@@ -15,5 +15,7 @@ Este espacio es un lugar para programar, soldar, parametrizar, y hacer deploymen
 
 ## Créditos
 
+Sitio web programado desde República 180 y Salvador Sanfuentes 2221, comuna de Santiago, ciudad Santiago, Región Metropolitana, Chile.
+
 * Programación: Aarón Montoya
 * Gráficas: Mateo Arce
