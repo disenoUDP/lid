@@ -68,9 +68,9 @@ export default async function(eleventyConfig) {
 			limit: 10,
 		},
 		metadata: {
-			language: "en",
-			title: "Blog Title",
-			subtitle: "This is a longer description about your blog.",
+			language: "es",
+			title: "LID UDP",
+			subtitle: "Laboratorio de Interacción Digital UDP.",
 			base: "https://example.com/",
 			author: {
 				name: "Your Name"
