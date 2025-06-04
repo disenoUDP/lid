@@ -1,8 +1,8 @@
 ---js
 const eleventyNavigation = {
-	key: "Info",
-	order: 1
-};
+ key: "Info",
+ order: 1
+}
 ---
 
 # Laboratorio de Interacción Digital
@@ -13,9 +13,7 @@ Este laboratorio está en la Facultad de Arquitectura, Arte y Diseño, es lidera
 
 Este espacio es un lugar para programar, soldar, parametrizar, y hacer deployments.
 
-
 ## Créditos
 
 * Programación: Aarón Montoya
 * Gráficas: Mateo Arce
-
