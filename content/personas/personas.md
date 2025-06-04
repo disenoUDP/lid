@@ -22,6 +22,8 @@ Ingeniere civil electricista de la Pontificia Universidad Católica de Chile, ma
 
 * Profesor, Diseño UDP (2023 a la fecha)
 
+Diseñador de la Pontificia Universidad Católica de Chile, magíster en Telecomunicaciones Interactivas de New York University. Extensa experiencia en educación (pregrado, posgrado y educación continua), innovación y desarrollo de productos interactivos. Ha liderado programas académicos y colaborado con instituciones en Chile y el extranjero en áreas de diseño, innovación, emprendimiento y tecnologías aplicadas. Su trabajo combina fabricación digital, estrategia digital y diseño de plataformas interactivas para el sector público y privado.
+
 ### Simón Gallardo
 
 * Profesor, Diseño UDP
