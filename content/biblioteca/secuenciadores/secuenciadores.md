@@ -6,3 +6,7 @@ const eleventyNavigation = {
 ---
 
 # Secuenciadores
+
+## Korg Sq-1
+
+## Polyend Seq
