@@ -1,11 +1,11 @@
 ---js
 const eleventyNavigation = {
- key: "Máquinas",
+ key: "Biblioteca",
  order: 7
 }
 ---
 
-# Máquinas
+# Biblioteca
 
 ## Creality Ender-2 V2
 
