@@ -3,10 +3,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="es">
   <title>LID UDP</title>
   <subtitle>Laboratorio de Interacción Digital UDP.</subtitle>
-  <link href="https://example.com/laboratorioInteraccionDigital/feed/feed.xml" rel="self" />
-  <link href="https://example.com/laboratorioInteraccionDigital/" />
-  <updated>2025-06-22T18:31:19Z</updated>
-  <id>https://example.com/laboratorioInteraccionDigital/</id>
+  <link href="https://example.com/lid/feed/feed.xml" rel="self" />
+  <link href="https://example.com/lid/" />
+  <updated>2025-09-24T16:12:07Z</updated>
+  <id>https://example.com/lid/</id>
   <author>
     <name>Your Name</name>
   </author>
