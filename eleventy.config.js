@@ -7,12 +7,12 @@ import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
 
 import pluginFilters from "./_config/filters.js";
 
-export default function (eleventyConfig) {
-	eleventyConfig.addPlugin(eleventyNavigationPlugin);
-};
-
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function(eleventyConfig) {
+	
+	// Navigation plugin: https://www.11ty.dev/docs/plugins/navigation/
+	eleventyConfig.addPlugin(eleventyNavigationPlugin);
+
 	// Drafts, see also _data/eleventyDataSchema.js
 	eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
 		if(data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
