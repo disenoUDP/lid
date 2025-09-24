@@ -9,7 +9,9 @@ const eleventyNavigation = {
 
 ## 2025-02
 
-Próximamente se anunciarán los cursos para el segundo semestre de 2025.
+* DIS8645 Taller de diseño de máquinas computacionales
+  * dictado por académiques Aarón Montoya y Matías Serrano
+  * martes y viernes de 08:30am a 12:50pm, entre agosto y diciembre
 
 ## 2025-01
 
