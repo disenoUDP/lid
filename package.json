@@ -1,22 +1,22 @@
 {
-  "name": "laboratoriointeracciondigital",
-  "version": "0.0.1",
+  "name": "lid",
+  "version": "0.0.2",
   "description": "",
   "type": "module",
   "main": "index.js",
 	"scripts": {
 		"build": "npx @11ty/eleventy",
 		"build-nocolor": "cross-env NODE_DISABLE_COLORS=1 npx @11ty/eleventy",
-		"build-ghpages": "npx @11ty/eleventy --pathprefix=/laboratorioInteraccionDigital/",
+		"build-ghpages": "npx @11ty/eleventy --pathprefix=/lid/",
 		"start": "npx @11ty/eleventy --serve --quiet",
-		"start-ghpages": "npx @11ty/eleventy --pathprefix=/laboratorioInteraccionDigital/ --serve --quiet",
+		"start-ghpages": "npx @11ty/eleventy --pathprefix=/lid/ --serve --quiet",
 		"debug": "cross-env DEBUG=Eleventy* npx @11ty/eleventy",
 		"debugstart": "cross-env DEBUG=Eleventy* npx @11ty/eleventy --serve --quiet",
 		"benchmark": "cross-env DEBUG=Eleventy:Benchmark* npx @11ty/eleventy"
 	},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/disenoUDP/laboratorioInteraccionDigital.git"
+    "url": "git+https://github.com/disenoUDP/lid.git"
   },
   "keywords": [],
   "author": "",
@@ -25,9 +25,9 @@
 		"node": ">=18"
 	},
   "bugs": {
-    "url": "https://github.com/disenoUDP/laboratorioInteraccionDigital/issues"
+    "url": "https://github.com/disenoUDP/lid/issues"
   },
-  "homepage": "https://github.com/disenoUDP/laboratorioInteraccionDigital#readme",
+  "homepage": "https://github.com/disenoUDP/lid#readme",
   	"devDependencies": {
 		"@11ty/eleventy": "^3.1.0",
 		"@11ty/eleventy-img": "^6.0.4",

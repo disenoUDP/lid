@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>LID UDP</title>
+		<meta name="description" content="Laboratorio de Interacción Digital, Universidad Diego Portales">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="LID UDP">
+		
+		
+		
+		<style>/* This is an arbitrary CSS string added to the bundle */
+/* Defaults */
+:root {
+	--font-family: -apple-system, system-ui, sans-serif;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #C0C0C0;
+	--color-gray-90: #333;
+
+	--background-color: #fff;
+
+	--text-color: var(--color-gray-90);
+	--text-color-link: #082840;
+	--text-color-link-active: #5f2b48;
+	--text-color-link-visited: #17050F;
+
+	--syntax-tab-size: 2;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-gray-20: #e0e0e0;
+		--color-gray-50: #C0C0C0;
+		--color-gray-90: #dad8d8;
+
+		/* --text-color is assigned to --color-gray-_ above */
+		--text-color-link: #1493fb;
+		--text-color-link-active: #6969f7;
+		--text-color-link-visited: #a6a6f8;
+
+		--background-color: #15202b;
+	}
+}
+
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 40em;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden:not(:focus):not(:active) {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img{
+  max-width: 100%;
+}
+img[width][height] {
+  height: auto;
+}
+img[src$=".svg"] {
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
+video,
+iframe {
+	width: 100%;
+	height: auto;
+}
+iframe {
+	aspect-ratio: 16/9;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a[href] {
+	color: var(--text-color-link);
+}
+a[href]:visited {
+	color: var(--text-color-link-visited);
+}
+a[href]:hover,
+a[href]:active {
+	color: var(--text-color-link-active);
+}
+
+main,
+footer {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+}
+
+#skip-link {
+	text-decoration: none;
+	background: var(--background-color);
+	color: var(--text-color);
+	padding: 0.5rem 1rem;
+	border: 1px solid var(--color-gray-90);
+	border-radius: 2px;
+}
+
+/* Prevent visually-hidden skip link fom pushing content around when focused */
+#skip-link.visually-hidden:focus {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	/* Ensure it is positioned on top of everything else when it is shown */
+	z-index: 999;
+}
+
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: .5em 1em;
+	list-style: "";
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+.links-nextprev > * {
+	flex-grow: 1;
+}
+.links-nextprev-next {
+	text-align: right;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: .5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	flex-grow: 1;
+	font-size: 1em; /* 16px /16 */
+	font-weight: 700;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	gap: .5em 1em;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	counter-reset: start-from var(--postlist-index);
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 0.8125em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1.1875em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: .25em;
+	padding-right: .5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: .5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}</style>
+		
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">LID UDP</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item"><a href="/">Info</a></li>
+					<li class="nav-item"><a href="/personas/" aria-current="page">Personas</a></li>
+					<li class="nav-item"><a href="/cursos/">Cursos</a></li>
+					<li class="nav-item"><a href="/investigacion/">Investigación</a></li>
+					<li class="nav-item"><a href="/residencias/">Residencias</a></li>
+					<li class="nav-item"><a href="/maquinas/">Máquinas</a></li>
+					<li class="nav-item"><a href="/feed/feed.xml"></a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+<h1 id="personas">Personas</h1>
+<h2 id="investigadores-principales">Investigadores principales</h2>
+<h3 id="aaron-montoya">Aarón Montoya</h3>
+<ul>
+<li>Investigadore principal (2024 a la fecha)</li>
+<li>Profesore asistente, Diseño UDP (2023 a la fecha)</li>
+</ul>
+<p>Ingeniere civil electricista de la Pontificia Universidad Católica de Chile, magíster en arte electrónico de New York University, y magíster en ciencias y artes mediales de Massachusetts Institute of Technology. Actualmente es profesore asistente en la Escuela de Diseño UDP, y estudiante del Doctorado en Artes y Humanidades de la Universidad de Santiago Chile. Su tema de investigación es el diseño, escritura y manufactura de software y hardware para la creación de instrumentos musicales electrónicos y computacionales de fuente abierta.</p>
+<h2 id="academiques-colaboradores">Académiques colaboradores</h2>
+<h3 id="sergio-majluf">Sergio Majluf</h3>
+<ul>
+<li>Profesor, Diseño UDP (2023 a la fecha)</li>
+</ul>
+<p>Diseñador de la Pontificia Universidad Católica de Chile, magíster en Telecomunicaciones Interactivas de New York University. Extensa experiencia en educación (pregrado, posgrado y educación continua), innovación y desarrollo de productos interactivos. Ha liderado programas académicos y colaborado con instituciones en Chile y el extranjero en áreas de diseño, innovación, emprendimiento y tecnologías aplicadas. Su trabajo combina fabricación digital, estrategia digital y diseño de plataformas interactivas para el sector público y privado.</p>
+<h3 id="simon-gallardo">Simón Gallardo</h3>
+<ul>
+<li>Profesor, Diseño UDP</li>
+</ul>
+<h2 id="ayudantes-academiques-y-de-investigacion">Ayudantes académiques y de investigación</h2>
+<h3 id="andres-martin">Andrés Martin</h3>
+<ul>
+<li>Diseñador, Universidad de Chile (2024)</li>
+<li>Ayudante académico de pregrado (2023 - ahora)</li>
+</ul>
+<p>Diseñador de la Universidad de Chile. Ayudante en pregrado de cursos de programación creativa, diseño de interfaces electrónicas y experiencia de usuario en la Escuela de Diseño UDP. Ayudante en pregrado de cursos de física para diseñadores en la Universidad de Chile.</p>
+<h3 id="janis-sepulveda">Janis Sepúlveda</h3>
+<ul>
+<li>Estudiante de Diseño UDP (2020 - ahora)</li>
+<li>Ayudante académica de pregrado (2024 - ahora)</li>
+<li>Ayudante de investigación (2024 - ahora)</li>
+</ul>
+<p>Estudiante de último año de diseño industrial, con enfoque en diseño centrado en el usuario y experiencias digitales. Mi área de investigación es en la facilitación de interacciones más humanas y conscientes en contextos sensibles, como la salud y el bienestar. Ha participado en proyectos colaborativos como la app de Diseño Abierto de la Escuela de Diseño UDP, y actualmente desarrolla su tesis de pregrado: una app móvil que permite monitorear síntomas físicos y emocionales, pensada especialmente para quienes enfrentan neuralgia del trigémino. Desde el 2023 es ayudante de investigación y de cursos de pregrado de programación creativa. Su objetivo es construir soluciones empáticas que respondan a necesidades reales.</p>
+<h3 id="mateo-arce">Mateo Arce</h3>
+<ul>
+<li>Estudiante de Diseño UDP (2020 - ahora)</li>
+<li>Ayudante de investigación (2024 - ahora)</li>
+</ul>
+<p>Estudiante de último año de diseño gráfico. Su enfoque está en la intersección entre diseño gráfico y código, desarrollando sitios web, interfaces de usuario y sistemas de identidad visual, para crear experiencias visuales funcionales e innovadoras. Su tesis de pregrado es una exploración de  tipográfia interactiva. Las herramientas que usa incluyen Adobe y GitHub Pages.</p>
+<h3 id="sofia-etchepare">Sofía Etchepare</h3>
+<ul>
+<li>Estudiante de Diseño UDP (2021 - ahora)</li>
+<li>Ayudante de académica de pregrado (2024 - ahora)</li>
+</ul>
+<p>Estudiante de cuarto año de diseño gráfico en UDP. Lleva dos años de experiencia aprendiendo a programar en softwares y plataformas como p5.js, Figma, Arduino y MIT App Inventor. Actualmente es ayudante académica de pregrado en cursos de programación en diseño UDP.</p>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p><em>Página web  construida con <a href="https://www.11ty.dev/">Eleventy v3.1.2</a></em></p>
+		</footer>
+
+		<!-- Esta web `/personas/` fue construida en 2025-09-24T16:10:55.769Z -->
+		<script type="module" src="/dist/lS4ihmGStI.js"></script>
+	</body>
+</html>

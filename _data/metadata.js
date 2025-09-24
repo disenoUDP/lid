@@ -1,6 +1,6 @@
 export default {
 	title: "LID UDP",
-	url: "https://disenoudp.github.io/laboratoriointeracciondigital",
+	url: "https://disenoudp.github.io/lid",
 	language: "en",
 	description: "Laboratorio de Interacción Digital, Universidad Diego Portales",
 	author: {
