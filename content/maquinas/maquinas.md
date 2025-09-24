@@ -9,7 +9,7 @@ const eleventyNavigation = {
 
 Secciones:
 
-<a href="./cuerdas/">
+<a href="./cuerdas/">cuerdas</a>
 
 ### Sintetizadores
 
