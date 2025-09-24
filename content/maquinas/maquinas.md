@@ -7,6 +7,28 @@ const eleventyNavigation = {
 
 # Biblioteca
 
+## Cuerdas
+
+### Ciat-Lonbarde Shtar
+
+Tar
+
+### Yamaha RBX370-a
+
+Bajo eléctrico
+
+### Ibanez Omar Rodriguez Lopez
+
+Guitarra eléctrica
+
+### Ibanez Jetking-2
+
+### G&L F-100
+
+Guitarra eléctrica
+
+### Sintetizadores
+
 ## Creality Ender-2 V2
 
 * Máquina donada al lab.
