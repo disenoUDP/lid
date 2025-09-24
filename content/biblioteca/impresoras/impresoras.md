@@ -1,6 +1,6 @@
 ---js
 const eleventyNavigation = {
- key: "sintetizadores",
+ key: "impresoras",
  parent: "maquinas"
 }
 ---
