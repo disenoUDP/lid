@@ -6,7 +6,11 @@
 
 /* Theme colors */
 :root {
-	--color-gray-20: #e0e0e0;
+	--background-color: #000000;
+	--nav-background-color: #39FF14;
+	--text-color: #FFFFFF;
+	--text-color-link: #39FF14; 
+	/* --color-gray-20: #e0e0e0;
 	--color-gray-50: #C0C0C0;
 	--color-gray-90: #333;
 
@@ -17,7 +21,7 @@
 	--text-color-link-active: #5f2b48;
 	--text-color-link-visited: #17050F;
 
-	--syntax-tab-size: 2;
+	--syntax-tab-size: 2; */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -27,11 +31,11 @@
 		--color-gray-90: #dad8d8;
 
 		/* --text-color is assigned to --color-gray-_ above */
-		--text-color-link: #1493fb;
-		--text-color-link-active: #6969f7;
-		--text-color-link-visited: #a6a6f8;
+		--text-color-link: #39FF14;
+		--text-color-link-active: #1DA600;
+		--text-color-link-visited: #28D200;
 
-		--background-color: #15202b;
+		/* --background-color: #15202b; */
 	}
 }
 

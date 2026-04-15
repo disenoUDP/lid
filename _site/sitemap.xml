@@ -2,42 +2,67 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 	
 	<url>
+		<loc>https://disenoudp.github.io/biblioteca/</loc>
+		<lastmod>2026-03-18</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://disenoudp.github.io/biblioteca/cuerdas/</loc>
+		<lastmod>2026-03-18</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://disenoudp.github.io/biblioteca/impresoras/</loc>
+		<lastmod>2026-03-18</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://disenoudp.github.io/biblioteca/libros/</loc>
+		<lastmod>2026-03-18</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://disenoudp.github.io/biblioteca/secuenciadores/</loc>
+		<lastmod>2026-03-18</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://disenoudp.github.io/biblioteca/sintetizadores/</loc>
+		<lastmod>2026-03-18</lastmod>
+	</url>
+	
+	<url>
 		<loc>https://disenoudp.github.io/cursos/</loc>
-		<lastmod>2025-09-24</lastmod>
+		<lastmod>2026-03-18</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://disenoudp.github.io/</loc>
-		<lastmod>2025-09-24</lastmod>
+		<lastmod>2026-03-18</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://disenoudp.github.io/investigacion/</loc>
-		<lastmod>2025-09-24</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://disenoudp.github.io/maquinas/</loc>
-		<lastmod>2025-09-24</lastmod>
+		<lastmod>2026-03-18</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://disenoudp.github.io/personas/</loc>
-		<lastmod>2025-09-24</lastmod>
+		<lastmod>2026-03-18</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://disenoudp.github.io/residencias/</loc>
-		<lastmod>2025-09-24</lastmod>
+		<lastmod>2026-03-18</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://disenoudp.github.io/tags/</loc>
-		<lastmod>2025-09-24</lastmod>
+		<lastmod>2026-03-18</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://disenoudp.github.io/feed/feed.xml</loc>
-		<lastmod>2025-09-24</lastmod>
+		<lastmod>2026-03-19</lastmod>
 	</url>
 </urlset>
