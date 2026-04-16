@@ -1,15 +1,3 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>LID UDP</title>
-		<meta name="description" content="Laboratorio de Interacción Digital, Universidad Diego Portales">
-		<link rel="alternate" href="/lid/feed/feed.xml" type="application/atom+xml" title="LID UDP">
-		
-		
-		
-		<style>/* This is an arbitrary CSS string added to the bundle */
 /* Defaults */
 :root {
 	font-family: 'B612 Mono';
@@ -308,49 +296,5 @@ header {
 }
 .post-metadata time {
 	margin-right: 1em;
-}</style>
-		
-	</head>
-	<body>
-		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+}
 
-		<header>
-			<a href="/lid/" class="home-link">LID UDP</a>
-			<nav>
-				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
-				<ul class="nav">
-					<li class="nav-item"><a href="/lid/">Info</a></li>
-					<li class="nav-item"><a href="/lid/personas/">Personas</a></li>
-					<li class="nav-item"><a href="/lid/cursos/">Cursos</a></li>
-					<li class="nav-item"><a href="/lid/investigacion/">Investigación</a></li>
-					<li class="nav-item"><a href="/lid/eventos/">Eventos</a></li>
-					<li class="nav-item"><a href="/lid/residencias/" aria-current="page">Residencias</a></li>
-					<li class="nav-item"><a href="/lid/biblioteca/">Biblioteca</a></li>
-					<li class="nav-item"><a href="/lid/feed/feed.xml"></a></li>
-				</ul>
-			</nav>
-		</header>
-
-		<main id="main">
-			<heading-anchors>
-				
-
-<h1 id="residencias">Residencias</h1>
-<p>Este programa de residencias busca apoyar a personas diseñadoras en su práctica de investigación, profesional y de creación</p>
-<h2 id="2025-06">2025-06</h2>
-<h3 id="andres-martin-mobiliario-del-laboratorio-y-construccion-de-maquinas-electronicas">Andrés Martin: mobiliario del laboratorio y construcción de máquinas electrónicas</h3>
-<p>Durante el mes de junio 2025 la residencia inaugural del Laboratorio será de Andrés Martin, diseñador de la Universidad de Chile. Este mes será el colofón de la trayectoria de Andrés como ayudante académico de pregrado en la Escuela de Diseño UDP, donde ha sido ayudante de taller durante cuatro semestres seguidos.</p>
-<p>Su labor se concentrará en apoyar la manufactura de los proyectos finales del curso DIS8644 Taller de diseño de máquinas electrónicas, y también en la cotización, adquisición y montaje de mobiliario para el laboratorio.</p>
-
-
-			</heading-anchors>
-		</main>
-
-		<footer>
-			<p><em>Página web  construida con <a href="https://www.11ty.dev/">Eleventy v3.1.5</a></em></p>
-		</footer>
-
-		<!-- Esta web `/residencias/` fue construida en 2026-04-16T17:31:27.823Z -->
-		<script type="module" src="/lid/dist/cC8wS6ZjFU.js"></script>
-	</body>
-</html>
