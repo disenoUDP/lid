@@ -7,10 +7,7 @@ const eleventyNavigation = {
 
 # Libros
 
-## Synth Gems 1
+{% for libro in libros.libros %}
 
-Editorial: Bjooks
-
-## Push Turn Move
-
-Editorial: Bjooks
+- {{ libro.titulo }} de editorial {{ libro.editorial }}
+{% endfor %}

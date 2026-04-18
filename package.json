@@ -37,6 +37,7 @@
     "cross-env": "^7.0.3",
     "luxon": "^3.6.1",
     "prismjs": "^1.30.0",
+    "yaml": "^2.8.3",
     "zod": "^3.24.4",
     "zod-validation-error": "^3.4.1"
   },
