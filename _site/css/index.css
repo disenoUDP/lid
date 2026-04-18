@@ -1,4 +1,4 @@
-/* Defaults */
+/* Defaults
 :root {
 	--font-family: -apple-system, system-ui, sans-serif;
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
@@ -17,7 +17,7 @@
 	--background-color: #fff;
 
 	--text-color: var(--color-gray-90);
-	--text-color-link: #082840;
+	--text-color-link: #082840;s
 	--text-color-link-active: #5f2b48;
 	--text-color-link-visited: #17050F;
 
@@ -34,6 +34,7 @@
 		--text-color-link: #39FF14;
 		--text-color-link-active: #1DA600;
 		--text-color-link-visited: #28D200;
+		--text-nav-color : #000000;
 
 		/* --background-color: #15202b; */
 	}
@@ -213,7 +214,28 @@ header {
 	text-decoration: none;
 }
 
-/* Nav */
+/* === NAV === */
+.nav {
+    position: fixed;
+	left: 0;
+	top: 0;
+    width: 15%;
+    height: 100%;
+    background-color: var(--nav-background-color);
+    color: var(--text-nav-color);
+    display: flex;
+    flex-direction: column;
+
+}
+.nav a {
+    color: var(--text-nav-color);
+    text-decoration: none;
+    padding: 10px;
+    text-align: left;
+}
+
+
+/* Nav
 .nav {
 	display: flex;
 	gap: .5em 1em;
@@ -229,7 +251,7 @@ header {
 }
 .nav a[href][aria-current="page"] {
 	text-decoration: underline;
-}
+} */
 
 /* Posts list */
 .postlist {
