@@ -8,16 +8,22 @@
 
 /* Theme colors */
 :root {
-	--color-gray-20: #e0e0e0;
-	--color-gray-50: #C0C0C0;
-	--color-gray-90: #333;
+	/* --color-gray-20: #e0e0e0; */
+	/* --color-gray-50: #C0C0C0; */
+	/* --color-gray-90: #333; */
 
-	--background-color: #fff;
+	/* --background-color: #fff; */
 
-	--text-color: var(--color-gray-90);
-	--text-color-link: #082840;
-	--text-color-link-active: #5f2b48;
-	--text-color-link-visited: #17050F;
+	/* --text-color: var(--color-gray-90); */
+	/* --text-color-link: #082840; */
+	/* --text-color-link-active: #5f2b48; */
+	/* --text-color-link-visited: #17050F; */
+
+	/* cambios felix */
+	--background-color: #000000;
+	--nav-background-color: #39FF14;
+	--text-color: #FFFFFF;
+	--text-color-link: #39FF14; 
 
 	--syntax-tab-size: 2;
 }
@@ -29,9 +35,17 @@
 		--color-gray-90: #dad8d8;
 
 		/* --text-color is assigned to --color-gray-_ above */
-		--text-color-link: #1493fb;
-		--text-color-link-active: #6969f7;
-		--text-color-link-visited: #a6a6f8;
+		/* --text-color-link: #1493fb; */
+		/* --text-color-link-active: #6969f7; */
+		/* --text-color-link-visited: #a6a6f8; */
+
+		/* cambios felix */
+		--text-color-link: #39FF14;
+		--text-color-link-active: #1DA600;
+		--text-color-link-visited: #28D200;
+		--text-nav-color : #000000;
+
+
 
 		--background-color: #15202b;
 	}
@@ -213,12 +227,32 @@ header {
 
 /* Nav */
 .nav {
-	display: flex;
-	gap: .5em 1em;
-	padding: 0;
-	margin: 0;
-	list-style: none;
+	/* display: flex; */
+	/* gap: .5em 1em; */
+	/* padding: 0; */
+	/* margin: 0; */
+	/* list-style: none; */
+
+	/* cambios felix */
+	position: fixed;
+	left: 0;
+	top: 0;
+    width: 15%;
+    height: 100%;
+    background-color: var(--nav-background-color);
+    color: var(--text-nav-color);
+    display: flex;
+    flex-direction: column;
 }
+
+/* cambios felix */
+.nav a {
+    color: var(--text-nav-color);
+    text-decoration: none;
+    padding: 10px;
+    text-align: left;
+}
+
 .nav-item {
 	display: inline-block;
 }
