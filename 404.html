@@ -342,6 +342,250 @@ header {
 }
 .post-metadata time {
 	margin-right: 1em;
+}
+
+
+/* desde aca fue sofrito  */
+
+        /* 2. DEFINIMOS LA IDENTIDAD VISUAL (CSS Variables) */
+        :root {
+            /* Paleta de colores inspirada en Fuse/Soft Glossary */
+            --bg: #000000;          /* Negro absoluto */
+            --text: #ffffff;        /* Blanco puro */
+            --accent: #bcff00;      /* Verde lima eléctrico (vibrante) */
+            --line: rgba(255, 255, 255, 0.15); /* Líneas sutiles */
+            
+            /* Tipografía */
+            --font-main: 'Inter', sans-serif;
+            --font-tech: 'Space Mono', monospace;
+        }
+
+        /* Reset básico */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: var(--font-main);
+            height: 100vh;
+            display: grid;
+            /* Grilla técnica: Panel lateral estrecho a la izquierda */
+            grid-template-columns: 280px 1fr;
+            grid-template-rows: 60px 1fr 50px;
+            border: 1px solid var(--line);
+        }
+
+        /* Estilo de Celda Base */
+        .cell {
+            border: 0.5px solid var(--line);
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        /* --- SECCIONES DE LA GRILLA --- */
+
+        .header {
+            grid-column: span 2;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: var(--font-tech);
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .header .brand { font-weight: 700; color: var(--accent); }
+
+        .sidebar {
+            grid-row: span 2; /* Ocupa las dos filas de abajo */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            font-family: var(--font-tech);
+            font-size: 13px;
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 5vh 5%;
+        }
+
+       .footer {
+    grid-column: 2;
+    font-size: 11px;
+    font-family: var(--font-tech);
+    background: var(--accent); /* Fondo verde lima */
+    color: #000;              /* Texto negro */
+    overflow: hidden;         /* Esconde el texto que se sale */
+    white-space: nowrap;      /* Evita que el texto salte de línea */
+    display: flex;
+    align-items: center;
+}
+
+.scrolling-text {
+    display: inline-block;
+    animation: scroll-left 20s linear infinite;
+}
+
+@keyframes scroll-left {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+}
+
+        /* --- ELEMENTOS DE IDENTIDAD --- */
+
+        /* Título con efecto de estiramiento (como Fuse) */
+        h1 {
+            font-size: clamp(3rem, 10vw, 12rem); /* Responsivo */
+            font-weight: 900;
+            text-transform: uppercase;
+            line-height: 0.95;
+            letter-spacing: -5px;
+            transition: letter-spacing 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+            cursor: pointer;
+        }
+
+        h1:hover {
+            letter-spacing: 15px; /* Se estira suavemente */
+            color: var(--accent);
+        }
+
+        /* Botón/Enlace Técnico */
+        .tech-link {
+            display: inline-block;
+            color: var(--text);
+            text-decoration: none;
+            font-family: var(--font-tech);
+            text-transform: uppercase;
+            font-size: 12px;
+            padding: 8px 15px;
+            border: 1px solid var(--text);
+            transition: 0.3s;
+            margin-top: 20px;
+        }
+
+        .tech-link:hover {
+            background-color: var(--accent);
+            color: var(--bg);
+            border-color: var(--accent);
+        }
+
+        /* Lista de Navegación Simple */
+        .nav-list { list-style: none; margin-top: 40px; }
+        .nav-list li { margin-bottom: 15px; }
+        .nav-list a {
+            color: #888;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .nav-list a:hover { color: var(--text); padding-left: 10px; }
+
+        /* Escondemos el cursor real en todo el sitio */
+html, body {
+    cursor: none;
+}
+
+#cursor {
+    width: 15px;
+    height: 15px;
+    background-color: var(--accent);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none; /* Crucial para poder hacer clic en lo que hay debajo */
+    z-index: 10000;
+    transition: transform 0.1s ease;
+}
+
+/* Contenedor del explorador */
+.directory {
+    display: flex;
+    flex-direction: column;
+}
+
+.dir-header {
+    font-size: 10px;
+    color: var(--accent);
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 20px;
+}
+
+.nav-list {
+    list-style: none;
+}
+
+.nav-list li {
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 0.5px solid transparent; /* Para que no salte al hacer hover */
+    transition: all 0.2s ease;
+}
+
+.nav-list li:hover {
+    border-bottom: 0.5px solid var(--line);
+    padding-left: 5px; /* Pequeño desplazamiento como en Soft Glossary */
+}
+
+.icon {
+    font-family: var(--font-tech);
+    margin-right: 10px;
+    color: var(--line);
+}
+
+.nav-list li:hover .icon {
+    color: var(--accent);
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: var(--text);
+    font-size: 13px;
+    text-transform: uppercase;
+    font-family: var(--font-tech);
+}
+
+/* Estilo para los archivos (.txt) */
+.file a {
+    color: #888;
+}
+
+/* Escondemos todas las vistas menos la activa */
+.content-view {
+    display: none;
+    animation: fadeIn 0.4s ease-out;
+}
+
+.content-view.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.tech-title {
+    font-family: var(--font-tech);
+    color: var(--accent);
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+.project-item {
+    padding: 10px;
+    border: 1px solid var(--line);
+    margin-bottom: 5px;
+    transition: 0.3s;
+}
+
+.project-item:hover {
+    background: var(--text);
+    color: var(--bg);
+    cursor: pointer;
 }</style>
 		
 	</head>
@@ -381,7 +625,7 @@ header {
 			<p><em>Página web  construida con <a href="https://www.11ty.dev/">Eleventy v3.1.5</a></em></p>
 		</footer>
 
-		<!-- Esta web `/404.html` fue construida en 2026-04-23T02:58:02.246Z -->
+		<!-- Esta web `/404.html` fue construida en 2026-04-23T17:31:42.742Z -->
 		<script type="module" src="/lid/dist/cC8wS6ZjFU.js"></script>
 	</body>
 </html>
