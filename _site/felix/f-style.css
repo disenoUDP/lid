@@ -30,12 +30,21 @@
 
 /* === GENERAL === */
 
+.main-content {
+  margin-left: 15%;
+  padding: 40px;
+}
+
 body {
   font-family: var(--font-family-monospace);
   color: var(--text-color);
   background-color: var(--background-color);
   padding: 0;
   margin: 0 auto;
+}
+
+h1, h2 {
+  font-family: var(--font-family);
 }
 
 a[href] {
@@ -51,20 +60,25 @@ a[href]:visited {
 
 .sidebar {
   position: fixed;
+  background-color: var(--nav-background-color);
+  width: max-content;
+  height: 100%;
+  left: 0;
+  top:0;
+}
+
+/* .sidebar {
+  position: fixed;
   left: 0;
   top: 0;
-  width: 15%;
+  width: max-content;
   height: 100%;
   background-color: var(--nav-background-color);
   color: var(--nav-text-color);
   display: flex;
   flex-direction: column;
   font-size: 2rem;
-}
-
-.sidebar h1 {
-  margin: 0 0 60px 0;
-}
+} */
 
 /* lista en nav */
 .sidebar nav ul {
@@ -73,21 +87,19 @@ a[href]:visited {
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+
 }
 
 /* === NAV === */
 
 .nav {
-  position: fixed;
   left: 0;
-  top: 100px;
-  width: 10%;
-  height: 100%;
-  background-color: var(--nav-background-color);
-  color: var(--text-nav-color);
+  width: 15%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  font-size: 1.5rem;
+  color: var(--nav-text-color);
 }
 
 .nav a {
@@ -99,7 +111,7 @@ a[href]:visited {
 
 /* === MAIN === */
 
-.main-content {
+main {
   flex: 1;
   background-color: var(--background-color);
   padding: 40px;
@@ -128,25 +140,20 @@ a[href]:visited {
 }
 
 footer {
+  margin-left: 15%;
   flex: 1;
   padding: 40px;
   margin-left: 15%;
-  color: var(--text-color-link);
 }
 
 /* === IMAGENES === */
 
-.logo-container {
-  position: relative;
-  z-index: 10;
-  /* Higher numbers sit closer to the user */
-  display: flex;
-  align-items: flex-start;
-  padding-bottom: 40px;
+/* .logo-container {
+display: flex;
+align-items: flex-start;
+padding: 20px;
 }
 
 .logo-image {
   width: 100px;
-  /* Adjust size to match your image */
-  height: auto;
-}
+} */
