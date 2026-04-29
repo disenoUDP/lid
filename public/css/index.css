@@ -307,6 +307,15 @@ img[src$=".svg"] {
 	max-width: none;
 }
 
+.libro-img {
+	width: 180px;
+	height: 240px;
+	object-fit: cover;
+	object-position: center;
+	margin: 6px;
+	border-radius: 6px;
+}
+
 video, iframe {
 	width: 100%;
 	height: auto;
