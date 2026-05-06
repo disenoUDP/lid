@@ -1,4 +1,4 @@
-# laboratorioInteraccionDigital
+# laboratorio Interaccion Digital
 
 ## Acerca de
 

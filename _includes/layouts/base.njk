@@ -7,63 +7,57 @@
 		<meta name="description" content="{{ description or metadata.description }}">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
 
-		{#- Uncomment this if you’d like folks to know that you used Eleventy to build your site!  #}
-		{#- <meta name="generator" content="{{ eleventy.generator }}"> #}
-
-		{#-
-		Plain-text bundles are provided via the `eleventy-plugin-bundle` plugin:
-		1. CSS:
-			* Add to a per-page bundle using `{% css %}{% endcss %}`
-			* Retrieve bundle content using `{% getBundle "css" %}` or `{% getBundleFileUrl "css" %}`
-		2. Or for JavaScript:
-			* Add to a per-page bundle using `{% js %}{% endjs %}`
-			* Retrieve via `{% getBundle "js" %}` or `{% getBundleFileUrl "js" %}`
-		3. Learn more: https://github.com/11ty/eleventy-plugin-bundle
-		#}
-
-		{#- Add an arbitrary string to the bundle #}
-		<style>/* This is an arbitrary CSS string added to the bundle */</style>
-		{#- Add the contents of a file to the bundle #}
 		<style>{% include "public/css/index.css" %}</style>
-		{#- Or you can add from node_modules #}
-		{# <style>{% include "node_modules/prismjs/themes/prism-okaidia.css" %}</style> #}
-
-		{#- Render the CSS bundle using inlined CSS (for the fastest site performance in production) #}
 		<style>{% getBundle "css" %}</style>
-		{#- Renders the CSS bundle using a separate file, if you can't set CSP directive style-src: 'unsafe-inline' #}
-		{#- <link rel="stylesheet" href="{% getBundleFileUrl "css" %}"> #}
 
-		{#- Add the heading-anchors web component to the JavaScript bundle #}
 		<script type="module">{% include "node_modules/@zachleat/heading-anchors/heading-anchors.js" %}</script>
 	</head>
 	<body>
-		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+		<div id="cursor"></div>
+		<a href="#main" id="skip-link" class="visually-hidden">Ir al contenido principal</a>
 
-		<header>
-			<a href="/" class="home-link">{{ metadata.title }}</a>
+		<header class="cell header">
+			<button id="nav-toggle" aria-label="Colapsar navegación" aria-expanded="true">☰</button>
+			<a href="/" class="brand">{{ metadata.title }}</a>
+		</header>
 
-			{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-			<nav>
-				<h2 class="visually-hidden">Top level navigation menu</h2>
-				<ul class="nav">
+		<aside class="cell sidebar" id="sidebar">
+			<nav aria-label="Menú principal">
+				<div class="dir-header">Navegación</div>
+				<ul class="nav-list">
 				{%- for entry in collections.all | eleventyNavigation %}
-					<li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
+					<li><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
 				{%- endfor %}
 				</ul>
 			</nav>
-		</header>
+		</aside>
 
-		<main id="main">
+		<main class="cell main-content" id="main">
 			<heading-anchors>
 				{{ content | safe }}
 			</heading-anchors>
 		</main>
 
-		<footer>
-			<p><em>Página web  construida con <a href="https://www.11ty.dev/">{{ eleventy.generator }}</a></em></p>
+		<footer class="cell footer">
+			<span class="scrolling-text">Laboratorio de Interacción Digital &nbsp;—&nbsp; LID UDP &nbsp;—&nbsp; Universidad Diego Portales &nbsp;—&nbsp; Facultad de Arquitectura, Arte y Diseño &nbsp;—&nbsp; Santiago, Chile &nbsp;—&nbsp; {{ metadata.title }} &nbsp;—&nbsp; Diseño de Interacción &nbsp;—&nbsp; Interfaces Humano-Computador &nbsp;—&nbsp; Diseño de Máquinas Electrónicas</span>
 		</footer>
 
-		<!-- Esta web `{{ page.url }}` fue construida en {% currentBuildDate %} -->
+		<script>
+			// Cursor personalizado
+			const cursor = document.getElementById('cursor');
+			document.addEventListener('mousemove', e => {
+				cursor.style.left = e.clientX + 'px';
+				cursor.style.top  = e.clientY + 'px';
+			});
+
+			// Toggle sidebar
+			const toggle = document.getElementById('nav-toggle');
+			toggle.addEventListener('click', () => {
+				const collapsed = document.body.classList.toggle('nav-collapsed');
+				toggle.setAttribute('aria-expanded', String(!collapsed));
+			});
+		</script>
+
 		<script type="module" src="{% getBundleFileUrl "js" %}"></script>
 	</body>
 </html>

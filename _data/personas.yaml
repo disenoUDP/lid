@@ -43,7 +43,7 @@ personas:
       inicio: false
       fin: false
 
-  - nombre: "Bernardita Lobo"
+  - nombre: "Bernardita Jesús"
     github: "bernardita-jesus"
     correo: "bernardita.lobo"
     ig: "bernardita_jesus"
@@ -55,16 +55,17 @@ personas:
       existencia: true
       inicio: 2026
       fin: false
-      cursos: ["Fabricación Digital"]
-       
+      cursos:
+        - nombre: "DIS0915 Fabricación Digital"
+          semestres: ["2026-1"]       
     profeUDP:
       existencia: false
       inicio: false
       fin: false
 
   - nombre: "Carolina Pino"
-    github: ""
-    correo: ""
+    github: 
+    correo: "maria.pino6"
     estudianteUDP:
       existencia: false
       inicio: false
@@ -77,10 +78,13 @@ personas:
       existencia: true
       inicio: 2026
       fin: false
-
+      cursos:
+        - nombre: "DIS09211 Taller III: Problema y Concepto"
+          semestres: ["2026-1"]
+          
   - nombre: "Christian Oyarzún"
-    github: ""
-    correo: ""
+    github: "coyarzun"
+    correo: "christian.oyarzun"
     estudianteUDP:
       existencia: false
       inicio: false
@@ -93,6 +97,13 @@ personas:
       existencia: true
       inicio: 2025
       fin: false
+      cursos:
+        - nombre: "DIS9034 Programación creativa y multimedia"
+          semestres: ["2025-1"]
+        - nombre: "DIS8952 Cuerpo, movimiento y código"
+          semestres: ["2025-2"]
+        - nombre: " DIS09214 Pensamiento computacional"
+          semestres: ["2026-1"]
 
   - nombre: "Emilia Guerra"
     github: "emiguerra"
@@ -105,6 +116,9 @@ personas:
       existencia: true
       inicio: 2026
       fin: false
+      cursos:
+        - nombre: "DIS8644 Taller de diseño de máquinas electrónicas"
+          semestres: ["2026-1"]
     profeUDP:
       existencia: false
       inicio: false
@@ -118,8 +132,8 @@ personas:
       inicio: 2023
       fin: false
     ayudanteUDP: 
-      existencia: true
-      inicio: 2026
+      existencia: false
+      inicio: false
       fin: false
     profeUDP:
       existencia: false
@@ -127,8 +141,8 @@ personas:
       fin: false
       
   - nombre: "Jacinta Barrenechea"
-    github: ""
-    correo: ""
+    github: "jacintaOOO"
+    correo: "jacinta.barrenechea"
     estudianteUDP:
       existencia: true
       inicio: 2021
@@ -137,6 +151,11 @@ personas:
       existencia: true
       inicio: 2025
       fin: false
+      cursos:
+        - nombre: "DIS09214 Pensamiento computacional"
+          semestres: ["2026-1"]
+        - nombre: "DIS8949 Introducción al diseño de servicios"
+          semestres: ["2026-1"]  
     profeUDP:
       existencia: false
       inicio: false
@@ -161,7 +180,7 @@ personas:
       
   - nombre: "Joaquín González"
     github: ""
-    correo: "joaquin.gonzalez"
+    correo: "joaquin.gonzalez7"
     estudianteUDP:
       existencia: false
       inicio: false
@@ -188,14 +207,17 @@ personas:
       existencia: true
       inicio: 2025
       fin: false
+      cursos:
+        - nombre: "DIS8012 Administración financiera"
+          semestres: ["2026-1"]
     profeUDP:
       existencia: false
       inicio: false
       fin: false
 
   - nombre: "Matías Serrano"
-    github: ""
-    correo: ""
+    github: "misaaaaaa"
+    correo: "matias.serrano"
     estudianteUDP:
       existencia: false
       inicio: false
@@ -209,22 +231,24 @@ personas:
       inicio: 2024
       fin: false
 
-  - nombre: "Santiago Gaete"
+  - nombre: "Santiago Gaete Fernández"
     github: "santiagoClifford"
     correo: "santiago.gaete@mail.udp.cl"
     instagram: "clifford1one"
+    p5.js: "clifford1one"
     estudianteUDP:
       existencia: true
       inicio: 2022
       fin: false
-      cursos:
-      - nombre: "Administración financiera"
-        sigla: "DIS8012_CA01"
-        semestres: ["2026-1"]
     ayudanteUDP: 
       existencia: true
       inicio: 2026
       fin: false
+      cursos:
+        - nombre: "DIS09214 Pensamiento Computacional"
+          semestres: ["2026-1"]
+        - nombre: "DIS8012 Administración Financiera"
+          semestres: ["2026-1"]     
     profeUDP:
       existencia: false
       inicio: false
@@ -280,16 +304,19 @@ personas:
       fin: false
 
   - nombre: "Sofía Etchepare"
-    github: ""
-    correo: ""
+    github: "Bumwox"
+    correo: "sofia.etchepare"
     estudianteUDP:
       existencia: true
-      inicio: 1234
-      fin: 1234
+      inicio: 2022
+      fin: false
     ayudanteUDP: 
       existencia: true
       inicio: 2025
       fin: false
+      cursos:
+        - nombre: "Programacion creativa multimedia"
+          semestres: ["2026-1"]    
     profeUDP:
       existencia: false
       inicio: false
@@ -322,6 +349,11 @@ personas:
       existencia: true
       inicio: 2024
       fin: false
+      cursos:
+        - nombre: "Geometría Básica"
+          semestres: ["2024-1"]
+        - nombre: "DIS09214 Pensamiento Computacional"
+          semestres: ["2026-1"]   
     profeUDP:
       existencia: false
       inicio: false

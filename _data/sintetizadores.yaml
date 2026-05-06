@@ -1,0 +1,229 @@
+---
+nombreBiblioteca: sintetizadores lid
+sintetizadores:
+
+  - id: 1
+    marca: "Moog"
+    modelo: "Subharmonicon"
+    categorias: ["sintetizador", "analógico", "semimodular", "polirítmico"]
+    enlaces: ["https://www.moogmusic.com/synthesizers/subharmonicon/"]
+    imagenes: ["moog-01.jpeg"]
+
+  - id: 2
+    marca: "Moog"
+    modelo: "Mother-32"
+    categorias: ["sintetizador", "semimodular", "analógico"]
+    enlaces: ["https://www.moogmusic.com/synthesizers/mother-32/"]
+    imagenes: ["moog-02.jpeg"]
+
+  - id: 3
+    marca: "Moog"
+    modelo: "DFAM"
+    categorias: ["sintetizador", "semimodular", "percusión", "analógico"]
+    enlaces: ["https://www.moogmusic.com/synthesizers/dfam/"]
+    imagenes: ["moog-03.jpeg"]
+
+  - id: 4
+    marca: "Dave Smith Instruments"
+    modelo: "Mopho"
+    categorias: ["sintetizador", "monofónico", "analógico"]
+    enlaces: ["https://www.soundonsound.com/reviews/dave-smith-instruments-mopho"]
+    imagenes: ["dave-smith-instruments-01.jpeg"]
+
+  - id: 5
+    marca: "Asturia"
+    modelo: "MiniLab 3"
+    categorias: ["controlador"]
+    enlaces: ["https://www.arturia.com/es/products/hybrid-synths/minilab-3/overview"]
+    imagenes: ["asturia-01.jpeg"]
+
+  - id: 6
+    marca: "Korg"
+    modelo: "Minilogue"
+    categorias: ["sintetizador", "polifónico", "analógico"]
+    enlaces: ["https://www.korg.com/cl/products/synthesizers/minilogue/"]
+    imagenes: ["korg-01.jpeg"]
+
+  - id: 7
+    marca: "Korg"
+    modelo: "Volca Sample"
+    categorias: ["secuenciador", "sampler", "digital"]
+    enlaces: ["https://www.korg.com/cl/products/dj/volca_sample/index.php"]
+    imagenes: ["korg-02.jpeg"]
+
+  - id: 8
+    marca: "Korg"
+    modelo: "Volca Sample"
+    categorias: ["secuenciador", "sampler", "digital"]
+    enlaces: ["https://www.korg.com/cl/products/dj/volca_sample/index.php"]
+    imagenes: ["korg-03.jpeg"]
+
+  - id: 9
+    marca: "Korg"
+    modelo: "SQ-64 Poly Secuencer"
+    categorias: ["secuenciador", "polifónico"]
+    enlaces: ["https://www.korg.com/cl/products/dj/sq_64/"]
+    imagenes: ["korg-04.jpeg"]
+
+  - id: 10
+    marca: "Korg"
+    modelo: "SDD-3000 Pedal"
+    categorias: ["pedal", "preamplificador", "analógico", "delay"]
+    enlaces: ["https://www.korg.com/nz/products/effects/sdd3000_pedal/"]
+    imagenes: ["korg-05.jpeg"]
+
+  - id: 11
+    marca: "Novation"
+    modelo: "Launch Control XL"
+    categorias: ["controlador MIDI"]
+    enlaces: ["NO ENCONTRE"]
+    imagenes: ["novation-01.jpeg"]
+
+  - id: 12
+    marca: "Roland"
+    modelo: "TR-08"
+    categorias: ["caja de ritmos", "percusión"]
+    enlaces: ["https://www.roland.com/es-es/products/tr-08/"]
+    imagenes: ["roland-01.jpeg"]
+
+  - id: 13
+    marca: "Roland"
+    modelo: "VT-4"
+    categorias: ["transformador de voz", "procesador"]
+    enlaces: ["https://www.roland.com/us/products/vt-4/"]
+    imagenes: ["roland-02.jpeg"]
+
+  - id: 14
+    marca: "Electro Harmonix"
+    modelo: "8 Step Program"
+    categorias: ["secuenciador", "analógico"]
+    enlaces: ["https://www.ehx.com/products/8-step-program/"]
+    imagenes: ["electro-harmonix-01.jpeg"]
+
+  - id: 15
+    marca: "Electro Harmonix"
+    modelo: "Tri Parallel Mixer"
+    categorias: ["pedal"]
+    enlaces: ["https://www.ehx.com/products/tri-parallel-mixer/"]
+    imagenes: ["electro-harmonix-02.jpeg"]
+
+  - id: 16
+    marca: "Electro Faustus"
+    modelo: "EF102 Photo Theremin"
+    categorias: ["pedal", "analógico"]
+    enlaces: ["https://www.electrofaustus.com/ef102-photo-theremin"]
+    imagenes: ["electro-faustus-01.jpeg"]
+
+  - id: 17
+    marca: "Electro Faustus"
+    modelo: "Drone Thing"
+    categorias: ["sintetizador", "analógico"]
+    enlaces: ["https://www.electrofaustus.com/shop/p/ef109-drone-thing"]
+    imagenes: ["electro-faustus-02.jpeg"]
+
+  - id: 18
+    marca: "Electro Faustus"
+    modelo: "EF101D Deluxe Dual Oscillator"
+    categorias: ["pedal", "efectos", "digital"]
+    enlaces: ["NO ENCONTRE"]
+    imagenes: ["electro-faustus-03.jpeg"]
+
+  - id: 19
+    marca: "Bastl Instruments"
+    modelo: "Microgranny MG 2"
+    categorias: ["sampler", "monofónico"]
+    enlaces: ["https://bastl-instruments.com/instruments/microgranny"]
+    imagenes: ["bastl-instruments-01.jpeg"]
+
+  - id: 20
+    marca: "Bastl Instruments"
+    modelo: "Microgranny MG 2"
+    categorias: ["sampler", "monofónico"]
+    enlaces: ["https://bastl-instruments.com/instruments/microgranny"]
+    imagenes: ["bastl-instruments-03.jpeg"]
+    
+  - id: 21
+    marca: "Bastl Instruments"
+    modelo: "Illuminati"
+    categorias: ["sintetizador", "semimodular", "percusión", "analógico", "monofónico", "polifónico", "polirítmico"]
+    enlaces: ["https://bastl-instruments.com/instruments/illuminati"]
+    imagenes: ["bastl-instruments-02.jpeg"]
+
+  - id: 22
+    marca: "Make Noise Music-01"
+    modelo: "0-CTRL"
+    categorias: ["secuenciador", "analógico", "controlador"]
+    enlaces: ["https://www.makenoisemusic.com/synthesizers-and-controllers/0-ctrl/"]
+    imagenes: ["make-noise-music-01.jpeg"]
+
+  - id: 23
+    marca: "Dunn Effects"
+    modelo: "SubaQuatic"
+    categorias: ["pedal"]
+    enlaces: ["NO ENCONTRE"]
+    imagenes: ["dunn-effects-01.jpeg"]
+
+  - id: 24
+    marca: "Focusrite"
+    modelo: "Clarett 4Pre"
+    categorias: ["interfaz"]
+    enlaces: ["https://focusrite.com/products/clarett-plus-4pre"]
+    imagenes: ["focusrite-01.jpeg"]
+
+  - id: 25
+    marca: "Hikari Instruments"
+    modelo: "Monos CV"
+    categorias: ["sintetizador"]
+    enlaces: ["http://hikari-ins.shop-pro.jp/?pid=138476888"]
+    imagenes: ["hikari-instruments-01.jpeg"]
+
+  - id: 26
+    marca: "Oficina de Sonido"
+    modelo: "La Golden Acapulco Dub Siren"
+    categorias: ["sintetizador", "sampler", "monofónico", "analógico"]
+    enlaces: ["https://pablodelcielo.com/La-Golden-Acapulco-Sirena-Dub-Sampler"]
+    imagenes: ["oficina-de-sonido-01.jpeg"]
+
+  - id: 27
+    marca: "Roger Linn Design"
+    modelo: "AdrenaLinn III"
+    categorias: ["procesador de efectos"]
+    enlaces: ["https://www.rogerlinndesign.com/about/adrenalinn"]
+    imagenes: ["roger-linn-01.jpeg"]
+
+  - id: 28
+    marca: "Floating Forest Pedals"
+    modelo: "Drifter"
+    categorias: ["pedal", "delay"]
+    enlaces: [" https://www.floatingforestpedals.com/shop/drifter"]
+    imagenes: ["floating-forest-pedals-01.jpeg"]
+
+  - id: 29
+    marca: "Critter and Guitari"
+    modelo: "Bolsa Bass"
+    categorias: ["sintetizador", "monofónico", "secuenciador"]
+    enlaces: ["https://www.critterandguitari.com/blog-tags/bolsa-bass"]
+    imagenes: ["critter-and-guitari-01.jpeg"]
+
+  - id: 30
+    marca: "Critter and Guitari"
+    modelo: "Pocket Piano"
+    categorias: ["sintetizador", "monofónico"]
+    enlaces: ["https://www.critterandguitari.com/pocket-piano"]
+    imagenes: ["critter-and-guitari-02.jpeg"]
+
+  - id: 31
+    marca: "Critter and Guitari"
+    modelo: "Kaleidoloop"
+    categorias: ["sampler", "looper"]
+    enlaces: ["https://www.critterandguitari.com/kaleidoloop"]
+    imagenes: ["critter-and-guitari-03.jpeg"]
+
+  - id: 32
+    marca: "Critter and Guitari"
+    modelo: "Kaleidoloop"
+    categorias: ["sampler", "looper"]
+    enlaces: ["https://www.critterandguitari.com/kaleidoloop"]
+    imagenes: ["critter-and-guitari-04.jpeg"]
+
+

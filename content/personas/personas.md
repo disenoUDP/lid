@@ -41,6 +41,10 @@ const eleventyNavigation = {
 
 {% endif %}
 
+    {% for curso in persona.ayudanteUDP.cursos %}
+    - {{ curso.nombre }} ({{ curso.semestres | join(", ") }})
+    {% endfor %}
+
 {% endif %}
 
 {% if persona.estudianteUDP.existencia %}
@@ -54,6 +58,10 @@ const eleventyNavigation = {
 - Estudiante desde {{ persona.estudianteUDP.inicio }} hasta {{ persona.estudianteUDP.fin }}
 
 {% endif %}
+
+    {% for curso in persona.estudianteUDP.cursos %}
+    - {{ curso.nombre }} ({{ curso.semestres | join(", ") }})
+    {% endfor %}
 
 {% endif %}
 
