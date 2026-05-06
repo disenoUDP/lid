@@ -1,0 +1,1024 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>LID UDP</title>
+		<meta name="description" content="Laboratorio de Interacción Digital, Universidad Diego Portales">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="LID UDP">
+
+		
+		<style>/* === VARIABLES === */
+:root {
+	--bg: #000000;
+	--text: #ffffff;
+	--accent: #FF2D78;
+	--accent-alt: #FF10F0;
+	--nav-bg: #000000;
+	--nav-text: #FF2D78;
+	--line: rgba(255, 45, 120, 0.25);
+	--font-main: 'Inter', sans-serif;
+	--font-tech: 'Space Mono', monospace;
+	--sidebar-width: 240px;
+	--header-height: 50px;
+	--footer-height: 40px;
+	--syntax-tab-size: 2;
+}
+
+/* === RESET === */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+/* === BASE === */
+html {
+	overflow-y: hidden;
+}
+
+html,
+body {
+	height: 100%;
+	font-family: var(--font-main);
+	background-color: var(--bg);
+	color: var(--text);
+	cursor: none;
+	text-transform: lowercase;
+}
+
+/* === LAYOUT GRID === */
+body {
+	display: grid;
+	grid-template-columns: var(--sidebar-width) 1fr;
+	grid-template-rows: var(--header-height) 1fr var(--footer-height);
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+	border: 1px solid var(--line);
+	transition: grid-template-columns 0.3s ease;
+}
+
+body.nav-collapsed {
+	grid-template-columns: 0px 1fr;
+}
+
+/* === CELL BASE === */
+.cell {
+	border: 0.5px solid var(--line);
+	overflow: hidden;
+}
+
+/* === HEADER === */
+.header {
+	grid-column: 1 / -1;
+	grid-row: 1;
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	padding: 0 20px;
+	font-family: var(--font-tech);
+	font-size: 12px;
+	letter-spacing: 1px;
+	background: var(--bg);
+	border-bottom: 0.5px solid var(--line);
+}
+
+.brand {
+	font-weight: 700;
+	color: var(--accent);
+	text-decoration: none;
+}
+
+#nav-toggle {
+	background: none;
+	border: 1px solid var(--line);
+	color: var(--accent);
+	cursor: pointer;
+	padding: 5px 12px;
+	font-family: var(--font-tech);
+	font-size: 14px;
+	line-height: 1;
+	flex-shrink: 0;
+	transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+
+#nav-toggle:hover {
+	border-color: var(--accent);
+	background: var(--accent);
+	color: var(--bg);
+}
+
+/* === SIDEBAR === */
+.sidebar {
+	grid-column: 1;
+	grid-row: 2;
+	background: var(--nav-bg);
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	overflow: hidden;
+	transition: padding 0.3s ease;
+}
+
+body.nav-collapsed .sidebar {
+	padding: 0;
+}
+
+.dir-header {
+	font-size: 10px;
+	color: var(--nav-text);
+	font-family: var(--font-tech);
+	letter-spacing: 1px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid rgba(255, 45, 120, 0.3);
+	margin-bottom: 20px;
+	white-space: nowrap;
+}
+
+.nav-list {
+	list-style: none;
+}
+
+.nav-list li {
+	padding: 8px 0;
+	display: flex;
+	align-items: center;
+	border-bottom: 0.5px solid transparent;
+	transition: all 0.2s ease;
+	white-space: nowrap;
+}
+
+.nav-list li:hover {
+	border-bottom: 0.5px solid rgba(255, 45, 120, 0.4);
+	padding-left: 5px;
+}
+
+.nav-list a {
+	text-decoration: none;
+	color: var(--nav-text);
+	font-size: 13px;
+	font-family: var(--font-tech);
+}
+
+.nav-list a[aria-current="page"] {
+	font-weight: 700;
+	text-decoration: underline;
+}
+
+/* === MAIN CONTENT === */
+.main-content {
+	grid-column: 2;
+	grid-row: 2;
+	overflow-y: auto;
+	padding: 40px 5%;
+}
+
+/* === FOOTER === */
+.footer {
+	grid-column: 1 / -1;
+	grid-row: 3;
+	background: var(--bg);
+	border-top: 0.5px solid var(--accent);
+	color: var(--accent);
+	font-family: var(--font-tech);
+	font-size: 11px;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+	white-space: nowrap;
+	letter-spacing: 0.5px;
+}
+
+.scrolling-text {
+	display: inline-block;
+	padding-left: 100vw;
+	animation: scroll-left 35s linear infinite;
+}
+
+@keyframes scroll-left {
+	from {
+		transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(-100%);
+	}
+}
+
+/* === TIPOGRAFÍA === */
+h1 {
+	font-size: clamp(3rem, 10vw, 12rem);
+	font-weight: 900;
+	line-height: 0.92;
+	letter-spacing: -3px;
+	margin-bottom: 2rem;
+	transition: letter-spacing 0.6s cubic-bezier(0.22, 1, 0.36, 1), color 0.3s;
+	cursor: pointer;
+}
+
+h1:hover {
+	letter-spacing: 12px;
+	color: var(--accent);
+}
+
+h2 {
+	font-family: var(--font-tech);
+	color: var(--accent);
+	font-size: 1.1rem;
+	letter-spacing: 1px;
+	margin: 2.5rem 0 1rem;
+}
+
+h3 {
+	font-family: var(--font-tech);
+	font-size: 0.95rem;
+	margin: 1.5rem 0 0.5rem;
+}
+
+p {
+	line-height: 1.6;
+	margin-bottom: 1em;
+	font-size: 0.95rem;
+	max-width: 72ch;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+
+ul,
+ol {
+	padding-left: 1.5rem;
+	margin-bottom: 1em;
+}
+
+li {
+	line-height: 1.6;
+	font-size: 0.95rem;
+}
+
+a[href] {
+	color: var(--accent);
+}
+
+a[href]:visited {
+	color: var(--accent-alt);
+}
+
+a[href]:hover,
+a[href]:active {
+	color: var(--text);
+}
+
+/* === CURSOR PERSONALIZADO === */
+#cursor {
+	width: 12px;
+	height: 12px;
+	background-color: var(--accent);
+	border-radius: 50%;
+	position: fixed;
+	pointer-events: none;
+	z-index: 10000;
+	transform: translate(-50%, -50%);
+	transition: transform 0.08s ease;
+}
+
+/* === CÓDIGO === */
+pre,
+code {
+	font-family: var(--font-tech);
+}
+
+pre:not([class*="language-"]) {
+	background: rgba(255, 255, 255, 0.05);
+	padding: 1rem;
+	overflow-x: auto;
+	border: 0.5px solid var(--line);
+	margin: 1rem 0;
+	line-height: 1.4;
+	-moz-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+}
+
+code {
+	word-break: break-all;
+	font-size: 0.875em;
+}
+
+/* === IMÁGENES === */
+img {
+	max-width: 100%;
+}
+
+img[width][height] {
+	height: auto;
+}
+
+img[src$=".svg"] {
+	width: 100%;
+	height: auto;
+	max-width: none;
+}
+
+.libro-img {
+	width: 180px;
+	height: 240px;
+	object-fit: cover;
+	object-position: center;
+	margin: 6px;
+	border-radius: 6px;
+}
+
+video,
+iframe {
+	width: 100%;
+	height: auto;
+}
+
+iframe {
+	aspect-ratio: 16/9;
+}
+
+/* === SKIP LINK === */
+#skip-link {
+	text-decoration: none;
+	background: var(--bg);
+	color: var(--text);
+	padding: 0.5rem 1rem;
+	border: 1px solid var(--line);
+}
+
+#skip-link.visually-hidden:focus {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	z-index: 999;
+}
+
+/* === ACCESIBILIDAD === */
+.visually-hidden:not(:focus):not(:active) {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* === LISTA DE POSTS === */
+.postlist {
+	list-style: none;
+	padding: 0;
+}
+
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5em;
+	margin-bottom: 1.5em;
+	padding-bottom: 1.5em;
+	border-bottom: 0.5px solid var(--line);
+}
+
+.postlist-link {
+	font-size: 1.1em;
+	font-weight: 700;
+	flex-basis: 100%;
+	text-underline-position: from-font;
+}
+
+.postlist-date {
+	font-size: 0.8em;
+	color: rgba(255, 255, 255, 0.4);
+	font-family: var(--font-tech);
+}
+
+/* === NAVEGACIÓN ANTERIOR/SIGUIENTE === */
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: 1em;
+	list-style: none;
+	padding: 1em 0 0;
+	border-top: 0.5px solid var(--line);
+	margin-top: 2em;
+}
+
+.links-nextprev-next {
+	text-align: right;
+}
+
+/* === ETIQUETAS === */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	font-style: italic;
+	font-size: 0.85em;
+	color: var(--accent);
+}
+
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: 0.5em;
+	list-style: none;
+	padding: 0;
+	margin: 0 0 2rem;
+	font-family: var(--font-tech);
+	font-size: 0.8em;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.post-metadata time {
+	margin-right: 1em;
+}
+
+table {
+	margin: 1em 0;
+	border-collapse: collapse;
+}
+
+table td,
+table th {
+	padding: 0.5em 1em 0.5em 0;
+	border-bottom: 0.5px solid var(--line);
+}
+
+@media (max-width: 768px) {
+	:root {
+		--sidebar-width: 100vw;
+		--header-height: 60px;
+		--content-padding: 24px 4%;
+	}
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: clamp(3rem, 10vw, 12rem);
+    font-weight: 900;
+    line-height: 0.92;
+    letter-spacing: -3px;
+    margin-bottom: 2rem;
+    cursor: pointer;
+
+    /* Scroll-driven animation */
+    animation: titulo-scroll linear both;
+    animation-timeline: scroll();
+    animation-range: 0px 300px; /* empieza a cambiar desde 0 hasta 300px de scroll */
+  }
+}
+
+@keyframes titulo-scroll {
+  from {
+    letter-spacing: -3px;
+    color: inherit;
+  }
+  to {
+    letter-spacing: 12px;
+    color: var(--accent);
+  }
+}</style>
+
+		
+	</head>
+	<body>
+		<div id="cursor"></div>
+		<a href="#main" id="skip-link" class="visually-hidden">Ir al contenido principal</a>
+
+		<header class="cell header">
+			<button id="nav-toggle" aria-label="Colapsar navegación" aria-expanded="true">☰</button>
+			<a href="/" class="brand">LID UDP</a>
+		</header>
+
+		<aside class="cell sidebar" id="sidebar">
+			<nav aria-label="Menú principal">
+				<div class="dir-header">Navegación</div>
+				<ul class="nav-list">
+					<li><a href="/">Info</a></li>
+					<li><a href="/personas/">Personas</a></li>
+					<li><a href="/cursos/">Cursos</a></li>
+					<li><a href="/investigacion/">Investigación</a></li>
+					<li><a href="/eventos/">Eventos</a></li>
+					<li><a href="/residencias/">Residencias</a></li>
+					<li><a href="/biblioteca/">Biblioteca</a></li>
+					<li><a href="/feed/feed.xml"></a></li>
+				</ul>
+			</nav>
+		</aside>
+
+		<main class="cell main-content" id="main">
+			<heading-anchors>
+				
+
+<h1 id="libros">Libros</h1>
+<h2 id="synth-gems-1">Synth gems 1</h2>
+<ul>
+<li>Autores: Mike Metlay</li>
+<li>Editorial: Bjooks</li>
+<li>Año: 2021</li>
+<li>Palabras clave: sintetizadores, electrónica</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="push-turn-move">Push turn move</h2>
+<ul>
+<li>Autores: Kim Bjørn</li>
+<li>Editorial: Bjooks</li>
+<li>Año: 2017</li>
+<li>Palabras clave: sintetizadores, electrónica</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="modular-synthesis">Modular synthesis</h2>
+<ul>
+<li>Autores: Erza J. Teboul, Andreas Kitzmann, Einar Engström</li>
+<li>Editorial: Routledge</li>
+<li>Año: 2024</li>
+<li>Palabras clave: sintetizadores, electrónica</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="patch-and-tweak">Patch &amp; tweak</h2>
+<ul>
+<li>Autores: Kim Bjørn, Chris Meyer</li>
+<li>Editorial: Bjooks</li>
+<li>Año: 2018</li>
+<li>Palabras clave: sintetizadores, electrónica</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="aesthetic-programming">Aesthetic programming</h2>
+<ul>
+<li>Autores: Winnie Soon, Geoff Cox</li>
+<li>Editorial: Open Humanities Press</li>
+<li>Año: 2020</li>
+<li>Palabras clave: programación, software</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="handmade-electronic-music">Handmade electronic music</h2>
+<ul>
+<li>Autores: Nicolas Collins</li>
+<li>Editorial: Routledge</li>
+<li>Año: 2020</li>
+<li>Palabras clave: música, electrónica</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="chromatic-algorithms">Chromatic algorithms</h2>
+<ul>
+<li>Autores: Carolyn L. Kane</li>
+<li>Editorial: University of Chicago Press</li>
+<li>Año: 2014</li>
+<li>Palabras clave: arte, computador</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="processing">Processing</h2>
+<ul>
+<li>Autores: Casey Reas, Ben Fry</li>
+<li>Editorial: The MIT Press</li>
+<li>Año: 2014</li>
+<li>Palabras clave: visual, programación</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="code">Code</h2>
+<ul>
+<li>Autores: Charles Petzold</li>
+<li>Editorial: Microsoft Press</li>
+<li>Año: 2022</li>
+<li>Palabras clave: código, hardware, software</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="the-computers-that-made-the-world">The computers that made the World</h2>
+<ul>
+<li>Autores: Tim Danton</li>
+<li>Editorial: Raspberry Pi Press</li>
+<li>Año: 2025</li>
+<li>Palabras clave: computadores</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="fuentes-del-derecho">Fuentes del derecho</h2>
+<ul>
+<li>Autores: Martin Gubbins</li>
+<li>Editorial: Tácitas</li>
+<li>Año: 2010</li>
+<li>Palabras clave: poesía, chilena</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="haz-facil-lo-imposible">Haz fácil lo imposible</h2>
+<ul>
+<li>Autores: Steve Krug</li>
+<li>Editorial: Anaya Multimedia</li>
+<li>Año: 2010</li>
+<li>Palabras clave: experiencia, usuario</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="imagenes-de-imagenes-del-cuadro-a-la-pantalla">Imágenes de imágenes: del cuadro a la pantalla</h2>
+<ul>
+<li>Autores: Fernando Pérez Villalón</li>
+<li>Editorial: Mundana</li>
+<li>Año: 2023</li>
+<li>Palabras clave: análisis, estudios mediales</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="de-otras-cosas-y-el-amor">De otras cosas y el amor</h2>
+<ul>
+<li>Autores: Pacífico Carrasco Gonzales</li>
+<li>Editorial: Imprenta Fournier</li>
+<li>Año: TBD</li>
+<li>Palabras clave: poesía, chilena, amor</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="articulations">Articulations</h2>
+<ul>
+<li>Autores: Allison Parrish</li>
+<li>Editorial: Counterpath Press</li>
+<li>Año: TBD</li>
+<li>Palabras clave: poesía, programación</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="caps-lock">Caps Lock</h2>
+<ul>
+<li>Autores: Ruben Pater</li>
+<li>Editorial: Valiz</li>
+<li>Año: TBD</li>
+<li>Palabras clave: capitalismo, diseño</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="how-speak-machine">How speak machine</h2>
+<ul>
+<li>Autores: John Maeda</li>
+<li>Editorial: Portfolio Penguin</li>
+<li>Año: TBD</li>
+<li>Palabras clave: pensamiento computacional, algoritmos</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="make-analog-synthesizers">Make: analog synthesizers</h2>
+<ul>
+<li>Autores: Ray Wilson</li>
+<li>Editorial: Make Community</li>
+<li>Año: TBD</li>
+<li>Palabras clave: sonido, sintetizadores</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="pedagogy-of-hope">Pedagogy of hope</h2>
+<ul>
+<li>Autores: Paulo Freire</li>
+<li>Editorial: Bloomsbury Academic</li>
+<li>Año: TBD</li>
+<li>Palabras clave: esperanza, pedagogía</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="jeannette">Jeannette</h2>
+<ul>
+<li>Autores: Alejandra Carmona López</li>
+<li>Editorial: Planeta</li>
+<li>Año: TBD</li>
+<li>Palabras clave: Política, Biografía</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="fisica-conceptual">Física Conceptual</h2>
+<ul>
+<li>Autores: Paul G. Hewitt</li>
+<li>Editorial: Addison Wesley Longman</li>
+<li>Año: TBD</li>
+<li>Palabras clave: Física, Métodos</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="the-fitting-book">The fitting book</h2>
+<ul>
+<li>Autores: Gina Renee Dunham</li>
+<li>Editorial: Gina Renee Dunham</li>
+<li>Año: TBD</li>
+<li>Palabras clave: Patronaje, diseño</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="digital-art">Digital art</h2>
+<ul>
+<li>Autores: Christiane Paul</li>
+<li>Editorial: Thames &amp; Hudson</li>
+<li>Año: TBD</li>
+<li>Palabras clave: digital, diseño</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="patch-and-tweak-with-korg">Patch &amp; tweak with Korg</h2>
+<ul>
+<li>Autores: Kim Bjørn</li>
+<li>Editorial: Kitaro</li>
+<li>Año: TBD</li>
+<li>Palabras clave: electrónica, sintetizadores</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="inspire-the-music">Inspire the music</h2>
+<ul>
+<li>Autores: Kim Bjørn</li>
+<li>Editorial: BJOOKS</li>
+<li>Año: TBD</li>
+<li>Palabras clave: instrumentos, sintetizadores</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="album">Álbum</h2>
+<ul>
+<li>Autores: Martín Gubbins</li>
+<li>Editorial: Ediciones Tácitas</li>
+<li>Año: TBD</li>
+<li>Palabras clave: álbum, poesía</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="vector-synthesis">Vector Synthesis</h2>
+<ul>
+<li>Autores: Derek Holzer</li>
+<li>Editorial:</li>
+<li>Año: TBD</li>
+<li>Palabras clave: computación, sintetizadores</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="impressme">Impressme</h2>
+<ul>
+<li>Autores: Omar Céspedes, José Bodet</li>
+<li>Editorial:</li>
+<li>Año: TBD</li>
+<li>Palabras clave: impresión, gráfica, fabricación</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="turtles-termites-and-traffic-jams">Turtles, termites, and traffic jams</h2>
+<ul>
+<li>Autores: Mitchel Resnick</li>
+<li>Editorial: MIT Press</li>
+<li>Año: TBD</li>
+<li>Palabras clave: computación, electronica, programación</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="escalas">Escalas</h2>
+<ul>
+<li>Autores: Martín Gubbins</li>
+<li>Editorial: Mangos de Hacha</li>
+<li>Año: TBD</li>
+<li>Palabras clave: poesía</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="pioneer-works-journal">Pioneer Works Journal</h2>
+<ul>
+<li>Autores: colectivo</li>
+<li>Editorial: Pioneer Works Press</li>
+<li>Año: TBD</li>
+<li>Palabras clave: arte, música, ciencia</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="sleepwalk-with-me-and-other-painfully-true-stories">Sleepwalk with Me and Other Painfully True Stories</h2>
+<ul>
+<li>Autores: Mike Birbiglia</li>
+<li>Editorial:</li>
+<li>Año: 2010</li>
+<li>Palabras clave: autobiografía, humor</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="making-pictures-with-generative-adversarial-networks">Making Pictures with Generative Adversarial Networks</h2>
+<ul>
+<li>Autores: Casey Reas</li>
+<li>Editorial:</li>
+<li>Año: 2019</li>
+<li>Palabras clave: ensayo, computación, arte, inteligencia artificial</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="la-musica-de-ana-tijoux">La música de Ana Tijoux</h2>
+<ul>
+<li>Autores: María José Barros Cruz</li>
+<li>Editorial: Fondo de Cultura Económica, Editorial Popular</li>
+<li>Año: 2019</li>
+<li>Palabras clave: arte, música, activismo, feminismo, cultura</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="output">Output</h2>
+<ul>
+<li>Autores: Lillian-Yvonne Bertram, Nick Montfort</li>
+<li>Editorial:</li>
+<li>Año: TBD</li>
+<li>Palabras clave: computación, inteligencia artificial, algoritmos, arte</li>
+</ul>
+<p>Imágenes:</p>
+<p><img src="/public/libros-imagenes/out-put.jpeg" alt="Output"></p>
+<h2 id="being-digital">Being digital</h2>
+<ul>
+<li>Autores: Nicholas Negroponte</li>
+<li>Editorial:</li>
+<li>Año: TBD</li>
+<li>Palabras clave: computación, tecnología</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="stompbox">Stompbox</h2>
+<ul>
+<li>Autores: Eilon Paz, Dan Epstein, James Rotondi</li>
+<li>Editorial: Ten Speed Press</li>
+<li>Año: 2018</li>
+<li>Palabras clave: música, electrónica, sonido, pedales, instrumentos</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="code-as-creative-medium">Code as Creative Medium</h2>
+<ul>
+<li>Autores: Golan Levin, Tega Brain</li>
+<li>Editorial: MIT Press</li>
+<li>Año: TBD</li>
+<li>Palabras clave: programación, electrónica</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="reminded-by-the-instruments">Reminded by the Instruments</h2>
+<ul>
+<li>Autores: You Nakai</li>
+<li>Editorial: David Tudor Music</li>
+<li>Año: TBD</li>
+<li>Palabras clave: arte, instrumentos, electrónica</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="tengo-una-platita">Tengo una Platita</h2>
+<ul>
+<li>Autores: Paola Molina</li>
+<li>Editorial: Plaza &amp; Janés</li>
+<li>Año: TBD</li>
+<li>Palabras clave: ensayo, humor, sátira</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="the-book-of-knowledge-of-impractical-musical-device">The book of Knowledge of Impractical Musical Device</h2>
+<ul>
+<li>Autores: Yann Seznec</li>
+<li>Editorial:</li>
+<li>Año: TBD</li>
+<li>Palabras clave: diseño de instrumentos, arte, proyecto</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="redoble-por-rancas">Redoble por Rancas&lt;&lt;</h2>
+<ul>
+<li>Autores: Manuel Scorza</li>
+<li>Editorial: Alfaguara</li>
+<li>Año: TBD</li>
+<li>Palabras clave: Novela, Realismo mágico, Literatura</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="vintage-synthesizers">Vintage Synthesizers</h2>
+<ul>
+<li>Autores: Mark Vail</li>
+<li>Editorial: Miller Freeman Books</li>
+<li>Año: TBD</li>
+<li>Palabras clave: Música, Guía técnica, Historia de la tecnología</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="midi-for-the-professional">MIDI for the Professional</h2>
+<ul>
+<li>Autores: Paul D., Lehrman, Tim Tully</li>
+<li>Editorial: Amsco Publications</li>
+<li>Año: TBD</li>
+<li>Palabras clave:</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="patch-and-tweak-with-korg-2">Patch &amp; Tweak with Korg</h2>
+<ul>
+<li>Autores: Kim Bjørn</li>
+<li>Editorial: Bjooks</li>
+<li>Año: TBD</li>
+<li>Palabras clave: tecnología musical, guía, sintetizadores</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="the-guitar-circle">The Guitar Circle</h2>
+<ul>
+<li>Autores: Robert Fripp</li>
+<li>Editorial: Discipline Global Mobile</li>
+<li>Año: TBD</li>
+<li>Palabras clave: música, filosofía, guitarra</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="mindstorms">Mindstorms</h2>
+<ul>
+<li>Autores: Seymour Papert</li>
+<li>Editorial: Basic Books</li>
+<li>Año: TBD</li>
+<li>Palabras clave: educación, programación</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="electronica-digital-logica-digital-integrada">Electrónica Digital Lógica Digital Integrada</h2>
+<ul>
+<li>Autores: Santiago Acha, Manuel Castro, Julio Pérez, Miguel Rioseras</li>
+<li>Editorial: Alfaomega</li>
+<li>Año: TBD</li>
+<li>Palabras clave: electrónica digital, lógica combinacional, simulación</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="serious-python">Serious Python</h2>
+<ul>
+<li>Autores: Julien Danjou</li>
+<li>Editorial:</li>
+<li>Año: TBD</li>
+<li>Palabras clave: electrónica digital, lógica combinacional, simulación</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="object-oriented-python">Object-Oriented Python</h2>
+<ul>
+<li>Autores: Irv Kalb</li>
+<li>Editorial: No Starch Press</li>
+<li>Año: TBD</li>
+<li>Palabras clave: electrónica digital, lógica combinacional, simulación</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="automate-the-boring-stuff-with-python">Automate the Boring Stuff with Python</h2>
+<ul>
+<li>Autores: Al Sweigart</li>
+<li>Editorial: No Starch Press</li>
+<li>Año: TBD</li>
+<li>Palabras clave: automatización, procesamiento de datos, productividad</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="political-interventions">Political Interventions</h2>
+<ul>
+<li>Autores: Dominik Landwehr, Christoph Wachter, Mathias Jud</li>
+<li>Editorial: Migros-Kulturprozent</li>
+<li>Año: TBD</li>
+<li>Palabras clave: cultura digital, activismo, intervención política</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="depeloping-synthesizers-with-vcv-rack">Depeloping synthesizers with vcv rack</h2>
+<ul>
+<li>Autores: Leonardo Gabrielli</li>
+<li>Editorial: Focal Press</li>
+<li>Año: TBD</li>
+<li>Palabras clave: síntesis modular, audio digital, VCV Rack</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="hello-robot">Hello, Robot</h2>
+<ul>
+<li>Autores: Mateo Kries, Christoph Thun-Hohenstein, Amelie Klein</li>
+<li>Editorial:</li>
+<li>Año: TBD</li>
+<li>Palabras clave: robótica, interacción humano-máquina, inteligencia artificial</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="design-an-rp2040-board-with-kicad">Design an rp2040 Board with Kicad</h2>
+<ul>
+<li>Autores: Jo Hinchliffe, Ben Everard</li>
+<li>Editorial: Raspberry Pi Press</li>
+<li>Año: TBD</li>
+<li>Palabras clave: KiCad, PCB, Hardware</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="el-jinete-inmenso">El Jinete Inmenso</h2>
+<ul>
+<li>Autores: Manuel Scorza</li>
+<li>Editorial: Siglo Veintiuno Editores</li>
+<li>Año: TBD</li>
+<li>Palabras clave: Novela, Literatura peruana, Conflictos agrarios</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="la-tumba-del-relampago">La tumba del Relámpago</h2>
+<ul>
+<li>Autores: Manuel Scorza</li>
+<li>Editorial: Siglo Veintiuno Editores</li>
+<li>Año: TBD</li>
+<li>Palabras clave: Novela, Literatura peruana, Conflictos agrarios</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="cantar-de-agapito-robles">Cantar de Agapito Robles</h2>
+<ul>
+<li>Autores: Manuel Scorza</li>
+<li>Editorial: Siglo Veintiuno Editores</li>
+<li>Año: TBD</li>
+<li>Palabras clave: Novela, Literatura peruana, Conflictos agrarios</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="la-danza-inmovil">La Danza inmóvil</h2>
+<ul>
+<li>Autores: Manuel Scorza</li>
+<li>Editorial: Siglo Veintiuno Editores</li>
+<li>Año: TBD</li>
+<li>Palabras clave: Novela, Literatura peruana, Conflictos agrarios</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="redoble-por-rancas-2">Redoble por Rancas</h2>
+<ul>
+<li>Autores: Manuel Scorza</li>
+<li>Editorial: Siglo Veintiuno Editores</li>
+<li>Año: TBD</li>
+<li>Palabras clave: Novela, Literatura peruana, Conflictos agrarios</li>
+</ul>
+<p>Imágenes:</p>
+<h2 id="garabombo-el-invisible">Garabombo el Invisible</h2>
+<ul>
+<li>Autores: Manuel Scorza</li>
+<li>Editorial: Siglo Veintiuno Editores</li>
+<li>Año: TBD</li>
+<li>Palabras clave: Novela, Literatura peruana, Conflictos agrarios</li>
+</ul>
+<p>Imágenes:</p>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer class="cell footer">
+			<span class="scrolling-text">Laboratorio de Interacción Digital &nbsp;—&nbsp; LID UDP &nbsp;—&nbsp; Universidad Diego Portales &nbsp;—&nbsp; Facultad de Arquitectura, Arte y Diseño &nbsp;—&nbsp; Santiago, Chile &nbsp;—&nbsp; LID UDP &nbsp;—&nbsp; Diseño de Interacción &nbsp;—&nbsp; Interfaces Humano-Computador &nbsp;—&nbsp; Diseño de Máquinas Electrónicas</span>
+		</footer>
+
+		
+
+		<script type="module" src="/dist/V_mL3VoQ1Z.js"></script>
+	</body>
+</html>

@@ -1,0 +1,791 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>LID UDP</title>
+		<meta name="description" content="Laboratorio de Interacción Digital, Universidad Diego Portales">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="LID UDP">
+
+		
+		<style>/* === VARIABLES === */
+:root {
+	--bg: #000000;
+	--text: #ffffff;
+	--accent: #FF2D78;
+	--accent-alt: #FF10F0;
+	--nav-bg: #000000;
+	--nav-text: #FF2D78;
+	--line: rgba(255, 45, 120, 0.25);
+	--font-main: 'Inter', sans-serif;
+	--font-tech: 'Space Mono', monospace;
+	--sidebar-width: 240px;
+	--header-height: 50px;
+	--footer-height: 40px;
+	--syntax-tab-size: 2;
+}
+
+/* === RESET === */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+/* === BASE === */
+html {
+	overflow-y: hidden;
+}
+
+html,
+body {
+	height: 100%;
+	font-family: var(--font-main);
+	background-color: var(--bg);
+	color: var(--text);
+	cursor: none;
+	text-transform: lowercase;
+}
+
+/* === LAYOUT GRID === */
+body {
+	display: grid;
+	grid-template-columns: var(--sidebar-width) 1fr;
+	grid-template-rows: var(--header-height) 1fr var(--footer-height);
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+	border: 1px solid var(--line);
+	transition: grid-template-columns 0.3s ease;
+}
+
+body.nav-collapsed {
+	grid-template-columns: 0px 1fr;
+}
+
+/* === CELL BASE === */
+.cell {
+	border: 0.5px solid var(--line);
+	overflow: hidden;
+}
+
+/* === HEADER === */
+.header {
+	grid-column: 1 / -1;
+	grid-row: 1;
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	padding: 0 20px;
+	font-family: var(--font-tech);
+	font-size: 12px;
+	letter-spacing: 1px;
+	background: var(--bg);
+	border-bottom: 0.5px solid var(--line);
+}
+
+.brand {
+	font-weight: 700;
+	color: var(--accent);
+	text-decoration: none;
+}
+
+#nav-toggle {
+	background: none;
+	border: 1px solid var(--line);
+	color: var(--accent);
+	cursor: pointer;
+	padding: 5px 12px;
+	font-family: var(--font-tech);
+	font-size: 14px;
+	line-height: 1;
+	flex-shrink: 0;
+	transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+
+#nav-toggle:hover {
+	border-color: var(--accent);
+	background: var(--accent);
+	color: var(--bg);
+}
+
+/* === SIDEBAR === */
+.sidebar {
+	grid-column: 1;
+	grid-row: 2;
+	background: var(--nav-bg);
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	overflow: hidden;
+	transition: padding 0.3s ease;
+}
+
+body.nav-collapsed .sidebar {
+	padding: 0;
+}
+
+.dir-header {
+	font-size: 10px;
+	color: var(--nav-text);
+	font-family: var(--font-tech);
+	letter-spacing: 1px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid rgba(255, 45, 120, 0.3);
+	margin-bottom: 20px;
+	white-space: nowrap;
+}
+
+.nav-list {
+	list-style: none;
+}
+
+.nav-list li {
+	padding: 8px 0;
+	display: flex;
+	align-items: center;
+	border-bottom: 0.5px solid transparent;
+	transition: all 0.2s ease;
+	white-space: nowrap;
+}
+
+.nav-list li:hover {
+	border-bottom: 0.5px solid rgba(255, 45, 120, 0.4);
+	padding-left: 5px;
+}
+
+.nav-list a {
+	text-decoration: none;
+	color: var(--nav-text);
+	font-size: 13px;
+	font-family: var(--font-tech);
+}
+
+.nav-list a[aria-current="page"] {
+	font-weight: 700;
+	text-decoration: underline;
+}
+
+/* === MAIN CONTENT === */
+.main-content {
+	grid-column: 2;
+	grid-row: 2;
+	overflow-y: auto;
+	padding: 40px 5%;
+}
+
+/* === FOOTER === */
+.footer {
+	grid-column: 1 / -1;
+	grid-row: 3;
+	background: var(--bg);
+	border-top: 0.5px solid var(--accent);
+	color: var(--accent);
+	font-family: var(--font-tech);
+	font-size: 11px;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+	white-space: nowrap;
+	letter-spacing: 0.5px;
+}
+
+.scrolling-text {
+	display: inline-block;
+	padding-left: 100vw;
+	animation: scroll-left 35s linear infinite;
+}
+
+@keyframes scroll-left {
+	from {
+		transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(-100%);
+	}
+}
+
+/* === TIPOGRAFÍA === */
+h1 {
+	font-size: clamp(3rem, 10vw, 12rem);
+	font-weight: 900;
+	line-height: 0.92;
+	letter-spacing: -3px;
+	margin-bottom: 2rem;
+	transition: letter-spacing 0.6s cubic-bezier(0.22, 1, 0.36, 1), color 0.3s;
+	cursor: pointer;
+}
+
+h1:hover {
+	letter-spacing: 12px;
+	color: var(--accent);
+}
+
+h2 {
+	font-family: var(--font-tech);
+	color: var(--accent);
+	font-size: 1.1rem;
+	letter-spacing: 1px;
+	margin: 2.5rem 0 1rem;
+}
+
+h3 {
+	font-family: var(--font-tech);
+	font-size: 0.95rem;
+	margin: 1.5rem 0 0.5rem;
+}
+
+p {
+	line-height: 1.6;
+	margin-bottom: 1em;
+	font-size: 0.95rem;
+	max-width: 72ch;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+
+ul,
+ol {
+	padding-left: 1.5rem;
+	margin-bottom: 1em;
+}
+
+li {
+	line-height: 1.6;
+	font-size: 0.95rem;
+}
+
+a[href] {
+	color: var(--accent);
+}
+
+a[href]:visited {
+	color: var(--accent-alt);
+}
+
+a[href]:hover,
+a[href]:active {
+	color: var(--text);
+}
+
+/* === CURSOR PERSONALIZADO === */
+#cursor {
+	width: 12px;
+	height: 12px;
+	background-color: var(--accent);
+	border-radius: 50%;
+	position: fixed;
+	pointer-events: none;
+	z-index: 10000;
+	transform: translate(-50%, -50%);
+	transition: transform 0.08s ease;
+}
+
+/* === CÓDIGO === */
+pre,
+code {
+	font-family: var(--font-tech);
+}
+
+pre:not([class*="language-"]) {
+	background: rgba(255, 255, 255, 0.05);
+	padding: 1rem;
+	overflow-x: auto;
+	border: 0.5px solid var(--line);
+	margin: 1rem 0;
+	line-height: 1.4;
+	-moz-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+}
+
+code {
+	word-break: break-all;
+	font-size: 0.875em;
+}
+
+/* === IMÁGENES === */
+img {
+	max-width: 100%;
+}
+
+img[width][height] {
+	height: auto;
+}
+
+img[src$=".svg"] {
+	width: 100%;
+	height: auto;
+	max-width: none;
+}
+
+.libro-img {
+	width: 180px;
+	height: 240px;
+	object-fit: cover;
+	object-position: center;
+	margin: 6px;
+	border-radius: 6px;
+}
+
+video,
+iframe {
+	width: 100%;
+	height: auto;
+}
+
+iframe {
+	aspect-ratio: 16/9;
+}
+
+/* === SKIP LINK === */
+#skip-link {
+	text-decoration: none;
+	background: var(--bg);
+	color: var(--text);
+	padding: 0.5rem 1rem;
+	border: 1px solid var(--line);
+}
+
+#skip-link.visually-hidden:focus {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	z-index: 999;
+}
+
+/* === ACCESIBILIDAD === */
+.visually-hidden:not(:focus):not(:active) {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* === LISTA DE POSTS === */
+.postlist {
+	list-style: none;
+	padding: 0;
+}
+
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5em;
+	margin-bottom: 1.5em;
+	padding-bottom: 1.5em;
+	border-bottom: 0.5px solid var(--line);
+}
+
+.postlist-link {
+	font-size: 1.1em;
+	font-weight: 700;
+	flex-basis: 100%;
+	text-underline-position: from-font;
+}
+
+.postlist-date {
+	font-size: 0.8em;
+	color: rgba(255, 255, 255, 0.4);
+	font-family: var(--font-tech);
+}
+
+/* === NAVEGACIÓN ANTERIOR/SIGUIENTE === */
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: 1em;
+	list-style: none;
+	padding: 1em 0 0;
+	border-top: 0.5px solid var(--line);
+	margin-top: 2em;
+}
+
+.links-nextprev-next {
+	text-align: right;
+}
+
+/* === ETIQUETAS === */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	font-style: italic;
+	font-size: 0.85em;
+	color: var(--accent);
+}
+
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: 0.5em;
+	list-style: none;
+	padding: 0;
+	margin: 0 0 2rem;
+	font-family: var(--font-tech);
+	font-size: 0.8em;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.post-metadata time {
+	margin-right: 1em;
+}
+
+table {
+	margin: 1em 0;
+	border-collapse: collapse;
+}
+
+table td,
+table th {
+	padding: 0.5em 1em 0.5em 0;
+	border-bottom: 0.5px solid var(--line);
+}
+
+@media (max-width: 768px) {
+	:root {
+		--sidebar-width: 100vw;
+		--header-height: 60px;
+		--content-padding: 24px 4%;
+	}
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: clamp(3rem, 10vw, 12rem);
+    font-weight: 900;
+    line-height: 0.92;
+    letter-spacing: -3px;
+    margin-bottom: 2rem;
+    cursor: pointer;
+
+    /* Scroll-driven animation */
+    animation: titulo-scroll linear both;
+    animation-timeline: scroll();
+    animation-range: 0px 300px; /* empieza a cambiar desde 0 hasta 300px de scroll */
+  }
+}
+
+@keyframes titulo-scroll {
+  from {
+    letter-spacing: -3px;
+    color: inherit;
+  }
+  to {
+    letter-spacing: 12px;
+    color: var(--accent);
+  }
+}</style>
+
+		
+	</head>
+	<body>
+		<div id="cursor"></div>
+		<a href="#main" id="skip-link" class="visually-hidden">Ir al contenido principal</a>
+
+		<header class="cell header">
+			<button id="nav-toggle" aria-label="Colapsar navegación" aria-expanded="true">☰</button>
+			<a href="/" class="brand">LID UDP</a>
+		</header>
+
+		<aside class="cell sidebar" id="sidebar">
+			<nav aria-label="Menú principal">
+				<div class="dir-header">Navegación</div>
+				<ul class="nav-list">
+					<li><a href="/">Info</a></li>
+					<li><a href="/personas/">Personas</a></li>
+					<li><a href="/cursos/">Cursos</a></li>
+					<li><a href="/investigacion/">Investigación</a></li>
+					<li><a href="/eventos/">Eventos</a></li>
+					<li><a href="/residencias/">Residencias</a></li>
+					<li><a href="/biblioteca/">Biblioteca</a></li>
+					<li><a href="/feed/feed.xml"></a></li>
+				</ul>
+			</nav>
+		</aside>
+
+		<main class="cell main-content" id="main">
+			<heading-anchors>
+				
+
+<h1 id="sintetizadores">Sintetizadores</h1>
+<h2 id="moog-subharmonicon">Moog Subharmonicon</h2>
+<p>Categorías: sintetizador, analógico, semimodular, polirítmico</p>
+<p>Enlaces:</p>
+<ul>
+<li><a href="https://www.moogmusic.com/synthesizers/subharmonicon/">https://www.moogmusic.com/synthesizers/subharmonicon/</a></li>
+</ul>
+<p>Imágenes:</p>
+<img src="/public/sintetizadores-imagenes/moog-01.jpeg" alt="Moog Subharmonicon">
+<h2 id="moog-mother-32">Moog Mother-32</h2>
+<p>Categorías: sintetizador, semimodular, analógico</p>
+<p>Enlaces:</p>
+<ul>
+<li><a href="https://www.moogmusic.com/synthesizers/mother-32/">https://www.moogmusic.com/synthesizers/mother-32/</a></li>
+</ul>
+<p>Imágenes:</p>
+<img src="/public/sintetizadores-imagenes/moog-02.jpeg" alt="Moog Mother-32">
+<h2 id="moog-dfam">Moog DFAM</h2>
+<p>Categorías: sintetizador, semimodular, percusión, analógico</p>
+<p>Enlaces:</p>
+<ul>
+<li><a href="https://www.moogmusic.com/synthesizers/dfam/">https://www.moogmusic.com/synthesizers/dfam/</a></li>
+</ul>
+<p>Imágenes:</p>
+<img src="/public/sintetizadores-imagenes/moog-03.jpeg" alt="Moog DFAM">
+<h2 id="dave-smith-instruments-mopho">Dave Smith Instruments Mopho</h2>
+<p>Categorías: sintetizador, monofónico, analógico</p>
+<p>Enlaces:</p>
+<ul>
+<li><a href="https://www.soundonsound.com/reviews/dave-smith-instruments-mopho">https://www.soundonsound.com/reviews/dave-smith-instruments-mopho</a></li>
+</ul>
+<p>Imágenes:</p>
+<img src="/public/sintetizadores-imagenes/dave-smith-instruments-01.jpeg" alt="Dave Smith Instruments Mopho">
+<h2 id="asturia-minilab-3">Asturia MiniLab 3</h2>
+<p>Categorías: controlador</p>
+<p>Enlaces:</p>
+<ul>
+<li><a href="https://www.arturia.com/es/products/hybrid-synths/minilab-3/overview">https://www.arturia.com/es/products/hybrid-synths/minilab-3/overview</a></li>
+</ul>
+<p>Imágenes:</p>
+<img src="/public/sintetizadores-imagenes/asturia-01.jpeg" alt="Asturia MiniLab 3">
+<h2 id="korg-minilogue">Korg Minilogue</h2>
+<p>Categorías: sintetizador, polifónico, analógico</p>
+<p>Enlaces:</p>
+<ul>
+<li><a href="https://www.korg.com/cl/products/synthesizers/minilogue/">https://www.korg.com/cl/products/synthesizers/minilogue/</a></li>
+</ul>
+<p>Imágenes:</p>
+<img src="/public/sintetizadores-imagenes/korg-01.jpeg" alt="Korg Minilogue">
+<h2 id="korg-volca-sample">Korg Volca Sample</h2>
+<p>Categorías: secuenciador, sampler, digital</p>
+<p>Enlaces:</p>
+<ul>
+<li><a href="https://www.korg.com/cl/products/dj/volca_sample/index.php">https://www.korg.com/cl/products/dj/volca_sample/index.php</a></li>
+</ul>
+<p>Imágenes:</p>
+<img src="/public/sintetizadores-imagenes/korg-02.jpeg" alt="Korg Volca Sample">
+<h2 id="korg-volca-sample-2">Korg Volca Sample</h2>
+<p>Categorías: secuenciador, sampler, digital</p>
+<p>Enlaces:</p>
+<ul>
+<li><a href="https://www.korg.com/cl/products/dj/volca_sample/index.php">https://www.korg.com/cl/products/dj/volca_sample/index.php</a></li>
+</ul>
+<p>Imágenes:</p>
+<img src="/public/sintetizadores-imagenes/korg-03.jpeg" alt="Korg Volca Sample">
+<h2 id="korg-sq-64-poly-secuencer">Korg SQ-64 Poly Secuencer</h2>
+<p>Categorías: secuenciador, polifónico</p>
+<p>Enlaces:</p>
+<ul>
+<li><a href="https://www.korg.com/cl/products/dj/sq_64/">https://www.korg.com/cl/products/dj/sq_64/</a></li>
+</ul>
+<p>Imágenes:</p>
+<img src="/public/sintetizadores-imagenes/korg-04.jpeg" alt="Korg SQ-64 Poly Secuencer">
+<h2 id="korg-sdd-3000-pedal">Korg SDD-3000 Pedal</h2>
+<p>Categorías: pedal, preamplificador, analógico, delay</p>
+<p>Enlaces:</p>
+<ul>
+<li><a href="https://www.korg.com/nz/products/effects/sdd3000_pedal/">https://www.korg.com/nz/products/effects/sdd3000_pedal/</a></li>
+</ul>
+<p>Imágenes:</p>
+<img src="/public/sintetizadores-imagenes/korg-05.jpeg" alt="Korg SDD-3000 Pedal">
+<h2 id="novation-launch-control-xl">Novation Launch Control XL</h2>
+<p>Categorías: controlador MIDI</p>
+<p>Enlaces:</p>
+<ul>
+<li>[NO ENCONTRE](NO ENCONTRE)</li>
+</ul>
+<p>Imágenes:</p>
+<img src="/public/sintetizadores-imagenes/novation-01.jpeg" alt="Novation Launch Control XL">
+<h2 id="roland-tr-08">Roland TR-08</h2>
+<p>Categorías: caja de ritmos, percusión</p>
+<p>Enlaces:</p>
+<ul>
+<li><a href="https://www.roland.com/es-es/products/tr-08/">https://www.roland.com/es-es/products/tr-08/</a></li>
+</ul>
+<p>Imágenes:</p>
+<img src="/public/sintetizadores-imagenes/roland-01.jpeg" alt="Roland TR-08">
+<h2 id="roland-vt-4">Roland VT-4</h2>
+<p>Categorías: transformador de voz, procesador</p>
+<p>Enlaces:</p>
+<ul>
+<li><a href="https://www.roland.com/us/products/vt-4/">https://www.roland.com/us/products/vt-4/</a></li>
+</ul>
+<p>Imágenes:</p>
+<img src="/public/sintetizadores-imagenes/roland-02.jpeg" alt="Roland VT-4">
+<h2 id="electro-harmonix-8-step-program">Electro Harmonix 8 Step Program</h2>
+<p>Categorías: secuenciador, analógico</p>
+<p>Enlaces:</p>
+<ul>
+<li><a href="https://www.ehx.com/products/8-step-program/">https://www.ehx.com/products/8-step-program/</a></li>
+</ul>
+<p>Imágenes:</p>
+<img src="/public/sintetizadores-imagenes/electro-harmonix-01.jpeg" alt="Electro Harmonix 8 Step Program">
+<h2 id="electro-harmonix-tri-parallel-mixer">Electro Harmonix Tri Parallel Mixer</h2>
+<p>Categorías: pedal</p>
+<p>Enlaces:</p>
+<ul>
+<li><a href="https://www.ehx.com/products/tri-parallel-mixer/">https://www.ehx.com/products/tri-parallel-mixer/</a></li>
+</ul>
+<p>Imágenes:</p>
+<img src="/public/sintetizadores-imagenes/electro-harmonix-02.jpeg" alt="Electro Harmonix Tri Parallel Mixer">
+<h2 id="electro-faustus-ef102-photo-theremin">Electro Faustus EF102 Photo Theremin</h2>
+<p>Categorías: pedal, analógico</p>
+<p>Enlaces:</p>
+<ul>
+<li><a href="https://www.electrofaustus.com/ef102-photo-theremin">https://www.electrofaustus.com/ef102-photo-theremin</a></li>
+</ul>
+<p>Imágenes:</p>
+<img src="/public/sintetizadores-imagenes/electro-faustus-01.jpeg" alt="Electro Faustus EF102 Photo Theremin">
+<h2 id="electro-faustus-drone-thing">Electro Faustus Drone Thing</h2>
+<p>Categorías: sintetizador, analógico</p>
+<p>Enlaces:</p>
+<ul>
+<li><a href="https://www.electrofaustus.com/shop/p/ef109-drone-thing">https://www.electrofaustus.com/shop/p/ef109-drone-thing</a></li>
+</ul>
+<p>Imágenes:</p>
+<img src="/public/sintetizadores-imagenes/electro-faustus-02.jpeg" alt="Electro Faustus Drone Thing">
+<h2 id="electro-faustus-ef101d-deluxe-dual-oscillator">Electro Faustus EF101D Deluxe Dual Oscillator</h2>
+<p>Categorías: pedal, efectos, digital</p>
+<p>Enlaces:</p>
+<ul>
+<li>[NO ENCONTRE](NO ENCONTRE)</li>
+</ul>
+<p>Imágenes:</p>
+<img src="/public/sintetizadores-imagenes/electro-faustus-03.jpeg" alt="Electro Faustus EF101D Deluxe Dual Oscillator">
+<h2 id="bastl-instruments-microgranny-mg-2">Bastl Instruments Microgranny MG 2</h2>
+<p>Categorías: sampler, monofónico</p>
+<p>Enlaces:</p>
+<ul>
+<li><a href="https://bastl-instruments.com/instruments/microgranny">https://bastl-instruments.com/instruments/microgranny</a></li>
+</ul>
+<p>Imágenes:</p>
+<img src="/public/sintetizadores-imagenes/bastl-instruments-01.jpeg" alt="Bastl Instruments Microgranny MG 2">
+<h2 id="bastl-instruments-microgranny-mg-2-2">Bastl Instruments Microgranny MG 2</h2>
+<p>Categorías: sampler, monofónico</p>
+<p>Enlaces:</p>
+<ul>
+<li><a href="https://bastl-instruments.com/instruments/microgranny">https://bastl-instruments.com/instruments/microgranny</a></li>
+</ul>
+<p>Imágenes:</p>
+<img src="/public/sintetizadores-imagenes/bastl-instruments-03.jpeg" alt="Bastl Instruments Microgranny MG 2">
+<h2 id="bastl-instruments-illuminati">Bastl Instruments Illuminati</h2>
+<p>Categorías: sintetizador, semimodular, percusión, analógico, monofónico, polifónico, polirítmico</p>
+<p>Enlaces:</p>
+<ul>
+<li><a href="https://bastl-instruments.com/instruments/illuminati">https://bastl-instruments.com/instruments/illuminati</a></li>
+</ul>
+<p>Imágenes:</p>
+<img src="/public/sintetizadores-imagenes/bastl-instruments-02.jpeg" alt="Bastl Instruments Illuminati">
+<h2 id="make-noise-music-01-0-ctrl">Make Noise Music-01 0-CTRL</h2>
+<p>Categorías: secuenciador, analógico, controlador</p>
+<p>Enlaces:</p>
+<ul>
+<li><a href="https://www.makenoisemusic.com/synthesizers-and-controllers/0-ctrl/">https://www.makenoisemusic.com/synthesizers-and-controllers/0-ctrl/</a></li>
+</ul>
+<p>Imágenes:</p>
+<img src="/public/sintetizadores-imagenes/make-noise-music-01.jpeg" alt="Make Noise Music-01 0-CTRL">
+<h2 id="dunn-effects-subaquatic">Dunn Effects SubaQuatic</h2>
+<p>Categorías: pedal</p>
+<p>Enlaces:</p>
+<ul>
+<li>[NO ENCONTRE](NO ENCONTRE)</li>
+</ul>
+<p>Imágenes:</p>
+<img src="/public/sintetizadores-imagenes/dunn-effects-01.jpeg" alt="Dunn Effects SubaQuatic">
+<h2 id="focusrite-clarett-4pre">Focusrite Clarett 4Pre</h2>
+<p>Categorías: interfaz</p>
+<p>Enlaces:</p>
+<ul>
+<li><a href="https://focusrite.com/products/clarett-plus-4pre">https://focusrite.com/products/clarett-plus-4pre</a></li>
+</ul>
+<p>Imágenes:</p>
+<img src="/public/sintetizadores-imagenes/focusrite-01.jpeg" alt="Focusrite Clarett 4Pre">
+<h2 id="hikari-instruments-monos-cv">Hikari Instruments Monos CV</h2>
+<p>Categorías: sintetizador</p>
+<p>Enlaces:</p>
+<ul>
+<li><a href="http://hikari-ins.shop-pro.jp/?pid=138476888">http://hikari-ins.shop-pro.jp/?pid=138476888</a></li>
+</ul>
+<p>Imágenes:</p>
+<img src="/public/sintetizadores-imagenes/hikari-instruments-01.jpeg" alt="Hikari Instruments Monos CV">
+<h2 id="oficina-de-sonido-la-golden-acapulco-dub-siren">Oficina de Sonido La Golden Acapulco Dub Siren</h2>
+<p>Categorías: sintetizador, sampler, monofónico, analógico</p>
+<p>Enlaces:</p>
+<ul>
+<li><a href="https://pablodelcielo.com/La-Golden-Acapulco-Sirena-Dub-Sampler">https://pablodelcielo.com/La-Golden-Acapulco-Sirena-Dub-Sampler</a></li>
+</ul>
+<p>Imágenes:</p>
+<img src="/public/sintetizadores-imagenes/oficina-de-sonido-01.jpeg" alt="Oficina de Sonido La Golden Acapulco Dub Siren">
+<h2 id="roger-linn-design-adrenalinn-iii">Roger Linn Design AdrenaLinn III</h2>
+<p>Categorías: procesador de efectos</p>
+<p>Enlaces:</p>
+<ul>
+<li><a href="https://www.rogerlinndesign.com/about/adrenalinn">https://www.rogerlinndesign.com/about/adrenalinn</a></li>
+</ul>
+<p>Imágenes:</p>
+<img src="/public/sintetizadores-imagenes/roger-linn-01.jpeg" alt="Roger Linn Design AdrenaLinn III">
+<h2 id="floating-forest-pedals-drifter">Floating Forest Pedals Drifter</h2>
+<p>Categorías: pedal, delay</p>
+<p>Enlaces:</p>
+<ul>
+<li><a href="https://www.floatingforestpedals.com/shop/drifter"> https://www.floatingforestpedals.com/shop/drifter</a></li>
+</ul>
+<p>Imágenes:</p>
+<img src="/public/sintetizadores-imagenes/floating-forest-pedals-01.jpeg" alt="Floating Forest Pedals Drifter">
+<h2 id="critter-and-guitari-bolsa-bass">Critter and Guitari Bolsa Bass</h2>
+<p>Categorías: sintetizador, monofónico, secuenciador</p>
+<p>Enlaces:</p>
+<ul>
+<li><a href="https://www.critterandguitari.com/blog-tags/bolsa-bass">https://www.critterandguitari.com/blog-tags/bolsa-bass</a></li>
+</ul>
+<p>Imágenes:</p>
+<img src="/public/sintetizadores-imagenes/critter-and-guitari-01.jpeg" alt="Critter and Guitari Bolsa Bass">
+<h2 id="critter-and-guitari-pocket-piano">Critter and Guitari Pocket Piano</h2>
+<p>Categorías: sintetizador, monofónico</p>
+<p>Enlaces:</p>
+<ul>
+<li><a href="https://www.critterandguitari.com/pocket-piano">https://www.critterandguitari.com/pocket-piano</a></li>
+</ul>
+<p>Imágenes:</p>
+<img src="/public/sintetizadores-imagenes/critter-and-guitari-02.jpeg" alt="Critter and Guitari Pocket Piano">
+<h2 id="critter-and-guitari-kaleidoloop">Critter and Guitari Kaleidoloop</h2>
+<p>Categorías: sampler, looper</p>
+<p>Enlaces:</p>
+<ul>
+<li><a href="https://www.critterandguitari.com/kaleidoloop">https://www.critterandguitari.com/kaleidoloop</a></li>
+</ul>
+<p>Imágenes:</p>
+<img src="/public/sintetizadores-imagenes/critter-and-guitari-03.jpeg" alt="Critter and Guitari Kaleidoloop">
+<h2 id="critter-and-guitari-kaleidoloop-2">Critter and Guitari Kaleidoloop</h2>
+<p>Categorías: sampler, looper</p>
+<p>Enlaces:</p>
+<ul>
+<li><a href="https://www.critterandguitari.com/kaleidoloop">https://www.critterandguitari.com/kaleidoloop</a></li>
+</ul>
+<p>Imágenes:</p>
+<img src="/public/sintetizadores-imagenes/critter-and-guitari-04.jpeg" alt="Critter and Guitari Kaleidoloop">
+
+
+			</heading-anchors>
+		</main>
+
+		<footer class="cell footer">
+			<span class="scrolling-text">Laboratorio de Interacción Digital &nbsp;—&nbsp; LID UDP &nbsp;—&nbsp; Universidad Diego Portales &nbsp;—&nbsp; Facultad de Arquitectura, Arte y Diseño &nbsp;—&nbsp; Santiago, Chile &nbsp;—&nbsp; LID UDP &nbsp;—&nbsp; Diseño de Interacción &nbsp;—&nbsp; Interfaces Humano-Computador &nbsp;—&nbsp; Diseño de Máquinas Electrónicas</span>
+		</footer>
+
+		
+
+		<script type="module" src="/dist/V_mL3VoQ1Z.js"></script>
+	</body>
+</html>
