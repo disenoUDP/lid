@@ -5,14 +5,14 @@ cursos:
     semestres:
       - semestre: "2026-1"
         secciones:
-        - seccion: 1
-          profes: ["Aarón Montoya", "Matías Serrano"]
-          ayudantes: ["Emilia Guerra"]
+          - seccion: 1
+            profes: ["Aarón Montoya", "Matías Serrano"]
+            ayudantes: ["Emilia Guerra"]
       - semestre: "2025-1"
         secciones:
-        - seccion: 1
-          profes: ["Aarón Montoya", "Matías Serrano"]
-          ayudantes: ["Andrés Martin"]
+          - seccion: 1
+            profes: ["Aarón Montoya", "Matías Serrano"]
+            ayudantes: ["Andrés Martin"]
   - sigla: "DIS8645"
     nombre: "Taller de diseño de máquinas computacionales"
     semestres:
@@ -21,29 +21,37 @@ cursos:
           - seccion: 1
             profes: ["Aarón Montoya", "Matías Serrano"]
             ayudantes: ["Janis Sepúlveda", "Mateo Arce"]
+  - sigla: "DIS8652"
+    nombre: "Taller de visualización experimental de datos"
+    semestres:
+      - semestre: "2026-1"
+        secciones:
+          - seccion: 1
+            profes: ["Sergio Mora", "Joaquín González"]
+            ayudantes: [""]
   - sigla: "DIS09214"
     nombre: "Pensamiento computacional"
     semestres:
       - semestre: "2026-1"
         secciones:
           - seccion: 1
-            profes: [""]
-            ayudantes: ["", ""]
+            profes: ["Christian Oyarzún"]
+            ayudantes: ["Morgan Aravena"]
           - seccion: 2
-            profes: [""]
-            ayudantes: [""]
+            profes: ["Paulina Mujica"]
+            ayudantes: ["Janis Sepúlveda"]
           - seccion: 3
-            profes: [""]
+            profes: ["Sofía Suazo"]
             ayudantes: [""]
           - seccion: 4
-            profes: ["aarón montoya"]
-            ayudantes: ["vania paredes"]
+            profes: ["Aarón Montoya"]
+            ayudantes: ["Vania Paredes"]
           - seccion: 5
-            profes: ["matías serrano"]
-            ayudantes: ["santiago gaete"]
+            profes: ["Matías Serrano"]
+            ayudantes: ["Santiago Gaete"]
           - seccion: 6
-            profes: [""]
-            ayudantes: ["", ""]
+            profes: ["Sofía Suazo"]
+            ayudantes: [""]
   - sigla: "DIS8637"
     nombre: "Taller de experiencia de usuario UX"
     semestres:
@@ -70,8 +78,3 @@ cursos:
           - seccion: 1
             profes: ["Sergio Majluf", "Aarón Montoya"]
             ayudantes: [""]
-  
-
-
-        
-        
