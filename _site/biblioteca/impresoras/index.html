@@ -362,6 +362,87 @@ iframe {
 	z-index: 999;
 }
 
+/* === FILTROS DE CURSOS === */
+.cursos-filtros {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	align-items: flex-end;
+	margin-bottom: 2.5rem;
+	padding: 1rem;
+	border: 0.5px solid var(--line);
+}
+
+.filtro-grupo {
+	display: flex;
+	flex-direction: column;
+	gap: 0.3rem;
+}
+
+.filtro-grupo label {
+	font-family: var(--font-tech);
+	font-size: 10px;
+	color: var(--accent);
+	letter-spacing: 1px;
+}
+
+.filtro-grupo select {
+	background: var(--bg);
+	color: var(--text);
+	border: 0.5px solid var(--line);
+	font-family: var(--font-tech);
+	font-size: 12px;
+	padding: 6px 10px;
+	cursor: pointer;
+	min-width: 160px;
+	appearance: none;
+	-webkit-appearance: none;
+}
+
+.filtro-grupo select:focus {
+	outline: none;
+	border-color: var(--accent);
+}
+
+#filtro-reset {
+	background: none;
+	border: 0.5px solid var(--line);
+	color: var(--accent);
+	font-family: var(--font-tech);
+	font-size: 11px;
+	padding: 6px 14px;
+	cursor: pointer;
+	letter-spacing: 0.5px;
+	transition: background 0.2s, color 0.2s, border-color 0.2s;
+	align-self: flex-end;
+}
+
+#filtro-reset:hover {
+	background: var(--accent);
+	color: var(--bg);
+	border-color: var(--accent);
+}
+
+.curso-item {
+	margin-bottom: 2.5rem;
+	border-bottom: 0.5px solid var(--line);
+	padding-bottom: 1rem;
+}
+
+.curso-sigla {
+	font-family: var(--font-tech);
+	font-size: 0.75rem;
+	color: rgba(255, 255, 255, 0.4);
+	font-weight: 400;
+}
+
+.seccion-item {
+	margin-left: 1rem;
+	margin-bottom: 1rem;
+	padding-left: 1rem;
+	border-left: 1px solid var(--line);
+}
+
 /* === ACCESIBILIDAD === */
 .visually-hidden:not(:focus):not(:active) {
 	clip: rect(0 0 0 0);
@@ -525,20 +606,20 @@ table th {
 <li>Materiales usados: TPU</li>
 <li>Coordinar uso vía Discord del lab con la gente ahí indicada.</li>
 </ul>
-<p><img src="content\biblioteca\impresoras\imagenes\maquina-ender-2-v2.jpg" alt="máquina Creality Ender-2 v2"></p>
+<p><img src="content/biblioteca/impresoras/imagenes/maquina-ender-2-v2.jpg" alt="máquina Creality Ender-2 v2"></p>
 <h2 id="creality-ender-3-v3-ke">Creality Ender-3 V3 KE</h2>
 <ul>
 <li>Máquina propiedad de profesore Aarón Montoya.</li>
 <li>Materiales usados: PLA.</li>
 <li>Coordinar vía Discord del lab con la gente ahí indicada, y además reservar en el calendario.</li>
 </ul>
-<p><img src="content\biblioteca\impresoras\imagenes\maquina-ender-v3-ke.jpg" alt="máquina Creality Ender-3 v3 KE"></p>
+<p><img src="content/biblioteca/impresoras/imagenes/maquina-ender-v3-ke.jpg" alt="máquina Creality Ender-3 v3 KE"></p>
 <h2 id="bambulab-x1c">Bambulab X1C</h2>
 <ul>
 <li>Máquina propiedad de profesore Aarón Montoya.</li>
 <li>Acceso restringido a profesores, ayudantes, y estudiantes avanzades.</li>
 </ul>
-<p><img src="content\biblioteca\impresoras\imagenes\maquina-bambulab-x1c.jpg" alt="máquina Bambu Lab X1-Carbon"></p>
+<p><img src="content/biblioteca/impresoras/imagenes/maquina-bambulab-x1c.jpg" alt="máquina Bambu Lab X1-Carbon"></p>
 
 
 			</heading-anchors>
@@ -550,6 +631,6 @@ table th {
 
 		
 
-		<script type="module" src="/dist/V_mL3VoQ1Z.js"></script>
+		<script type="module" src="/dist/rEKS21jmbV.js"></script>
 	</body>
 </html>
