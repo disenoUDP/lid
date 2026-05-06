@@ -1,5 +1,62 @@
 ---
 cursos:
+  - sigla: "DIS09211"
+    nombre: "Taller 3: Problema y concepto"
+    semestres:
+      - semestre: "2026-1"
+        secciones:
+          - seccion: 7
+            profes: ["Carolina Pino", "Dominique Tetzner"]
+            ayudantes: ["Janis Sepúlveda"]
+  - sigla: "DIS09214"
+    nombre: "Pensamiento computacional"
+    semestres:
+      - semestre: "2026-1"
+        secciones:
+          - seccion: 1
+            profes: ["Christian Oyarzún"]
+            ayudantes: ["Morgan Aravena"]
+          - seccion: 2
+            profes: ["Paulina Mujica"]
+            ayudantes: ["Janis Sepúlveda"]
+          - seccion: 3
+            profes: ["Sofía Suazo"]
+            ayudantes: [""]
+          - seccion: 4
+            profes: ["Aarón Montoya"]
+            ayudantes: ["Vania Paredes"]
+          - seccion: 5
+            profes: ["Matías Serrano"]
+            ayudantes: ["Santiago Gaete"]
+          - seccion: 6
+            profes: ["Sofía Suazo"]
+            ayudantes: [""]
+  - sigla: "DIS8636"
+    nombre: "Taller de interfaz de usuario UI"
+    semestres:
+      - semestre: "2024-1"
+        secciones:
+          - seccion: 1
+            profes: ["Sergio Majluf", "Aarón Montoya"]
+            ayudantes: ["Andrés Martin"]
+      - semestre: "2023-1"
+        secciones:
+          - seccion: 1
+            profes: ["Sergio Majluf", "Aarón Montoya"]
+            ayudantes: ["Sebastián Cisternas"]
+  - sigla: "DIS8637"
+    nombre: "Taller de experiencia de usuario UX"
+    semestres:
+      - semestre: "2024-2"
+        secciones:
+          - seccion: 1
+            profes: ["Sergio Majluf", "Aarón Montoya"]
+            ayudantes: ["Andrés Martin"]
+      - semestre: "2023-2"
+        secciones:
+          - seccion: 1
+            profes: ["Sergio Majluf", "Aarón Montoya"]
+            ayudantes: ["Andrés Martin"]
   - sigla: "DIS8644"
     nombre: "Taller de diseño de máquinas electrónicas"
     semestres:
@@ -28,53 +85,4 @@ cursos:
         secciones:
           - seccion: 1
             profes: ["Sergio Mora", "Joaquín González"]
-            ayudantes: [""]
-  - sigla: "DIS09214"
-    nombre: "Pensamiento computacional"
-    semestres:
-      - semestre: "2026-1"
-        secciones:
-          - seccion: 1
-            profes: ["Christian Oyarzún"]
-            ayudantes: ["Morgan Aravena"]
-          - seccion: 2
-            profes: ["Paulina Mujica"]
-            ayudantes: ["Janis Sepúlveda"]
-          - seccion: 3
-            profes: ["Sofía Suazo"]
-            ayudantes: [""]
-          - seccion: 4
-            profes: ["Aarón Montoya"]
-            ayudantes: ["Vania Paredes"]
-          - seccion: 5
-            profes: ["Matías Serrano"]
-            ayudantes: ["Santiago Gaete"]
-          - seccion: 6
-            profes: ["Sofía Suazo"]
-            ayudantes: [""]
-  - sigla: "DIS8637"
-    nombre: "Taller de experiencia de usuario UX"
-    semestres:
-      - semestre: "2024-2"
-        secciones:
-          - seccion: 1
-            profes: ["Sergio Majluf", "Aarón Montoya"]
-            ayudantes: ["Andrés Martin"]
-      - semestre: "2023-2"
-        secciones:
-          - seccion: 1
-            profes: ["Sergio Majluf", "Aarón Montoya"]
-            ayudantes: ["Andrés Martin"]
-  - sigla: "DIS8636"
-    nombre: "Taller de interfaz de usuario UI"
-    semestres:
-      - semestre: "2024-1"
-        secciones:
-          - seccion: 1
-            profes: ["Sergio Majluf", "Aarón Montoya"]
-            ayudantes: ["Andrés Martin"]
-      - semestre: "2023-1"
-        secciones:
-          - seccion: 1
-            profes: ["Sergio Majluf", "Aarón Montoya"]
             ayudantes: [""]
