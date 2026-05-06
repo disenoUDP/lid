@@ -1,5 +1,5 @@
 personas:
-  - nombre: Aarón Montoya Moraga
+  - nombre: Aarón Montoya
     github: montoyamoraga
     correo: aaron.montoya
     bio: Ingeniere civil electricista de la Pontificia Universidad Católica de
@@ -209,7 +209,7 @@ personas:
       existencia: true
       inicio: 2024
       fin: false
-  - nombre: Santiago Gaete Fernández
+  - nombre: Santiago Gaete
     github: santiagoClifford
     correo: santiago.gaete@mail.udp.cl
     instagram: clifford1one
