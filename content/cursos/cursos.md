@@ -60,12 +60,12 @@ const eleventyNavigation = {
 
   secciones.forEach(function (sec) {
     if (sec.dataset.semestre) semestresSet.add(sec.dataset.semestre);
-    sec.dataset.profes.split('|').forEach(function (p) {
-      if (p.trim()) profesSet.add(p.trim());
-    });
-    sec.dataset.ayudantes.split('|').forEach(function (a) {
-      if (a.trim()) ayudantesSet.add(a.trim());
-    });
+    var profes = sec.dataset.profes.split('|').map(function (p) { return p.trim(); }).filter(Boolean);
+    var ayudantes = sec.dataset.ayudantes.split('|').map(function (a) { return a.trim(); }).filter(Boolean);
+    profes.forEach(function (p) { profesSet.add(p); });
+    ayudantes.forEach(function (a) { ayudantesSet.add(a); });
+    sec._profes = profes;
+    sec._ayudantes = ayudantes;
   });
 
   const semestresOrdenados = Array.from(semestresSet).sort(function (a, b) {
@@ -95,8 +95,8 @@ const eleventyNavigation = {
       let algunaVisible = false;
       curso.querySelectorAll('.seccion-item').forEach(function (sec) {
         const matchSem = !sem || sec.dataset.semestre === sem;
-        const matchProf = !prof || sec.dataset.profes.split('|').map(function (p) { return p.trim(); }).includes(prof);
-        const matchAy = !ay || sec.dataset.ayudantes.split('|').map(function (a) { return a.trim(); }).includes(ay);
+        const matchProf = !prof || sec._profes.includes(prof);
+        const matchAy = !ay || sec._ayudantes.includes(ay);
         const visible = matchSem && matchProf && matchAy;
         sec.style.display = visible ? '' : 'none';
         if (visible) algunaVisible = true;
