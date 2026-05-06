@@ -236,9 +236,13 @@ export { HeadingAnchors }
 				cursor.style.top  = e.clientY + 'px';
 			});
 
-			// Toggle sidebar
-			const toggle = document.getElementById('nav-toggle');
-			toggle.addEventListener('click', () => {
-				const collapsed = document.body.classList.toggle('nav-collapsed');
-				toggle.setAttribute('aria-expanded', String(!collapsed));
-			});
+// Toggle sidebar
+            const toggle = document.getElementById('nav-toggle');
+            if (window.innerWidth <= 768) {
+                document.body.classList.add('nav-collapsed');
+                toggle.setAttribute('aria-expanded', 'false');
+            }
+            toggle.addEventListener('click', () => {
+                const collapsed = document.body.classList.toggle('nav-collapsed');
+                toggle.setAttribute('aria-expanded', String(!collapsed));
+            });
