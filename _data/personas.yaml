@@ -1,14 +1,20 @@
----
 personas:
-  - nombre: "Aarón Montoya Moraga"
-    github: "montoyamoraga"
-    correo: "aaron.montoya"
-    bio: "Ingeniere civil electricista de la Pontificia Universidad Católica de Chile, magíster en arte electrónico de New York University, y magíster en ciencias y artes mediales de Massachusetts Institute of Technology. Actualmente es profesore asistente en la Escuela de Diseño UDP, y estudiante del Doctorado en Artes y Humanidades de la Universidad de Santiago Chile. Su tema de investigación es el diseño, escritura y manufactura de software y hardware para la creación de instrumentos musicales electrónicos y computacionales de fuente abierta."
+  - nombre: Aarón Montoya Moraga
+    github: montoyamoraga
+    correo: aaron.montoya
+    bio: Ingeniere civil electricista de la Pontificia Universidad Católica de
+      Chile, magíster en arte electrónico de New York University, y magíster en
+      ciencias y artes mediales de Massachusetts Institute of Technology.
+      Actualmente es profesore asistente en la Escuela de Diseño UDP, y
+      estudiante del Doctorado en Artes y Humanidades de la Universidad de
+      Santiago Chile. Su tema de investigación es el diseño, escritura y
+      manufactura de software y hardware para la creación de instrumentos
+      musicales electrónicos y computacionales de fuente abierta.
     estudianteUDP:
       existencia: false
       inicio: false
       fin: false
-    ayudanteUDP: 
+    ayudanteUDP:
       existencia: false
       inicio: false
       fin: false
@@ -16,25 +22,18 @@ personas:
       existencia: true
       inicio: 2023
       fin: false
-      cursos:
-        - nombre: "DIS8644 Taller de diseño de máquinas electrónicas"
-          semestres: ["2026-1", "2025-1"]
-        - nombre: "DIS8645 Taller de diseño de máquinas computacionales"
-          semestres: ["2025-2"]
-        - nombre: "DIS9079 Interacciones inalámbricas"
-          semestres: ["2026-1"]
-        - nombre: "DIS09214 Pensamiento computacional"
-          semestres: ["2026-1"]
-
-  - nombre: "Andrés Martin"
-    github: "andresmartin"
-    correo: "andres.martin"
-    bio: "Diseñador de la Universidad de Chile. Ayudante en pregrado de cursos de programación creativa, diseño de interfaces electrónicas y experiencia de usuario en la Escuela de Diseño UDP. Ayudante en pregrado de cursos de física para diseñadores en la Universidad de Chile."
+  - nombre: Andrés Martin
+    github: andresmartin
+    correo: andres.martin
+    bio: Diseñador de la Universidad de Chile. Ayudante en pregrado de cursos de
+      programación creativa, diseño de interfaces electrónicas y experiencia de
+      usuario en la Escuela de Diseño UDP. Ayudante en pregrado de cursos de
+      física para diseñadores en la Universidad de Chile.
     estudianteUDP:
       existencia: false
       inicio: false
       fin: false
-    ayudanteUDP: 
+    ayudanteUDP:
       existencia: true
       inicio: 2023
       fin: 2025
@@ -42,35 +41,30 @@ personas:
       existencia: false
       inicio: false
       fin: false
-
-  - nombre: "Bernardita Jesús"
-    github: "bernardita-jesus"
-    correo: "bernardita.lobo"
-    ig: "bernardita_jesus"
+  - nombre: Bernardita Jesús
+    github: bernardita-jesus
+    correo: bernardita.lobo
+    ig: bernardita_jesus
     estudianteUDP:
       existencia: true
       inicio: 2023
       fin: false
-    ayudanteUDP: 
+    ayudanteUDP:
       existencia: true
       inicio: 2026
       fin: false
-      cursos:
-        - nombre: "DIS0915 Fabricación Digital"
-          semestres: ["2026-1"]       
     profeUDP:
       existencia: false
       inicio: false
       fin: false
-
-  - nombre: "Carolina Pino"
-    github: 
-    correo: "maria.pino6"
+  - nombre: Carolina Pino
+    github: null
+    correo: maria.pino6
     estudianteUDP:
       existencia: false
       inicio: false
       fin: false
-    ayudanteUDP: 
+    ayudanteUDP:
       existencia: false
       inicio: false
       fin: false
@@ -78,18 +72,14 @@ personas:
       existencia: true
       inicio: 2026
       fin: false
-      cursos:
-        - nombre: "DIS09211 Taller III: Problema y Concepto"
-          semestres: ["2026-1"]
-          
-  - nombre: "Christian Oyarzún"
-    github: "coyarzun"
-    correo: "christian.oyarzun"
+  - nombre: Christian Oyarzún
+    github: coyarzun
+    correo: christian.oyarzun
     estudianteUDP:
       existencia: false
       inicio: false
       fin: false
-    ayudanteUDP: 
+    ayudanteUDP:
       existencia: false
       inicio: false
       fin: false
@@ -97,41 +87,29 @@ personas:
       existencia: true
       inicio: 2025
       fin: false
-      cursos:
-        - nombre: "DIS9034 Programación creativa y multimedia"
-          semestres: ["2025-1"]
-        - nombre: "DIS8952 Cuerpo, movimiento y código"
-          semestres: ["2025-2"]
-        - nombre: " DIS09214 Pensamiento computacional"
-          semestres: ["2026-1"]
-
-  - nombre: "Emilia Guerra"
-    github: "emiguerra"
-    correo: "emilia.guerra"
+  - nombre: Emilia Guerra
+    github: emiguerra
+    correo: emilia.guerra
     estudianteUDP:
       existencia: true
       inicio: 2021
       fin: false
-    ayudanteUDP: 
+    ayudanteUDP:
       existencia: true
       inicio: 2026
       fin: false
-      cursos:
-        - nombre: "DIS8644 Taller de diseño de máquinas electrónicas"
-          semestres: ["2026-1"]
     profeUDP:
       existencia: false
       inicio: false
       fin: false
-
-  - nombre: "Félix Rodríguez"
-    github: "felix-rg416"
-    correo: "felix.rodriguez"
+  - nombre: Félix Rodríguez
+    github: felix-rg416
+    correo: felix.rodriguez
     estudianteUDP:
       existencia: true
       inicio: 2023
       fin: false
-    ayudanteUDP: 
+    ayudanteUDP:
       existencia: false
       inicio: false
       fin: false
@@ -139,37 +117,40 @@ personas:
       existencia: false
       inicio: false
       fin: false
-      
-  - nombre: "Jacinta Barrenechea"
-    github: "jacintaOOO"
-    correo: "jacinta.barrenechea"
+  - nombre: Jacinta Barrenechea
+    github: jacintaOOO
+    correo: jacinta.barrenechea
     estudianteUDP:
       existencia: true
       inicio: 2021
       fin: 2025
-    ayudanteUDP: 
+    ayudanteUDP:
       existencia: true
       inicio: 2025
       fin: false
-      cursos:
-        - nombre: "DIS09214 Pensamiento computacional"
-          semestres: ["2026-1"]
-        - nombre: "DIS8949 Introducción al diseño de servicios"
-          semestres: ["2026-1"]  
     profeUDP:
       existencia: false
       inicio: false
       fin: false
-
-  - nombre: "Janis Sepúlveda"
-    github: "janisepulveda"
-    correo: "janis.sepulveda"
-    bio: "Diseñadora industrial UDP, estudiante del magíster de Diseño Avanzado UC, con enfoque en diseño centrado en el usuario y experiencias digitales. Su área de investigación es en la facilitación de interacciones más humanas y conscientes en contextos sensibles, como la salud y el bienestar. He participado en proyectos colaborativos como la app de Diseño Abierto de la Escuela de Diseño UDP, Su tesis de pregrado fue una app móvil que permite monitorear síntomas físicos y emocionales, pensada especialmente para quienes enfrentan neuralgia del trigémino. Desde el 2023 es ayudante de investigación y de cursos de pregrado de programación creativa. Su objetivo es construir soluciones empáticas que respondan a necesidades reales."
+  - nombre: Janis Sepúlveda
+    github: janisepulveda
+    correo: janis.sepulveda
+    bio: Diseñadora industrial UDP, estudiante del magíster de Diseño Avanzado UC,
+      con enfoque en diseño centrado en el usuario y experiencias digitales. Su
+      área de investigación es en la facilitación de interacciones más humanas y
+      conscientes en contextos sensibles, como la salud y el bienestar. He
+      participado en proyectos colaborativos como la app de Diseño Abierto de la
+      Escuela de Diseño UDP, Su tesis de pregrado fue una app móvil que permite
+      monitorear síntomas físicos y emocionales, pensada especialmente para
+      quienes enfrentan neuralgia del trigémino. Desde el 2023 es ayudante de
+      investigación y de cursos de pregrado de programación creativa. Su
+      objetivo es construir soluciones empáticas que respondan a necesidades
+      reales.
     estudianteUDP:
       existencia: true
       inicio: 2021
       fin: 2025
-    ayudanteUDP: 
+    ayudanteUDP:
       existencia: true
       inicio: 2024
       fin: false
@@ -177,15 +158,14 @@ personas:
       existencia: false
       inicio: false
       fin: false
-      
-  - nombre: "Joaquín González"
+  - nombre: Joaquín González
     github: ""
-    correo: "joaquin.gonzalez7"
+    correo: joaquin.gonzalez7
     estudianteUDP:
       existencia: false
       inicio: false
       fin: false
-    ayudanteUDP: 
+    ayudanteUDP:
       existencia: false
       inicio: false
       fin: false
@@ -193,36 +173,35 @@ personas:
       existencia: true
       inicio: 2024
       fin: false
-
-  - nombre: "Mateo Arce"
-    github: "matbutom"
-    instagram: "matbutom"
-    correo: "mateo.arce"
-    bio: "Diseñador gráfico de UDP. Su enfoque está en la intersección entre diseño gráfico y código, desarrollando sitios web, interfaces de usuario y sistemas de identidad visual, para crear experiencias visuales funcionales e innovadoras. Su tesis de pregrado es una exploración de  tipográfia interactiva. Las herramientas que usa incluyen Adobe y GitHub Pages."
+  - nombre: Mateo Arce
+    github: matbutom
+    instagram: matbutom
+    correo: mateo.arce
+    bio: Diseñador gráfico de UDP. Su enfoque está en la intersección entre diseño
+      gráfico y código, desarrollando sitios web, interfaces de usuario y
+      sistemas de identidad visual, para crear experiencias visuales funcionales
+      e innovadoras. Su tesis de pregrado es una exploración de  tipográfia
+      interactiva. Las herramientas que usa incluyen Adobe y GitHub Pages.
     estudianteUDP:
       existencia: true
       inicio: 2021
       fin: 2025
-    ayudanteUDP: 
+    ayudanteUDP:
       existencia: true
       inicio: 2025
       fin: false
-      cursos:
-        - nombre: "DIS8012 Administración financiera"
-          semestres: ["2026-1"]
     profeUDP:
       existencia: false
       inicio: false
       fin: false
-
-  - nombre: "Matías Serrano"
-    github: "misaaaaaa"
-    correo: "matias.serrano"
+  - nombre: Matías Serrano
+    github: misaaaaaa
+    correo: matias.serrano
     estudianteUDP:
       existencia: false
       inicio: false
       fin: false
-    ayudanteUDP: 
+    ayudanteUDP:
       existencia: false
       inicio: false
       fin: false
@@ -230,39 +209,39 @@ personas:
       existencia: true
       inicio: 2024
       fin: false
-
-  - nombre: "Santiago Gaete Fernández"
-    github: "santiagoClifford"
-    correo: "santiago.gaete@mail.udp.cl"
-    instagram: "clifford1one"
-    p5.js: "clifford1one"
+  - nombre: Santiago Gaete Fernández
+    github: santiagoClifford
+    correo: santiago.gaete@mail.udp.cl
+    instagram: clifford1one
+    p5.js: clifford1one
     estudianteUDP:
       existencia: true
       inicio: 2022
       fin: false
-    ayudanteUDP: 
+    ayudanteUDP:
       existencia: true
       inicio: 2026
       fin: false
-      cursos:
-        - nombre: "DIS09214 Pensamiento Computacional"
-          semestres: ["2026-1"]
-        - nombre: "DIS8012 Administración Financiera"
-          semestres: ["2026-1"]     
     profeUDP:
       existencia: false
       inicio: false
       fin: false
-  
-  - nombre: "Sergio Majluf"
-    github: "sergiomajluf"
-    correo: "sergio.majluf"
-    bio: "Diseñador de la Pontificia Universidad Católica de Chile, magíster en Telecomunicaciones Interactivas de New York University. Extensa experiencia en educación (pregrado, posgrado y educación continua), innovación y desarrollo de productos interactivos. Ha liderado programas académicos y colaborado con instituciones en Chile y el extranjero en áreas de diseño, innovación, emprendimiento y tecnologías aplicadas. Su trabajo combina fabricación digital, estrategia digital y diseño de plataformas interactivas para el sector público y privado"
+  - nombre: Sergio Majluf
+    github: sergiomajluf
+    correo: sergio.majluf
+    bio: Diseñador de la Pontificia Universidad Católica de Chile, magíster en
+      Telecomunicaciones Interactivas de New York University. Extensa
+      experiencia en educación (pregrado, posgrado y educación continua),
+      innovación y desarrollo de productos interactivos. Ha liderado programas
+      académicos y colaborado con instituciones en Chile y el extranjero en
+      áreas de diseño, innovación, emprendimiento y tecnologías aplicadas. Su
+      trabajo combina fabricación digital, estrategia digital y diseño de
+      plataformas interactivas para el sector público y privado
     estudianteUDP:
       existencia: false
       inicio: false
       fin: false
-    ayudanteUDP: 
+    ayudanteUDP:
       existencia: false
       inicio: false
       fin: false
@@ -270,15 +249,14 @@ personas:
       existencia: true
       inicio: 2023
       fin: false
-
-  - nombre: "Sergio Mora"
+  - nombre: Sergio Mora
     github: ""
-    correo: "sergio.mora1"
+    correo: sergio.mora1
     estudianteUDP:
       existencia: false
       inicio: false
       fin: false
-    ayudanteUDP: 
+    ayudanteUDP:
       existencia: false
       inicio: false
       fin: false
@@ -286,15 +264,14 @@ personas:
       existencia: true
       inicio: 2024
       fin: false
-  
-  - nombre: "Simón Gallardo"
+  - nombre: Simón Gallardo
     github: ""
-    correo: "manuel.gallardo"
+    correo: manuel.gallardo
     estudianteUDP:
       existencia: true
       inicio: 1234
       fin: 1234
-    ayudanteUDP: 
+    ayudanteUDP:
       existencia: true
       inicio: 1234
       fin: 1234
@@ -302,34 +279,29 @@ personas:
       existencia: true
       inicio: 1234
       fin: false
-
-  - nombre: "Sofía Etchepare"
-    github: "Bumwox"
-    correo: "sofia.etchepare"
+  - nombre: Sofía Etchepare
+    github: Bumwox
+    correo: sofia.etchepare
     estudianteUDP:
       existencia: true
       inicio: 2022
       fin: false
-    ayudanteUDP: 
+    ayudanteUDP:
       existencia: true
       inicio: 2025
       fin: false
-      cursos:
-        - nombre: "Programacion creativa multimedia"
-          semestres: ["2026-1"]    
     profeUDP:
       existencia: false
       inicio: false
       fin: false
-
-  - nombre: "Sofía Pérez"
-    github: "sofia-perezm"
-    correo: "sofia.perez2"
+  - nombre: Sofía Pérez
+    github: sofia-perezm
+    correo: sofia.perez2
     estudianteUDP:
       existencia: true
       inicio: 2023
       fin: false
-    ayudanteUDP: 
+    ayudanteUDP:
       existencia: false
       inicio: false
       fin: false
@@ -337,36 +309,29 @@ personas:
       existencia: false
       inicio: false
       fin: false
-
-  - nombre: "Vania Paredes"
-    github: "vaniaparedes"
-    correo: "vania.paredes"
+  - nombre: Vania Paredes
+    github: vaniaparedes
+    correo: vania.paredes
     estudianteUDP:
       existencia: true
       inicio: 2023
       fin: false
-    ayudanteUDP: 
+    ayudanteUDP:
       existencia: true
       inicio: 2024
       fin: false
-      cursos:
-        - nombre: "Geometría Básica"
-          semestres: ["2024-1"]
-        - nombre: "DIS09214 Pensamiento Computacional"
-          semestres: ["2026-1"]   
     profeUDP:
       existencia: false
       inicio: false
       fin: false
-
-  - nombre: "Yamna Carrión"
-    github: "yamna-bit"
-    correo: "yamna.carrion"
+  - nombre: Yamna Carrión
+    github: yamna-bit
+    correo: yamna.carrion
     estudianteUDP:
       existencia: true
       inicio: 2023
       fin: false
-    ayudanteUDP: 
+    ayudanteUDP:
       existencia: false
       inicio: false
       fin: false
