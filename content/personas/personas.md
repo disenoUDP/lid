@@ -7,7 +7,7 @@ const eleventyNavigation = {
 
 # Personas
 
-{% for persona in personas.personas %}
+{% for persona in personasConCursos.personas %}
 
 ## {{ persona.nombre }}
 
