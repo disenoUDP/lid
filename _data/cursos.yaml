@@ -86,3 +86,48 @@ cursos:
           - seccion: 1
             profes: ["Sergio Mora", "Joaquín González"]
             ayudantes: [""]
+  - sigla: "DIS8915"
+    nombre: "Proyectos interdisciplinarios en tecnologías"
+    semestres:
+      - semestre: "2024-1"
+        secciones:
+          - seccion: 1
+            profes: ["Nicolás Troncoso"]
+            ayudantes: [""]
+  - sigla: "DIS8948"
+    nombre: "Interacciones digitales"
+    semestres:
+      - semestre: "2026-1"
+        secciones:
+          - seccion: 1
+            profes: ["Guillermo Montecinos"]
+            ayudantes: ["Magdalena Claro"]
+  - sigla: "DIS8952"
+    nombre: "Cuerpo, movimiento y código"
+    semestres:
+      - semestre: "2025-1"
+        secciones:
+          - seccion: 1
+            profes: ["Christian Oyarzún"]
+            ayudantes: ["Sofía Sandoval"]
+  - sigla: "DIS9005"
+    nombre: "Diseño de página web"
+    semestres:
+      - semestre: "2023-1"
+        secciones:
+          - seccion: 1
+            profes: ["Aarón Montoya"]
+            ayudantes: ["Francisca Wright"]
+  - sigla: "DIS9034"
+    nombre: "Programación creativa multimedia"
+    semestres:
+      - semestre: "2024-1"
+        secciones:
+          - seccion: 1
+            profes: ["Aarón Montoya"]
+            ayudantes: ["Janis Sepúlveda"]
+      - semestre: "2025-1"
+        secciones:
+          - seccion: 1
+            profes: ["Christian Oyarzún"]
+            ayudantes: ["Janis Sepúlveda", "Sofía Etchepare"]
