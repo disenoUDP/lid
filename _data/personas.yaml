@@ -58,7 +58,7 @@ personas:
       inicio: false
       fin: false
   - nombre: Carolina Pino
-    github: null
+    github: ""
     correo: maria.pino6
     estudianteUDP:
       existencia: false
@@ -180,7 +180,7 @@ personas:
     bio: Diseñador gráfico de UDP. Su enfoque está en la intersección entre diseño
       gráfico y código, desarrollando sitios web, interfaces de usuario y
       sistemas de identidad visual, para crear experiencias visuales funcionales
-      e innovadoras. Su tesis de pregrado es una exploración de  tipográfia
+      e innovadoras. Su tesis de pregrado es una exploración de tipografía
       interactiva. Las herramientas que usa incluyen Adobe y GitHub Pages.
     estudianteUDP:
       existencia: true
