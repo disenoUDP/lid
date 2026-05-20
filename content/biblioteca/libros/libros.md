@@ -11,7 +11,9 @@ const eleventyNavigation = {
 
 ## {{ libro.titulo }}
 
+{% if libro.id %}
 - ID: {{ libro.id }}
+{% endif %}
 - Autores: {% for autor in libro.autores %}{{ autor }}{% if not loop.last %}, {% endif %}{% endfor %}
 - Editorial: {{ libro.editorial }}
 - Año: {{ libro.agno }}
