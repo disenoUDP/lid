@@ -413,6 +413,45 @@ iframe {
 	border-color: var(--accent);
 }
 
+#btn-scramble,
+#btn-random {
+	background: none;
+	border: 0.5px solid var(--line);
+	color: var(--accent);
+	font-family: var(--font-tech);
+	font-size: 11px;
+	padding: 6px 14px;
+	cursor: pointer;
+	letter-spacing: 0.5px;
+	transition: background 0.2s, color 0.2s, border-color 0.2s;
+	align-self: flex-end;
+}
+
+#btn-scramble:hover,
+#btn-random:hover {
+	background: var(--accent);
+	color: var(--bg);
+	border-color: var(--accent);
+}
+
+#btn-ver-todos {
+	background: none;
+	border: 0.5px solid var(--accent);
+	color: var(--accent);
+	font-family: var(--font-tech);
+	font-size: 11px;
+	padding: 6px 14px;
+	cursor: pointer;
+	letter-spacing: 0.5px;
+	margin-bottom: 1.5rem;
+	transition: background 0.2s, color 0.2s;
+}
+
+#btn-ver-todos:hover {
+	background: var(--accent);
+	color: var(--bg);
+}
+
 .curso-item {
 	margin-bottom: 2.5rem;
 	border-bottom: 0.5px solid var(--line);
