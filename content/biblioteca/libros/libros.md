@@ -7,7 +7,7 @@ const eleventyNavigation = {
 
 # Libros
 
-{% for libro in libros.libros %}
+{% for libro in libros.libros | sortBooksByTitle %}
 
 ## {{ libro.titulo }}
 
