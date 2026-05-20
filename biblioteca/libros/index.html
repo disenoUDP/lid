@@ -423,6 +423,45 @@ iframe {
 	border-color: var(--accent);
 }
 
+#btn-scramble,
+#btn-random {
+	background: none;
+	border: 0.5px solid var(--line);
+	color: var(--accent);
+	font-family: var(--font-tech);
+	font-size: 11px;
+	padding: 6px 14px;
+	cursor: pointer;
+	letter-spacing: 0.5px;
+	transition: background 0.2s, color 0.2s, border-color 0.2s;
+	align-self: flex-end;
+}
+
+#btn-scramble:hover,
+#btn-random:hover {
+	background: var(--accent);
+	color: var(--bg);
+	border-color: var(--accent);
+}
+
+#btn-ver-todos {
+	background: none;
+	border: 0.5px solid var(--accent);
+	color: var(--accent);
+	font-family: var(--font-tech);
+	font-size: 11px;
+	padding: 6px 14px;
+	cursor: pointer;
+	letter-spacing: 0.5px;
+	margin-bottom: 1.5rem;
+	transition: background 0.2s, color 0.2s;
+}
+
+#btn-ver-todos:hover {
+	background: var(--accent);
+	color: var(--bg);
+}
+
 .curso-item {
 	margin-bottom: 2.5rem;
 	border-bottom: 0.5px solid var(--line);
@@ -625,10 +664,21 @@ table th {
       <option value="">todos</option>
     </select>
   </div>
+  <div class="filtro-grupo">
+    <label for="ordenar">ordenar</label>
+    <select id="ordenar">
+      <option value="az">a → z</option>
+      <option value="za">z → a</option>
+      <option value="agno-asc">año ↑</option>
+      <option value="agno-desc">año ↓</option>
+    </select>
+  </div>
+  <button id="btn-scramble">mezclar</button>
+  <button id="btn-random">libro al azar</button>
   <button id="filtro-reset">limpiar filtros</button>
 </div>
 <div id="libros-lista">
-<div class="libro-item" data-autores="winnie soon|geoff cox" data-editorial="open humanities press" data-temas="programación|software">
+<div class="libro-item" data-autores="winnie soon|geoff cox" data-editorial="open humanities press" data-temas="programación|software" data-titulo="aesthetic programming" data-agno="2020">
   <h2 id="aesthetic-programming">Aesthetic programming</h2>
   <ul>
     <li>ID: 5</li>
@@ -638,7 +688,7 @@ table th {
     <li>palabras clave: programación, software</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="martín gubbins" data-editorial="ediciones tácitas" data-temas="álbum|poesía">
+<div class="libro-item" data-autores="martín gubbins" data-editorial="ediciones tácitas" data-temas="álbum|poesía" data-titulo="álbum" data-agno="TBD">
   <h2 id="album">Álbum</h2>
   <ul>
     <li>ID: 26</li>
@@ -648,7 +698,7 @@ table th {
     <li>palabras clave: álbum, poesía</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="allison parrish" data-editorial="counterpath press" data-temas="poesía|programación">
+<div class="libro-item" data-autores="allison parrish" data-editorial="counterpath press" data-temas="poesía|programación" data-titulo="articulations" data-agno="TBD">
   <h2 id="articulations">Articulations</h2>
   <ul>
     <li>ID: 15</li>
@@ -658,7 +708,7 @@ table th {
     <li>palabras clave: poesía, programación</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="al sweigart" data-editorial="no starch press" data-temas="automatización|procesamiento de datos|productividad">
+<div class="libro-item" data-autores="al sweigart" data-editorial="no starch press" data-temas="automatización|procesamiento de datos|productividad" data-titulo="automate the boring stuff with python" data-agno="TBD">
   <h2 id="automate-the-boring-stuff-with-python">Automate the Boring Stuff with Python</h2>
   <ul>
     <li>ID: 51</li>
@@ -668,7 +718,7 @@ table th {
     <li>palabras clave: automatización, procesamiento de datos, productividad</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="nicholas negroponte" data-editorial="" data-temas="computación|tecnología">
+<div class="libro-item" data-autores="nicholas negroponte" data-editorial="" data-temas="computación|tecnología" data-titulo="being digital" data-agno="TBD">
   <h2 id="being-digital">Being digital</h2>
   <ul>
     <li>ID: 36</li>
@@ -678,7 +728,7 @@ table th {
     <li>palabras clave: computación, tecnología</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="manuel scorza" data-editorial="siglo veintiuno editores" data-temas="novela|literatura peruana|conflictos agrarios">
+<div class="libro-item" data-autores="manuel scorza" data-editorial="siglo veintiuno editores" data-temas="novela|literatura peruana|conflictos agrarios" data-titulo="cantar de agapito robles" data-agno="TBD">
   <h2 id="cantar-de-agapito-robles">Cantar de Agapito Robles</h2>
   <ul>
     <li>ID: 58</li>
@@ -688,7 +738,7 @@ table th {
     <li>palabras clave: Novela, Literatura peruana, Conflictos agrarios</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="ruben pater" data-editorial="valiz" data-temas="capitalismo|diseño">
+<div class="libro-item" data-autores="ruben pater" data-editorial="valiz" data-temas="capitalismo|diseño" data-titulo="caps lock" data-agno="TBD">
   <h2 id="caps-lock">Caps Lock</h2>
   <ul>
     <li>ID: 16</li>
@@ -698,7 +748,7 @@ table th {
     <li>palabras clave: capitalismo, diseño</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="carolyn l. kane" data-editorial="university of chicago press" data-temas="arte|computador">
+<div class="libro-item" data-autores="carolyn l. kane" data-editorial="university of chicago press" data-temas="arte|computador" data-titulo="chromatic algorithms" data-agno="2014">
   <h2 id="chromatic-algorithms">Chromatic algorithms</h2>
   <ul>
     <li>ID: 7</li>
@@ -708,7 +758,7 @@ table th {
     <li>palabras clave: arte, computador</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="charles petzold" data-editorial="microsoft press" data-temas="código|hardware|software">
+<div class="libro-item" data-autores="charles petzold" data-editorial="microsoft press" data-temas="código|hardware|software" data-titulo="code" data-agno="2022">
   <h2 id="code">Code</h2>
   <ul>
     <li>ID: 9</li>
@@ -718,7 +768,7 @@ table th {
     <li>palabras clave: código, hardware, software</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="golan levin|tega brain" data-editorial="mit press" data-temas="programación|electrónica">
+<div class="libro-item" data-autores="golan levin|tega brain" data-editorial="mit press" data-temas="programación|electrónica" data-titulo="code as creative medium" data-agno="TBD">
   <h2 id="code-as-creative-medium">Code as Creative Medium</h2>
   <ul>
     <li>ID: 38</li>
@@ -728,7 +778,7 @@ table th {
     <li>palabras clave: programación, electrónica</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="pacífico carrasco gonzales" data-editorial="imprenta fournier" data-temas="poesía|chilena|amor">
+<div class="libro-item" data-autores="pacífico carrasco gonzales" data-editorial="imprenta fournier" data-temas="poesía|chilena|amor" data-titulo="de otras cosas y el amor" data-agno="TBD">
   <h2 id="de-otras-cosas-y-el-amor">De otras cosas y el amor</h2>
   <ul>
     <li>ID: 14</li>
@@ -738,7 +788,7 @@ table th {
     <li>palabras clave: poesía, chilena, amor</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="leonardo gabrielli" data-editorial="focal press" data-temas="síntesis modular|audio digital|vcv rack">
+<div class="libro-item" data-autores="leonardo gabrielli" data-editorial="focal press" data-temas="síntesis modular|audio digital|vcv rack" data-titulo="depeloping synthesizers with vcv rack" data-agno="TBD">
   <h2 id="depeloping-synthesizers-with-vcv-rack">Depeloping synthesizers with vcv rack</h2>
   <ul>
     <li>ID: 53</li>
@@ -748,7 +798,7 @@ table th {
     <li>palabras clave: síntesis modular, audio digital, VCV Rack</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="jo hinchliffe|ben everard" data-editorial="raspberry pi press" data-temas="kicad|pcb|hardware">
+<div class="libro-item" data-autores="jo hinchliffe|ben everard" data-editorial="raspberry pi press" data-temas="kicad|pcb|hardware" data-titulo="design an rp2040 board with kicad" data-agno="TBD">
   <h2 id="design-an-rp2040-board-with-kicad">Design an rp2040 Board with Kicad</h2>
   <ul>
     <li>ID: 55</li>
@@ -758,7 +808,7 @@ table th {
     <li>palabras clave: KiCad, PCB, Hardware</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="christiane paul" data-editorial="thames &amp; hudson" data-temas="digital|diseño">
+<div class="libro-item" data-autores="christiane paul" data-editorial="thames &amp; hudson" data-temas="digital|diseño" data-titulo="digital art" data-agno="TBD">
   <h2 id="digital-art">Digital art</h2>
   <ul>
     <li>ID: 23</li>
@@ -768,7 +818,7 @@ table th {
     <li>palabras clave: digital, diseño</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="manuel scorza" data-editorial="siglo veintiuno editores" data-temas="novela|literatura peruana|conflictos agrarios">
+<div class="libro-item" data-autores="manuel scorza" data-editorial="siglo veintiuno editores" data-temas="novela|literatura peruana|conflictos agrarios" data-titulo="el jinete inmenso" data-agno="TBD">
   <h2 id="el-jinete-inmenso">El Jinete Inmenso</h2>
   <ul>
     <li>ID: 56</li>
@@ -778,7 +828,7 @@ table th {
     <li>palabras clave: Novela, Literatura peruana, Conflictos agrarios</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="santiago acha|manuel castro|julio pérez|miguel rioseras" data-editorial="alfaomega" data-temas="electrónica digital|lógica combinacional|simulación">
+<div class="libro-item" data-autores="santiago acha|manuel castro|julio pérez|miguel rioseras" data-editorial="alfaomega" data-temas="electrónica digital|lógica combinacional|simulación" data-titulo="electrónica digital lógica digital integrada" data-agno="TBD">
   <h2 id="electronica-digital-logica-digital-integrada">Electrónica Digital Lógica Digital Integrada</h2>
   <ul>
     <li>ID: 48</li>
@@ -788,7 +838,7 @@ table th {
     <li>palabras clave: electrónica digital, lógica combinacional, simulación</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="martín gubbins" data-editorial="mangos de hacha" data-temas="poesía">
+<div class="libro-item" data-autores="martín gubbins" data-editorial="mangos de hacha" data-temas="poesía" data-titulo="escalas" data-agno="TBD">
   <h2 id="escalas">Escalas</h2>
   <ul>
     <li>ID: 30</li>
@@ -798,7 +848,7 @@ table th {
     <li>palabras clave: poesía</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="paul g. hewitt" data-editorial="addison wesley longman" data-temas="física|métodos">
+<div class="libro-item" data-autores="paul g. hewitt" data-editorial="addison wesley longman" data-temas="física|métodos" data-titulo="física conceptual" data-agno="TBD">
   <h2 id="fisica-conceptual">Física Conceptual</h2>
   <ul>
     <li>ID: 21</li>
@@ -808,7 +858,7 @@ table th {
     <li>palabras clave: Física, Métodos</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="martin gubbins" data-editorial="ediciones tácitas" data-temas="poesía|chilena">
+<div class="libro-item" data-autores="martin gubbins" data-editorial="ediciones tácitas" data-temas="poesía|chilena" data-titulo="fuentes del derecho" data-agno="2010">
   <h2 id="fuentes-del-derecho">Fuentes del derecho</h2>
   <ul>
     <li>ID: 11</li>
@@ -818,7 +868,7 @@ table th {
     <li>palabras clave: poesía, chilena</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="manuel scorza" data-editorial="siglo veintiuno editores" data-temas="novela|literatura peruana|conflictos agrarios">
+<div class="libro-item" data-autores="manuel scorza" data-editorial="siglo veintiuno editores" data-temas="novela|literatura peruana|conflictos agrarios" data-titulo="garabombo el invisible" data-agno="TBD">
   <h2 id="garabombo-el-invisible">Garabombo el Invisible</h2>
   <ul>
     <li>ID: 61</li>
@@ -828,7 +878,7 @@ table th {
     <li>palabras clave: Novela, Literatura peruana, Conflictos agrarios</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="nicolas collins" data-editorial="routledge" data-temas="música|electrónica">
+<div class="libro-item" data-autores="nicolas collins" data-editorial="routledge" data-temas="música|electrónica" data-titulo="handmade electronic music" data-agno="2020">
   <h2 id="handmade-electronic-music">Handmade electronic music</h2>
   <ul>
     <li>ID: 6</li>
@@ -838,7 +888,7 @@ table th {
     <li>palabras clave: música, electrónica</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="steve krug" data-editorial="anaya multimedia" data-temas="experiencia|usuario">
+<div class="libro-item" data-autores="steve krug" data-editorial="anaya multimedia" data-temas="experiencia|usuario" data-titulo="haz fácil lo imposible" data-agno="2010">
   <h2 id="haz-facil-lo-imposible">Haz fácil lo imposible</h2>
   <ul>
     <li>ID: 12</li>
@@ -848,7 +898,7 @@ table th {
     <li>palabras clave: experiencia, usuario</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="mateo kries|christoph thun-hohenstein|amelie klein" data-editorial="" data-temas="robótica|interacción humano-máquina|inteligencia artificial">
+<div class="libro-item" data-autores="mateo kries|christoph thun-hohenstein|amelie klein" data-editorial="" data-temas="robótica|interacción humano-máquina|inteligencia artificial" data-titulo="hello, robot" data-agno="TBD">
   <h2 id="hello-robot">Hello, Robot</h2>
   <ul>
     <li>ID: 54</li>
@@ -858,7 +908,7 @@ table th {
     <li>palabras clave: robótica, interacción humano-máquina, inteligencia artificial</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="john maeda" data-editorial="portfolio penguin" data-temas="pensamiento computacional|algoritmos">
+<div class="libro-item" data-autores="john maeda" data-editorial="portfolio penguin" data-temas="pensamiento computacional|algoritmos" data-titulo="how speak machine" data-agno="TBD">
   <h2 id="how-speak-machine">How speak machine</h2>
   <ul>
     <li>ID: 17</li>
@@ -868,7 +918,7 @@ table th {
     <li>palabras clave: pensamiento computacional, algoritmos</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="fernando pérez villalón" data-editorial="mundana" data-temas="análisis|estudios mediales">
+<div class="libro-item" data-autores="fernando pérez villalón" data-editorial="mundana" data-temas="análisis|estudios mediales" data-titulo="imágenes de imágenes: del cuadro a la pantalla" data-agno="2023">
   <h2 id="imagenes-de-imagenes-del-cuadro-a-la-pantalla">Imágenes de imágenes: del cuadro a la pantalla</h2>
   <ul>
     <li>ID: 13</li>
@@ -878,7 +928,7 @@ table th {
     <li>palabras clave: análisis, estudios mediales</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="omar céspedes|josé bodet" data-editorial="" data-temas="impresión|gráfica|fabricación">
+<div class="libro-item" data-autores="omar céspedes|josé bodet" data-editorial="" data-temas="impresión|gráfica|fabricación" data-titulo="impressme" data-agno="TBD">
   <h2 id="impressme">Impressme</h2>
   <ul>
     <li>ID: 28</li>
@@ -888,7 +938,7 @@ table th {
     <li>palabras clave: impresión, gráfica, fabricación</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="kim bjørn" data-editorial="bjooks" data-temas="instrumentos|sintetizadores">
+<div class="libro-item" data-autores="kim bjørn" data-editorial="bjooks" data-temas="instrumentos|sintetizadores" data-titulo="inspire the music" data-agno="TBD">
   <h2 id="inspire-the-music">Inspire the music</h2>
   <ul>
     <li>ID: 25</li>
@@ -898,7 +948,7 @@ table th {
     <li>palabras clave: instrumentos, sintetizadores</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="alejandra carmona lópez" data-editorial="planeta" data-temas="política|biografía">
+<div class="libro-item" data-autores="alejandra carmona lópez" data-editorial="planeta" data-temas="política|biografía" data-titulo="jeannette" data-agno="TBD">
   <h2 id="jeannette">Jeannette</h2>
   <ul>
     <li>ID: 20</li>
@@ -908,7 +958,7 @@ table th {
     <li>palabras clave: Política, Biografía</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="manuel scorza" data-editorial="siglo veintiuno editores" data-temas="novela|literatura peruana|conflictos agrarios">
+<div class="libro-item" data-autores="manuel scorza" data-editorial="siglo veintiuno editores" data-temas="novela|literatura peruana|conflictos agrarios" data-titulo="la danza inmóvil" data-agno="TBD">
   <h2 id="la-danza-inmovil">La Danza inmóvil</h2>
   <ul>
     <li>ID: 59</li>
@@ -918,7 +968,7 @@ table th {
     <li>palabras clave: Novela, Literatura peruana, Conflictos agrarios</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="maría josé barros cruz" data-editorial="fondo de cultura económica, editorial popular" data-temas="arte|música|activismo|feminismo|cultura">
+<div class="libro-item" data-autores="maría josé barros cruz" data-editorial="fondo de cultura económica, editorial popular" data-temas="arte|música|activismo|feminismo|cultura" data-titulo="la música de ana tijoux" data-agno="2019">
   <h2 id="la-musica-de-ana-tijoux">La música de Ana Tijoux</h2>
   <ul>
     <li>ID: 34</li>
@@ -928,7 +978,7 @@ table th {
     <li>palabras clave: arte, música, activismo, feminismo, cultura</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="manuel scorza" data-editorial="siglo veintiuno editores" data-temas="novela|literatura peruana|conflictos agrarios">
+<div class="libro-item" data-autores="manuel scorza" data-editorial="siglo veintiuno editores" data-temas="novela|literatura peruana|conflictos agrarios" data-titulo="la tumba del relámpago" data-agno="TBD">
   <h2 id="la-tumba-del-relampago">La tumba del Relámpago</h2>
   <ul>
     <li>ID: 57</li>
@@ -938,7 +988,7 @@ table th {
     <li>palabras clave: Novela, Literatura peruana, Conflictos agrarios</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="ray wilson" data-editorial="make community" data-temas="sonido|sintetizadores">
+<div class="libro-item" data-autores="ray wilson" data-editorial="make community" data-temas="sonido|sintetizadores" data-titulo="make: analog synthesizers" data-agno="TBD">
   <h2 id="make-analog-synthesizers">Make: analog synthesizers</h2>
   <ul>
     <li>ID: 18</li>
@@ -948,7 +998,7 @@ table th {
     <li>palabras clave: sonido, sintetizadores</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="casey reas" data-editorial="" data-temas="ensayo|computación|arte|inteligencia artificial">
+<div class="libro-item" data-autores="casey reas" data-editorial="" data-temas="ensayo|computación|arte|inteligencia artificial" data-titulo="making pictures with generative adversarial networks" data-agno="2019">
   <h2 id="making-pictures-with-generative-adversarial-networks">Making Pictures with Generative Adversarial Networks</h2>
   <ul>
     <li>ID: 33</li>
@@ -958,7 +1008,7 @@ table th {
     <li>palabras clave: ensayo, computación, arte, inteligencia artificial</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="paul d.|lehrman|tim tully" data-editorial="amsco publications" data-temas="">
+<div class="libro-item" data-autores="paul d.|lehrman|tim tully" data-editorial="amsco publications" data-temas="" data-titulo="midi for the professional" data-agno="TBD">
   <h2 id="midi-for-the-professional">MIDI for the Professional</h2>
   <ul>
     <li>ID: 44</li>
@@ -968,7 +1018,7 @@ table th {
     <li>palabras clave: </li>
   </ul>
 </div>
-<div class="libro-item" data-autores="seymour papert" data-editorial="basic books" data-temas="educación|programación">
+<div class="libro-item" data-autores="seymour papert" data-editorial="basic books" data-temas="educación|programación" data-titulo="mindstorms" data-agno="TBD">
   <h2 id="mindstorms">Mindstorms</h2>
   <ul>
     <li>ID: 47</li>
@@ -978,7 +1028,7 @@ table th {
     <li>palabras clave: educación, programación</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="erza j. teboul|andreas kitzmann|einar engström" data-editorial="routledge" data-temas="sintetizadores|electrónica">
+<div class="libro-item" data-autores="erza j. teboul|andreas kitzmann|einar engström" data-editorial="routledge" data-temas="sintetizadores|electrónica" data-titulo="modular synthesis" data-agno="2024">
   <h2 id="modular-synthesis">Modular synthesis</h2>
   <ul>
     <li>ID: 3</li>
@@ -988,7 +1038,7 @@ table th {
     <li>palabras clave: sintetizadores, electrónica</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="irv kalb" data-editorial="no starch press" data-temas="electrónica digital|lógica combinacional|simulación">
+<div class="libro-item" data-autores="irv kalb" data-editorial="no starch press" data-temas="electrónica digital|lógica combinacional|simulación" data-titulo="object-oriented python" data-agno="TBD">
   <h2 id="object-oriented-python">Object-Oriented Python</h2>
   <ul>
     <li>ID: 50</li>
@@ -998,7 +1048,7 @@ table th {
     <li>palabras clave: electrónica digital, lógica combinacional, simulación</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="lillian-yvonne bertram|nick montfort" data-editorial="" data-temas="computación|inteligencia artificial|algoritmos|arte">
+<div class="libro-item" data-autores="lillian-yvonne bertram|nick montfort" data-editorial="" data-temas="computación|inteligencia artificial|algoritmos|arte" data-titulo="output" data-agno="TBD">
   <h2 id="output">Output</h2>
   <ul>
     <li>ID: 35</li>
@@ -1009,7 +1059,7 @@ table th {
   </ul>
 <p><img src="/lid/public/libros-imagenes/out-put.jpeg" alt="Output"></p>
 </div>
-<div class="libro-item" data-autores="kim bjørn|chris meyer" data-editorial="bjooks" data-temas="sintetizadores|electrónica">
+<div class="libro-item" data-autores="kim bjørn|chris meyer" data-editorial="bjooks" data-temas="sintetizadores|electrónica" data-titulo="patch &amp; tweak" data-agno="2018">
   <h2 id="patch-and-tweak">Patch &amp; tweak</h2>
   <ul>
     <li>ID: 4</li>
@@ -1019,7 +1069,7 @@ table th {
     <li>palabras clave: sintetizadores, electrónica</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="kim bjørn" data-editorial="kitaro" data-temas="electrónica|sintetizadores">
+<div class="libro-item" data-autores="kim bjørn" data-editorial="kitaro" data-temas="electrónica|sintetizadores" data-titulo="patch &amp; tweak with korg" data-agno="TBD">
   <h2 id="patch-and-tweak-with-korg">Patch &amp; tweak with Korg</h2>
   <ul>
     <li>ID: 24</li>
@@ -1029,7 +1079,7 @@ table th {
     <li>palabras clave: electrónica, sintetizadores</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="kim bjørn" data-editorial="bjooks" data-temas="tecnología musical|guía|sintetizadores">
+<div class="libro-item" data-autores="kim bjørn" data-editorial="bjooks" data-temas="tecnología musical|guía|sintetizadores" data-titulo="patch &amp; tweak with korg" data-agno="TBD">
   <h2 id="patch-and-tweak-with-korg-2">Patch &amp; Tweak with Korg</h2>
   <ul>
     <li>ID: 45</li>
@@ -1039,7 +1089,7 @@ table th {
     <li>palabras clave: tecnología musical, guía, sintetizadores</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="paulo freire" data-editorial="bloomsbury academic" data-temas="esperanza|pedagogía">
+<div class="libro-item" data-autores="paulo freire" data-editorial="bloomsbury academic" data-temas="esperanza|pedagogía" data-titulo="pedagogy of hope" data-agno="TBD">
   <h2 id="pedagogy-of-hope">Pedagogy of hope</h2>
   <ul>
     <li>ID: 19</li>
@@ -1049,7 +1099,7 @@ table th {
     <li>palabras clave: esperanza, pedagogía</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="colectivo" data-editorial="pioneer works press" data-temas="arte|música|ciencia">
+<div class="libro-item" data-autores="colectivo" data-editorial="pioneer works press" data-temas="arte|música|ciencia" data-titulo="pioneer works journal" data-agno="TBD">
   <h2 id="pioneer-works-journal">Pioneer Works Journal</h2>
   <ul>
     <li>ID: 31</li>
@@ -1059,7 +1109,7 @@ table th {
     <li>palabras clave: arte, música, ciencia</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="dominik landwehr|christoph wachter|mathias jud" data-editorial="migros-kulturprozent" data-temas="cultura digital|activismo|intervención política">
+<div class="libro-item" data-autores="dominik landwehr|christoph wachter|mathias jud" data-editorial="migros-kulturprozent" data-temas="cultura digital|activismo|intervención política" data-titulo="political interventions" data-agno="TBD">
   <h2 id="political-interventions">Political Interventions</h2>
   <ul>
     <li>ID: 52</li>
@@ -1069,7 +1119,7 @@ table th {
     <li>palabras clave: cultura digital, activismo, intervención política</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="casey reas|ben fry" data-editorial="mit press" data-temas="visual|programación">
+<div class="libro-item" data-autores="casey reas|ben fry" data-editorial="mit press" data-temas="visual|programación" data-titulo="processing" data-agno="2014">
   <h2 id="processing">Processing</h2>
   <ul>
     <li>ID: 8</li>
@@ -1079,7 +1129,7 @@ table th {
     <li>palabras clave: visual, programación</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="kim bjørn" data-editorial="bjooks" data-temas="sintetizadores|electrónica">
+<div class="libro-item" data-autores="kim bjørn" data-editorial="bjooks" data-temas="sintetizadores|electrónica" data-titulo="push turn move" data-agno="2017">
   <h2 id="push-turn-move">Push turn move</h2>
   <ul>
     <li>ID: 2</li>
@@ -1089,7 +1139,7 @@ table th {
     <li>palabras clave: sintetizadores, electrónica</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="manuel scorza" data-editorial="siglo veintiuno editores" data-temas="novela|literatura peruana|conflictos agrarios">
+<div class="libro-item" data-autores="manuel scorza" data-editorial="siglo veintiuno editores" data-temas="novela|literatura peruana|conflictos agrarios" data-titulo="redoble por rancas" data-agno="TBD">
   <h2 id="redoble-por-rancas">Redoble por Rancas</h2>
   <ul>
     <li>ID: 60</li>
@@ -1099,7 +1149,7 @@ table th {
     <li>palabras clave: Novela, Literatura peruana, Conflictos agrarios</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="manuel scorza" data-editorial="alfaguara" data-temas="novela|realismo mágico|literatura">
+<div class="libro-item" data-autores="manuel scorza" data-editorial="alfaguara" data-temas="novela|realismo mágico|literatura" data-titulo="redoble por rancas&lt;&lt;" data-agno="TBD">
   <h2 id="redoble-por-rancas-2">Redoble por Rancas&lt;&lt;</h2>
   <ul>
     <li>ID: 42</li>
@@ -1109,7 +1159,7 @@ table th {
     <li>palabras clave: Novela, Realismo mágico, Literatura</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="you nakai" data-editorial="david tudor music" data-temas="arte|instrumentos|electrónica">
+<div class="libro-item" data-autores="you nakai" data-editorial="david tudor music" data-temas="arte|instrumentos|electrónica" data-titulo="reminded by the instruments" data-agno="TBD">
   <h2 id="reminded-by-the-instruments">Reminded by the Instruments</h2>
   <ul>
     <li>ID: 39</li>
@@ -1119,7 +1169,7 @@ table th {
     <li>palabras clave: arte, instrumentos, electrónica</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="julien danjou" data-editorial="" data-temas="electrónica digital|lógica combinacional|simulación">
+<div class="libro-item" data-autores="julien danjou" data-editorial="" data-temas="electrónica digital|lógica combinacional|simulación" data-titulo="serious python" data-agno="TBD">
   <h2 id="serious-python">Serious Python</h2>
   <ul>
     <li>ID: 49</li>
@@ -1129,7 +1179,7 @@ table th {
     <li>palabras clave: electrónica digital, lógica combinacional, simulación</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="mike birbiglia" data-editorial="" data-temas="autobiografía|humor">
+<div class="libro-item" data-autores="mike birbiglia" data-editorial="" data-temas="autobiografía|humor" data-titulo="sleepwalk with me and other painfully true stories" data-agno="2010">
   <h2 id="sleepwalk-with-me-and-other-painfully-true-stories">Sleepwalk with Me and Other Painfully True Stories</h2>
   <ul>
     <li>ID: 32</li>
@@ -1139,7 +1189,7 @@ table th {
     <li>palabras clave: autobiografía, humor</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="eilon paz|dan epstein|james rotondi" data-editorial="ten speed press" data-temas="música|electrónica|sonido|pedales|instrumentos">
+<div class="libro-item" data-autores="eilon paz|dan epstein|james rotondi" data-editorial="ten speed press" data-temas="música|electrónica|sonido|pedales|instrumentos" data-titulo="stompbox" data-agno="2018">
   <h2 id="stompbox">Stompbox</h2>
   <ul>
     <li>ID: 37</li>
@@ -1149,7 +1199,7 @@ table th {
     <li>palabras clave: música, electrónica, sonido, pedales, instrumentos</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="mike metlay" data-editorial="bjooks" data-temas="sintetizadores|electrónica">
+<div class="libro-item" data-autores="mike metlay" data-editorial="bjooks" data-temas="sintetizadores|electrónica" data-titulo="synth gems 1" data-agno="2021">
   <h2 id="synth-gems-1">Synth gems 1</h2>
   <ul>
     <li>ID: 1</li>
@@ -1159,7 +1209,7 @@ table th {
     <li>palabras clave: sintetizadores, electrónica</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="paola molina" data-editorial="plaza &amp; janés" data-temas="ensayo|humor|sátira">
+<div class="libro-item" data-autores="paola molina" data-editorial="plaza &amp; janés" data-temas="ensayo|humor|sátira" data-titulo="tengo una platita" data-agno="TBD">
   <h2 id="tengo-una-platita">Tengo una Platita</h2>
   <ul>
     <li>ID: 40</li>
@@ -1169,7 +1219,7 @@ table th {
     <li>palabras clave: ensayo, humor, sátira</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="yann seznec" data-editorial="" data-temas="diseño de instrumentos|arte|proyecto">
+<div class="libro-item" data-autores="yann seznec" data-editorial="" data-temas="diseño de instrumentos|arte|proyecto" data-titulo="the book of knowledge of impractical musical device" data-agno="TBD">
   <h2 id="the-book-of-knowledge-of-impractical-musical-device">The book of Knowledge of Impractical Musical Device</h2>
   <ul>
     <li>ID: 41</li>
@@ -1179,7 +1229,7 @@ table th {
     <li>palabras clave: diseño de instrumentos, arte, proyecto</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="tim danton" data-editorial="raspberry pi press" data-temas="computadores">
+<div class="libro-item" data-autores="tim danton" data-editorial="raspberry pi press" data-temas="computadores" data-titulo="the computers that made the world" data-agno="2025">
   <h2 id="the-computers-that-made-the-world">The computers that made the World</h2>
   <ul>
     <li>ID: 10</li>
@@ -1189,7 +1239,7 @@ table th {
     <li>palabras clave: computadores</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="gina renee dunham" data-editorial="gina renee dunham" data-temas="patronaje|diseño">
+<div class="libro-item" data-autores="gina renee dunham" data-editorial="gina renee dunham" data-temas="patronaje|diseño" data-titulo="the fitting book" data-agno="TBD">
   <h2 id="the-fitting-book">The fitting book</h2>
   <ul>
     <li>ID: 22</li>
@@ -1199,7 +1249,7 @@ table th {
     <li>palabras clave: Patronaje, diseño</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="robert fripp" data-editorial="discipline global mobile" data-temas="música|filosofía|guitarra">
+<div class="libro-item" data-autores="robert fripp" data-editorial="discipline global mobile" data-temas="música|filosofía|guitarra" data-titulo="the guitar circle" data-agno="TBD">
   <h2 id="the-guitar-circle">The Guitar Circle</h2>
   <ul>
     <li>ID: 46</li>
@@ -1209,7 +1259,7 @@ table th {
     <li>palabras clave: música, filosofía, guitarra</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="mitchel resnick" data-editorial="mit press" data-temas="computación|electronica|programación">
+<div class="libro-item" data-autores="mitchel resnick" data-editorial="mit press" data-temas="computación|electronica|programación" data-titulo="turtles, termites, and traffic jams" data-agno="TBD">
   <h2 id="turtles-termites-and-traffic-jams">Turtles, termites, and traffic jams</h2>
   <ul>
     <li>ID: 29</li>
@@ -1219,7 +1269,7 @@ table th {
     <li>palabras clave: computación, electronica, programación</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="derek holzer" data-editorial="" data-temas="computación|sintetizadores">
+<div class="libro-item" data-autores="derek holzer" data-editorial="" data-temas="computación|sintetizadores" data-titulo="vector synthesis" data-agno="TBD">
   <h2 id="vector-synthesis">Vector Synthesis</h2>
   <ul>
     <li>ID: 27</li>
@@ -1229,7 +1279,7 @@ table th {
     <li>palabras clave: computación, sintetizadores</li>
   </ul>
 </div>
-<div class="libro-item" data-autores="mark vail" data-editorial="miller freeman books" data-temas="música|guía técnica|historia de la tecnología">
+<div class="libro-item" data-autores="mark vail" data-editorial="miller freeman books" data-temas="música|guía técnica|historia de la tecnología" data-titulo="vintage synthesizers" data-agno="TBD">
   <h2 id="vintage-synthesizers">Vintage Synthesizers</h2>
   <ul>
     <li>ID: 43</li>
@@ -1252,6 +1302,6 @@ table th {
 
 		
 
-		<script type="module" src="/lid/dist/tMQS5gezkD.js"></script>
+		<script type="module" src="/lid/dist/UoUnYVfECA.js"></script>
 	</body>
 </html>
