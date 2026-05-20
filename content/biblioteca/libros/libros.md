@@ -68,9 +68,6 @@ const eleventyNavigation = {
     autores.forEach(function (a) { autoresSet.add(a); });
     if (editorial) editorialesSet.add(editorial);
     temas.forEach(function (t) { temasSet.add(t); });
-    libro._autores = autores;
-    libro._editorial = editorial;
-    libro._temas = temas;
   });
 
   function populateSelect(id, values) {
@@ -88,14 +85,17 @@ const eleventyNavigation = {
   populateSelect('filtro-tema', temasSet);
 
   function aplicarFiltros() {
-    var autor = document.getElementById('filtro-autor').value;
-    var editorial = document.getElementById('filtro-editorial').value;
-    var tema = document.getElementById('filtro-tema').value;
+    var filtroAutor = document.getElementById('filtro-autor').value;
+    var filtroEditorial = document.getElementById('filtro-editorial').value;
+    var filtroTema = document.getElementById('filtro-tema').value;
 
     libros.forEach(function (libro) {
-      var matchAutor = !autor || libro._autores.includes(autor);
-      var matchEditorial = !editorial || libro._editorial === editorial;
-      var matchTema = !tema || libro._temas.includes(tema);
+      var autores = libro.dataset.autores.split('|').map(function (a) { return a.trim(); }).filter(Boolean);
+      var editorial = libro.dataset.editorial.trim();
+      var temas = libro.dataset.temas.split('|').map(function (t) { return t.trim(); }).filter(Boolean);
+      var matchAutor = !filtroAutor || autores.includes(filtroAutor);
+      var matchEditorial = !filtroEditorial || editorial === filtroEditorial;
+      var matchTema = !filtroTema || temas.includes(filtroTema);
       libro.style.display = (matchAutor && matchEditorial && matchTema) ? '' : 'none';
     });
   }
