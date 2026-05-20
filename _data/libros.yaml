@@ -76,7 +76,7 @@ libros:
     subtitulo: "A Programming Handbook for Visual Designers and Artists"
     autores: ["Casey Reas", "Ben Fry"] 
     palabrasClave: ["visual", "programación"]
-    editorial: "The MIT Press"
+    editorial: MIT Press
     agno: "2014"
     isbn: TBD
     codigoBarra: TBD
@@ -106,7 +106,7 @@ libros:
     subtitulo: 
     autores: ["Martin Gubbins"] 
     palabrasClave: ["poesía", "chilena"]
-    editorial: "Tácitas"
+    editorial: "Ediciones Tácitas"
     agno: "2010"
     isbn: TBD
     codigoBarra: TBD
@@ -246,7 +246,7 @@ libros:
     subtitulo: "50 years of Roland history"
     autores: ["Kim Bjørn"]
     palabrasClave: ["instrumentos", "sintetizadores"]
-    editorial: "BJOOKS"
+    editorial: "Bjooks"
     agno: TBD
     isbn: TBD
     codigoBarra: TBD
