@@ -611,3 +611,13 @@ libros:
     agno: TBD
     isbn: TBD
     codigoBarra: TBD  
+
+  - id: 62
+    titulo: "Tortugas, Termitas y Atascos de Tráfico"
+    subtitulo: 
+    autores: ["Mitchel Resnick"]
+    palabrasClave: ["simulación", "inteligencia artificial"]
+    editorial: "Gedisa Editorial"
+    agno: "2015"
+    isbn: TBD
+    codigoBarra: TBD     
