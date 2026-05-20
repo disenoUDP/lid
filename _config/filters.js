@@ -40,4 +40,23 @@ export default function(eleventyConfig) {
 	eleventyConfig.addFilter("sortAlphabetically", strings =>
 		(strings || []).sort((b, a) => b.localeCompare(a))
 	);
+
+	eleventyConfig.addFilter("sortBooksByTitle", books => {
+		if(!Array.isArray(books) || books.length === 0) {
+			return [];
+		}
+
+		return [...books].sort((a, b) => {
+			const titleA = String(a?.titulo || "").trim();
+			const titleB = String(b?.titulo || "").trim();
+			const startsWithNumberA = /^\d/.test(titleA);
+			const startsWithNumberB = /^\d/.test(titleB);
+
+			if(startsWithNumberA !== startsWithNumberB) {
+				return startsWithNumberA ? 1 : -1;
+			}
+
+			return titleA.localeCompare(titleB, "es", { sensitivity: "base", numeric: true });
+		});
+	});
 };
