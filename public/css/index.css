@@ -419,6 +419,12 @@ iframe {
 	padding-bottom: 1rem;
 }
 
+.libro-item {
+	margin-bottom: 2.5rem;
+	border-bottom: 0.5px solid var(--line);
+	padding-bottom: 1rem;
+}
+
 .curso-sigla {
 	font-family: var(--font-tech);
 	font-size: 0.75rem;
