@@ -24,7 +24,7 @@ libros:
   - id: 3
     titulo: "Modular synthesis"
     subtitulo: "Patching machine and people"
-    autores: ["Erza J. Teboul", "Andreas Kitzmann", "Einar Engström"]
+    autores: ["Ezra J. Teboul", "Andreas Kitzmann", "Einar Engström"]
     palabrasClave: ["sintetizadores", "electrónica"]
     editorial: "Routledge"
     agno: "2024"
@@ -92,7 +92,7 @@ libros:
     codigoBarra: TBD
 
   - id: 10
-    titulo: "The computers that made the World"
+    titulo: "The Computers That Made the World"
     subtitulo:
     autores: ["Tim Danton"] 
     palabrasClave: ["computadores"]
@@ -104,7 +104,7 @@ libros:
   - id: 11
     titulo: "Fuentes del derecho"
     subtitulo: 
-    autores: ["Martin Gubbins"] 
+    autores: ["Martín Gubbins"] 
     palabrasClave: ["poesía", "chilena"]
     editorial: "Ediciones Tácitas"
     agno: "2010"
@@ -134,7 +134,7 @@ libros:
   - id: 14 
     titulo: "De otras cosas y el amor"
     subtitulo: 
-    autores: ["Pacífico Carrasco Gonzales"]
+    autores: ["Pacífico Carrasco Gonzáles"]
     palabrasClave: ["poesía", "chilena", "amor"]
     editorial: "Imprenta Fournier"
     agno: TBD
@@ -157,17 +157,17 @@ libros:
     autores: ["Ruben Pater"] 
     palabrasClave: ["capitalismo", "diseño"]
     editorial: "Valiz"
-    agno: TBD
+    agno: "2021"
     isbn: TBD
     codigoBarra: TBD
 
   - id: 17
-    titulo: "How speak machine"
+    titulo: "How to Speak Machine"
     subtitulo: "Computational Thinking for the rest of us"
     autores: ["John Maeda"]
     palabrasClave: ["pensamiento computacional", "algoritmos"]
     editorial: "Portfolio Penguin"
-    agno: TBD
+    agno: "2019"
     isbn: TBD
     codigoBarra: TBD
 
@@ -176,8 +176,8 @@ libros:
     subtitulo: "A modern approach to old-school sound synthesis"
     autores: ["Ray Wilson"]
     palabrasClave: ["sonido", "sintetizadores"]
-    editorial: "Make Community"
-    agno: TBD
+    editorial: "Maker Media"
+    agno: "2014"
     isbn: TBD
     codigoBarra: TBD
 
@@ -187,7 +187,7 @@ libros:
     autores: ["Paulo Freire"]
     palabrasClave: ["esperanza", "pedagogía"]
     editorial: "Bloomsbury Academic"
-    agno: TBD
+    agno: "2014"
     isbn: TBD
     codigoBarra: TBD
 
@@ -197,7 +197,7 @@ libros:
     autores: ["Alejandra Carmona López"]
     palabrasClave: ["Política", "Biografía"]
     editorial: "Planeta"
-    agno: TBD
+    agno: "2025"
     isbn: TBD
     codigoBarra: TBD
 
@@ -213,11 +213,11 @@ libros:
 
   - id: 22
     titulo: "The fitting book"
-    subtitulo: "Make sewing pattern alterations archive the perfect fit you desire"
+    subtitulo: "Make sewing pattern alterations archieve the perfect fit you desire"
     autores: ["Gina Renee Dunham"]
     palabrasClave: ["Patronaje", "diseño"]
     editorial: "Gina Renee Dunham"
-    agno: TBD
+    agno: "2021"
     isbn: TBD
     codigoBarra: TBD
     
@@ -227,7 +227,7 @@ libros:
     autores: ["Christiane Paul"]
     palabrasClave: ["digital", "diseño"]
     editorial: "Thames & Hudson"
-    agno: TBD
+    agno: 2015
     isbn: TBD
     codigoBarra: TBD
     
@@ -236,8 +236,8 @@ libros:
     subtitulo: 
     autores: ["Kim Bjørn"]
     palabrasClave: ["electrónica", "sintetizadores"]
-    editorial: "Kitaro"
-    agno: TBD
+    editorial: "Bjooks"
+    agno: "2022"
     isbn: TBD
     codigoBarra: TBD
     
@@ -266,8 +266,8 @@ libros:
     subtitulo: "a media archaeological investigation into sound-modulated light"
     autores: ["Derek Holzer"]
     palabrasClave: ["computación", "sintetizadores"]
-    editorial:
-    agno: TBD
+    editorial: "Derek Holzer"
+    agno: "2019"
     isbn: TBD
     codigoBarra: TBD
 
@@ -277,7 +277,7 @@ libros:
     autores: ["Omar Céspedes", "José Bodet"]
     palabrasClave: ["impresión", "gráfica", "fabricación"]
     editorial:
-    agno: TBD
+    agno: "2019"
     isbn: TBD
     codigoBarra: TBD
 
@@ -498,7 +498,7 @@ libros:
     autores: ["Irv Kalb"]
     palabrasClave: ["electrónica digital", "lógica combinacional", "simulación"]
     editorial: "No Starch Press"
-    agno: TBD
+    agno: "2022"
     isbn: TBD
     codigoBarra: TBD
 
@@ -508,7 +508,7 @@ libros:
     autores: ["Al Sweigart"]
     palabrasClave: ["automatización", "procesamiento de datos", "productividad"]
     editorial: "No Starch Press"
-    agno: TBD
+    agno: "2015"
     isbn: TBD
     codigoBarra: TBD
 
@@ -518,17 +518,17 @@ libros:
     autores: ["Dominik Landwehr", "Christoph Wachter", "Mathias Jud"]
     palabrasClave: ["cultura digital", "activismo", "intervención política"]
     editorial: "Migros-Kulturprozent"
-    agno: TBD
+    agno: "2014"
     isbn: TBD
     codigoBarra: TBD
 
   - id: 53
-    titulo: "Depeloping synthesizers with vcv rack"
+    titulo: "Developing Virtual Synthesizers with VCV Rack"
     subtitulo: 
     autores: ["Leonardo Gabrielli"]
     palabrasClave: ["síntesis modular", "audio digital", "VCV Rack"]
     editorial: "Focal Press"
-    agno: TBD
+    agno: "2020"
     isbn: TBD
     codigoBarra: TBD   
 
@@ -537,8 +537,8 @@ libros:
     subtitulo: "Design between Human and Machine"
     autores: ["Mateo Kries", "Christoph Thun-Hohenstein", "Amelie Klein"]
     palabrasClave: ["robótica", "interacción humano-máquina", "inteligencia artificial"]
-    editorial: ""
-    agno: TBD
+    editorial: "Vitra Design Museum"
+    agno: "2017"
     isbn: TBD
     codigoBarra: TBD    
 
@@ -548,7 +548,7 @@ libros:
     autores: ["Jo Hinchliffe", "Ben Everard"]
     palabrasClave: ["KiCad", "PCB", "Hardware"]
     editorial: "Raspberry Pi Press"
-    agno: TBD
+    agno: "2024"
     isbn: TBD
     codigoBarra: TBD 
 
@@ -558,7 +558,7 @@ libros:
     autores: ["Manuel Scorza"]
     palabrasClave: ["Novela", "Literatura peruana", "Conflictos agrarios"]
     editorial: "Siglo Veintiuno Editores"
-    agno: TBD
+    agno: "1991"
     isbn: TBD
     codigoBarra: TBD  
 
@@ -568,7 +568,7 @@ libros:
     autores: ["Manuel Scorza"]
     palabrasClave: ["Novela", "Literatura peruana", "Conflictos agrarios"]
     editorial: "Siglo Veintiuno Editores"
-    agno: TBD
+    agno: "1998"
     isbn: TBD
     codigoBarra: TBD  
 
@@ -578,7 +578,7 @@ libros:
     autores: ["Manuel Scorza"]
     palabrasClave: ["Novela", "Literatura peruana", "Conflictos agrarios"]
     editorial: "Siglo Veintiuno Editores"
-    agno: TBD
+    agno: "1991"
     isbn: TBD
     codigoBarra: TBD 
 
@@ -588,7 +588,7 @@ libros:
     autores: ["Manuel Scorza"]
     palabrasClave: ["Novela", "Literatura peruana", "Conflictos agrarios"]
     editorial: "Siglo Veintiuno Editores"
-    agno: TBD
+    agno: "1991"
     isbn: TBD
     codigoBarra: TBD  
 
@@ -598,7 +598,7 @@ libros:
     autores: ["Manuel Scorza"]
     palabrasClave: ["Novela", "Literatura peruana", "Conflictos agrarios"]
     editorial: "Siglo Veintiuno Editores"
-    agno: TBD
+    agno: "1988"
     isbn: TBD
     codigoBarra: TBD  
 
@@ -608,7 +608,7 @@ libros:
     autores: ["Manuel Scorza"]
     palabrasClave: ["Novela", "Literatura peruana", "Conflictos agrarios"]
     editorial: "Siglo Veintiuno Editores"
-    agno: TBD
+    agno: "1988"
     isbn: TBD
     codigoBarra: TBD  
 
