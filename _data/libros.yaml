@@ -98,7 +98,7 @@ libros:
     agno: "2022"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["code.jpeg"]
 
   - id: 10
     titulo: "The Computers That Made the World"
@@ -109,7 +109,7 @@ libros:
     agno: "2025"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["computers-world.jpeg"]
 
   - id: 11
     titulo: "Fuentes del derecho"
@@ -131,7 +131,7 @@ libros:
     agno: "2010"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["haz-facil-lo-imposible.jpeg"]
 
   - id: 13
     titulo: "Imágenes de imágenes: del cuadro a la pantalla"
@@ -150,7 +150,7 @@ libros:
     autores: ["Pacífico Carrasco Gonzáles"]
     palabrasClave: ["poesía", "chilena", "amor"]
     editorial: "Imprenta Fournier"
-    agno: TBD
+    agno: "2000"
     isbn: TBD
     codigoBarra: TBD
     imagenes: []
@@ -161,7 +161,7 @@ libros:
     autores: ["Allison Parrish"]
     palabrasClave: ["poesía", "programación"]
     editorial: "Counterpath Press"
-    agno: TBD
+    agno: "2018"
     isbn: TBD
     codigoBarra: TBD
     imagenes: []
@@ -219,7 +219,7 @@ libros:
     agno: "2025"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["jeannette.jpeg"]
 
   - id: 21
     titulo: "Física Conceptual"
@@ -252,7 +252,7 @@ libros:
     agno: "2015"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["digital-art.jpeg"]
     
   - id: 24
     titulo: "Patch & tweak with Korg"
@@ -329,7 +329,7 @@ libros:
     agno: "2011"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["escalas-esc.jpeg"]
 
   - id: 31
     titulo: "Pioneer Works Journal"
@@ -340,7 +340,7 @@ libros:
     agno: "2023"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["pioneer-works.jpeg"]
 
   - id: 32
     titulo: "Sleepwalk with Me and Other Painfully True Stories"
@@ -373,7 +373,7 @@ libros:
     agno: "2019"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["ana-tijoux.jpeg"]
       
   - id: 35
     titulo: "Output"
@@ -395,7 +395,7 @@ libros:
     agno: "1995"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["being-digital.jpeg"]
 
   - id: 37
     titulo: "Stompbox"
@@ -428,7 +428,7 @@ libros:
     agno: "2021"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["reminded-instruments.jpeg"]
 
   - id: 40
     titulo: "Tengo una Platita" 
@@ -439,7 +439,7 @@ libros:
     agno: "2025"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["tengo-platita.jpeg"]
     
   - id: 41
     titulo: "The Book of Knowledge of Impractical Musical Devices"
@@ -450,7 +450,7 @@ libros:
     agno: "2019"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["the-book.jpeg"]
 
   - id: 42
     titulo: "Redoble por Rancas"
@@ -472,7 +472,7 @@ libros:
     agno: "2000"
     isbn: TBD
     codigoBarra: TBD 
-    imagenes: []
+    imagenes: ["vintage-synthesizers.jpeg"]
     
   - id: 44
     titulo: "MIDI for the Professional"
@@ -582,7 +582,7 @@ libros:
     agno: "2017"
     isbn: TBD
     codigoBarra: TBD 
-    imagenes: []
+    imagenes: ["hello-robot.jpeg"]
 
   - id: 54
     titulo: "Design an rp2040 Board with Kicad"
@@ -657,17 +657,6 @@ libros:
     palabrasClave: ["Novela", "Literatura peruana", "Conflictos agrarios"]
     editorial: "Siglo Veintiuno Editores"
     agno: "1988"
-    isbn: TBD
-    codigoBarra: TBD
-    imagenes: []
-
-  - id: 61
-    titulo: "Tortugas, Termitas y Atascos de Tráfico"
-    subtitulo: 
-    autores: ["Mitchel Resnick"]
-    palabrasClave: ["simulación", "inteligencia artificial"]
-    editorial: "Gedisa Editorial"
-    agno: "2015"
     isbn: TBD
     codigoBarra: TBD
     imagenes: []
