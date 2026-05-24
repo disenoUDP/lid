@@ -150,7 +150,7 @@ libros:
     autores: ["Pacífico Carrasco Gonzáles"]
     palabrasClave: ["poesía", "chilena", "amor"]
     editorial: "Imprenta Fournier"
-    agno: TBD
+    agno: "2000"
     isbn: TBD
     codigoBarra: TBD
     imagenes: []
@@ -161,7 +161,7 @@ libros:
     autores: ["Allison Parrish"]
     palabrasClave: ["poesía", "programación"]
     editorial: "Counterpath Press"
-    agno: TBD
+    agno: "2018"
     isbn: TBD
     codigoBarra: TBD
     imagenes: []
