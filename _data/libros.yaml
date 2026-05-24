@@ -10,6 +10,7 @@ libros:
     agno: "2021"
     isbn: TBD
     codigoBarra: TBD
+    imagenes: []
 
   - id: 2
     titulo: "Push turn move"
@@ -20,6 +21,7 @@ libros:
     agno: "2017"
     isbn: TBD
     codigoBarra: TBD
+    imagenes: []
 
   - id: 3
     titulo: "Modular synthesis"
@@ -30,6 +32,7 @@ libros:
     agno: "2024"
     isbn: TBD
     codigoBarra: TBD
+    imagenes: []
     
   - id: 4
     titulo: "Patch & tweak"
@@ -40,7 +43,8 @@ libros:
     agno: "2018"
     isbn: TBD
     codigoBarra: TBD
-
+    imagenes: []
+   
   - id: 5
     titulo: "Aesthetic programming"
     subtitulo: "A handbook of software studies"
@@ -50,6 +54,7 @@ libros:
     agno: "2020"
     isbn: TBD
     codigoBarra: TBD
+    imagenes: []
 
   - id: 6
     titulo: "Handmade electronic music"
@@ -60,6 +65,7 @@ libros:
     agno: "2020"
     isbn: TBD
     codigoBarra: TBD
+    imagenes: []
 
   - id: 7
     titulo: "Chromatic algorithms"
@@ -70,16 +76,18 @@ libros:
     agno: "2014"
     isbn: TBD
     codigoBarra: TBD
+    imagenes: []
 
   - id: 8
     titulo: "Processing"
     subtitulo: "A Programming Handbook for Visual Designers and Artists"
     autores: ["Casey Reas", "Ben Fry"] 
     palabrasClave: ["visual", "programación"]
-    editorial: MIT Press
+    editorial: "MIT Press"
     agno: "2014"
     isbn: TBD
     codigoBarra: TBD
+    imagenes: []
 
   - id: 9
     titulo: "Code"
@@ -90,6 +98,7 @@ libros:
     agno: "2022"
     isbn: TBD
     codigoBarra: TBD
+    imagenes: []
 
   - id: 10
     titulo: "The Computers That Made the World"
@@ -100,6 +109,7 @@ libros:
     agno: "2025"
     isbn: TBD
     codigoBarra: TBD
+    imagenes: []
 
   - id: 11
     titulo: "Fuentes del derecho"
@@ -110,6 +120,7 @@ libros:
     agno: "2010"
     isbn: TBD
     codigoBarra: TBD
+    imagenes: []
 
   - id: 12
     titulo: "Haz fácil lo imposible"
@@ -120,6 +131,7 @@ libros:
     agno: "2010"
     isbn: TBD
     codigoBarra: TBD
+    imagenes: []
 
   - id: 13
     titulo: "Imágenes de imágenes: del cuadro a la pantalla"
@@ -130,6 +142,7 @@ libros:
     agno: "2023"
     isbn: TBD
     codigoBarra: TBD
+    imagenes: []
 
   - id: 14 
     titulo: "De otras cosas y el amor"
@@ -140,6 +153,7 @@ libros:
     agno: TBD
     isbn: TBD
     codigoBarra: TBD
+    imagenes: []
 
   - id: 15
     titulo: "Articulations"
@@ -150,6 +164,7 @@ libros:
     agno: TBD
     isbn: TBD
     codigoBarra: TBD
+    imagenes: []
 
   - id: 16
     titulo: "Caps Lock"
@@ -160,6 +175,7 @@ libros:
     agno: "2021"
     isbn: TBD
     codigoBarra: TBD
+    imagenes: []
 
   - id: 17
     titulo: "How to Speak Machine"
@@ -170,6 +186,7 @@ libros:
     agno: "2019"
     isbn: TBD
     codigoBarra: TBD
+    imagenes: []
 
   - id: 18
     titulo: "Make: analog synthesizers"
@@ -180,6 +197,7 @@ libros:
     agno: "2014"
     isbn: TBD
     codigoBarra: TBD
+    imagenes: []
 
   - id: 19
     titulo: "Pedagogy of hope"
@@ -190,6 +208,7 @@ libros:
     agno: "2014"
     isbn: TBD
     codigoBarra: TBD
+    imagenes: []
 
   - id: 20
     titulo: "Jeannette"
@@ -200,6 +219,7 @@ libros:
     agno: "2025"
     isbn: TBD
     codigoBarra: TBD
+    imagenes: []
 
   - id: 21
     titulo: "Física Conceptual"
@@ -207,19 +227,21 @@ libros:
     autores: ["Paul G. Hewitt"]
     palabrasClave: ["Física", "Métodos"]
     editorial: "Addison Wesley Longman"
-    agno: TBD
+    agno: "1998"
     isbn: TBD
     codigoBarra: TBD
+    imagenes: []
 
   - id: 22
     titulo: "The fitting book"
-    subtitulo: "Make sewing pattern alterations archieve the perfect fit you desire"
+    subtitulo: "Make sewing pattern alterations achieve the perfect fit you desire"
     autores: ["Gina Renee Dunham"]
     palabrasClave: ["Patronaje", "diseño"]
     editorial: "Gina Renee Dunham"
     agno: "2021"
     isbn: TBD
     codigoBarra: TBD
+    imagenes: []
     
   - id: 23
     titulo: "Digital art"
@@ -227,9 +249,10 @@ libros:
     autores: ["Christiane Paul"]
     palabrasClave: ["digital", "diseño"]
     editorial: "Thames & Hudson"
-    agno: 2015
+    agno: "2015"
     isbn: TBD
     codigoBarra: TBD
+    imagenes: []
     
   - id: 24
     titulo: "Patch & tweak with Korg"
@@ -240,6 +263,7 @@ libros:
     agno: "2022"
     isbn: TBD
     codigoBarra: TBD
+    imagenes: []
     
   - id: 25
     titulo: "Inspire the music"
@@ -247,9 +271,10 @@ libros:
     autores: ["Kim Bjørn"]
     palabrasClave: ["instrumentos", "sintetizadores"]
     editorial: "Bjooks"
-    agno: TBD
+    agno: "2022"
     isbn: TBD
     codigoBarra: TBD
+    imagenes: []
     
   - id: 26
     titulo: "Álbum"
@@ -257,20 +282,22 @@ libros:
     autores: ["Martín Gubbins"]
     palabrasClave: ["álbum", "poesía"]
     editorial: "Ediciones Tácitas"
-    agno: TBD
+    agno: "2005"
     isbn: TBD
     codigoBarra: TBD
-
+    imagenes: []
+    
   - id: 27
     titulo: "Vector Synthesis"
-    subtitulo: "a media archaeological investigation into sound-modulated light"
+    subtitulo: "A Media Archaeological Investigation into Sound-Modulated Light"
     autores: ["Derek Holzer"]
     palabrasClave: ["computación", "sintetizadores"]
     editorial: "Derek Holzer"
     agno: "2019"
     isbn: TBD
     codigoBarra: TBD
-
+    imagenes: []
+    
   - id: 28
     titulo: "Impressme"
     subtitulo: "guía de referencia técnica y visual para impresión"
@@ -280,16 +307,18 @@ libros:
     agno: "2019"
     isbn: TBD
     codigoBarra: TBD
+    imagenes: []
 
   - id: 29
     titulo: "Turtles, termites, and traffic jams"
     subtitulo: "explorations in massively parallel microworlds"
     autores: ["Mitchel Resnick"]
-    palabrasClave: ["computación", "electronica", "programación"]
-    editorial: MIT Press
-    agno: TBD
+    palabrasClave: ["computación", "electrónica", "programación"]
+    editorial: "MIT Press"
+    agno: "1994"
     isbn: TBD
     codigoBarra: TBD
+    imagenes: []
 
   - id: 30
     titulo: "Escalas"
@@ -297,9 +326,10 @@ libros:
     autores: ["Martín Gubbins"]
     palabrasClave: ["poesía"]
     editorial: "Mangos de Hacha"
-    agno: TBD
+    agno: "2011"
     isbn: TBD
     codigoBarra: TBD
+    imagenes: []
 
   - id: 31
     titulo: "Pioneer Works Journal"
@@ -307,60 +337,65 @@ libros:
     autores: ["colectivo"]
     palabrasClave: ["arte", "música", "ciencia"]
     editorial: "Pioneer Works Press"
-    agno: TBD
+    agno: "2023"
     isbn: TBD
     codigoBarra: TBD
+    imagenes: []
 
   - id: 32
     titulo: "Sleepwalk with Me and Other Painfully True Stories"
     subtitulo:
     autores: ["Mike Birbiglia"]
     palabrasClave: ["autobiografía", "humor"]
-    editorial: 
-    agno: 2010
+    editorial: "Simon & Schuster"
+    agno: "2010"
     isbn: TBD
     codigoBarra: TBD
-
+    imagenes: []
+  
   - id: 33
     titulo: "Making Pictures with Generative Adversarial Networks"
     subtitulo:
     autores: ["Casey Reas"]
     palabrasClave: ["ensayo", "computación", "arte", "inteligencia artificial"]
-    editorial: 
-    agno: 2019
+    editorial: "Anteism Books" 
+    agno: "2019"
     isbn: TBD
     codigoBarra: TBD
+    imagenes: []
 
   - id: 34
-    titulo: "La música de Ana Tijoux"
+    titulo: "La Música de Ana Tijoux"
     subtitulo: "activismo, nuevas solidaridades y voces de la calle"
     autores: ["María José Barros Cruz"]
     palabrasClave: ["arte", "música", "activismo", "feminismo", "cultura"]
     editorial: "Fondo de Cultura Económica, Editorial Popular"
-    agno: 2019
+    agno: "2019"
     isbn: TBD
     codigoBarra: TBD
+    imagenes: []
       
   - id: 35
     titulo: "Output"
     subtitulo: "An Anthology of Computer-Generated Text, 1953–2023"
     autores: ["Lillian-Yvonne Bertram", "Nick Montfort"]
     palabrasClave: ["computación", "inteligencia artificial", "algoritmos", "arte"]
-    editorial: 
-    agno: TBD
+    editorial: "The MIT Press" 
+    agno: "2024"
     isbn: TBD
     codigoBarra: TBD
     imagenes: ["out-put.jpeg"]
       
   - id: 36
-    titulo: Being digital
+    titulo: "Being digital"
     subtitulo:
     autores: ["Nicholas Negroponte"]
     palabrasClave: ["computación", "tecnología"]
-    editorial: 
-    agno: TBD
+    editorial: "Alfred A. Knopf"
+    agno: "1995"
     isbn: TBD
     codigoBarra: TBD
+    imagenes: []
 
   - id: 37
     titulo: "Stompbox"
@@ -368,29 +403,32 @@ libros:
     autores: ["Eilon Paz", "Dan Epstein", "James Rotondi"]
     palabrasClave: ["música", "electrónica", "sonido", "pedales", "instrumentos"]
     editorial: "Ten Speed Press"
-    agno: 2018
+    agno: "2018"
     isbn: TBD
     codigoBarra: TBD
+    imagenes: []
 
   - id: 38
     titulo: "Code as Creative Medium"
     subtitulo: "A Handbook for Computational Art and Design"
     autores: ["Golan Levin", "Tega Brain"]
     palabrasClave: ["programación", "electrónica"]
-    editorial: MIT Press
-    agno: TBD
+    editorial: "MIT Press"
+    agno: "2021"
     isbn: TBD
     codigoBarra: TBD
+    imagenes: []
 
   - id: 39
     titulo: "Reminded by the Instruments"
     subtitulo:
     autores: ["You Nakai"]
     palabrasClave: ["arte", "instrumentos", "electrónica"]
-    editorial: David Tudor Music
-    agno: TBD
+    editorial: "Oxford University Press"
+    agno: "2021"
     isbn: TBD
     codigoBarra: TBD
+    imagenes: []
 
   - id: 40
     titulo: "Tengo una Platita" 
@@ -398,29 +436,32 @@ libros:
     autores: ["Paola Molina"]
     palabrasClave: ["ensayo", "humor", "sátira"]
     editorial: "Plaza & Janés"
-    agno: TBD
+    agno: "2025"
     isbn: TBD
     codigoBarra: TBD
+    imagenes: []
     
   - id: 41
-    titulo: "The book of Knowledge of Impractical Musical Device"
+    titulo: "The Book of Knowledge of Impractical Musical Devices"
     subtitulo:
     autores: ["Yann Seznec"]
     palabrasClave: ["diseño de instrumentos",  "arte", "proyecto"]
-    editorial: 
-    agno: TBD
+    editorial: "Yann Seznec"
+    agno: "2019"
     isbn: TBD
     codigoBarra: TBD
+    imagenes: []
 
   - id: 42
-    titulo: "Redoble por Rancas<<"
+    titulo: "Redoble por Rancas"
     subtitulo:
     autores: ["Manuel Scorza"]
     palabrasClave: ["Novela", "Realismo mágico", "Literatura"]
     editorial: "Alfaguara"
-    agno: TBD
+    agno: "2020"
     isbn: TBD
     codigoBarra: TBD
+    imagenes: []
     
   - id: 43
     titulo: "Vintage Synthesizers"
@@ -428,71 +469,67 @@ libros:
     autores: ["Mark Vail"]
     palabrasClave: ["Música", "Guía técnica","Historia de la tecnología"]
     editorial: "Miller Freeman Books"
-    agno: TBD
+    agno: "2000"
     isbn: TBD
     codigoBarra: TBD 
+    imagenes: []
     
   - id: 44
     titulo: "MIDI for the Professional"
     subtitulo:
-    autores: ["Paul D.", "Lehrman", "Tim Tully"]
+    autores: ["Paul D. Lehrman", "Tim Tully"]
     palabrasClave: [""]
     editorial: "Amsco Publications"
-    agno: TBD
+    agno: "1993"
     isbn: TBD
     codigoBarra: TBD
+    imagenes: []
 
   - id: 45
-    titulo: "Patch & Tweak with Korg"
-    subtitulo:
-    autores: ["Kim Bjørn"]
-    palabrasClave: ["tecnología musical", "guía", "sintetizadores"]
-    editorial: "Bjooks"
-    agno: TBD
-    isbn: TBD
-    codigoBarra: TBD
-
-  - id: 46
     titulo: "The Guitar Circle"
     subtitulo:
     autores: ["Robert Fripp"]
     palabrasClave: ["música", "filosofía", "guitarra"]
     editorial: "Discipline Global Mobile"
-    agno: TBD
+    agno: "2022"
     isbn: TBD
     codigoBarra: TBD
+    imagenes: []
 
-  - id: 47
+  - id: 46
     titulo: "Mindstorms"
     subtitulo: "Children, Computers, and Powerful Ideas"
     autores: ["Seymour Papert"]
     palabrasClave: ["educación", "programación"]
     editorial: "Basic Books"
-    agno: TBD
+    agno: "1980"
     isbn: TBD
     codigoBarra: TBD
+    imagenes: []
 
-  - id: 48
+  - id: 47
     titulo: "Electrónica Digital Lógica Digital Integrada"
     subtitulo: "Teoría, Problemas y Simulación"
     autores: ["Santiago Acha", "Manuel Castro", "Julio Pérez", "Miguel Rioseras"]
     palabrasClave: ["electrónica digital", "lógica combinacional", "simulación"]
     editorial: "Alfaomega"
-    agno: TBD
+    agno: "2010"
     isbn: TBD
     codigoBarra: TBD
+    imagenes: []
 
-  - id: 49
+  - id: 48
     titulo: "Serious Python"
     subtitulo: "Black-Belt Advice on Deployment, Scalability, Testing, and More"
     autores: ["Julien Danjou"]
     palabrasClave: ["electrónica digital", "lógica combinacional", "simulación"]
-    editorial: ""
-    agno: TBD
+    editorial: "No Starch Press"
+    agno: "2018"
     isbn: TBD
     codigoBarra: TBD
+    imagenes: []
 
-  - id: 50
+  - id: 49
     titulo: "Object-Oriented Python"
     subtitulo: "Master OOP by Building Games and GUIs"
     autores: ["Irv Kalb"]
@@ -501,8 +538,9 @@ libros:
     agno: "2022"
     isbn: TBD
     codigoBarra: TBD
+    imagenes: []
 
-  - id: 51
+  - id: 50
     titulo: "Automate the Boring Stuff with Python"
     subtitulo: "Practical Programming for Total Beginners"
     autores: ["Al Sweigart"]
@@ -511,8 +549,9 @@ libros:
     agno: "2015"
     isbn: TBD
     codigoBarra: TBD
+    imagenes: []
 
-  - id: 52
+  - id: 51
     titulo: "Political Interventions"
     subtitulo: "Edition Digital Culture 1"
     autores: ["Dominik Landwehr", "Christoph Wachter", "Mathias Jud"]
@@ -521,8 +560,9 @@ libros:
     agno: "2014"
     isbn: TBD
     codigoBarra: TBD
+    imagenes: []
 
-  - id: 53
+  - id: 52
     titulo: "Developing Virtual Synthesizers with VCV Rack"
     subtitulo: 
     autores: ["Leonardo Gabrielli"]
@@ -530,9 +570,10 @@ libros:
     editorial: "Focal Press"
     agno: "2020"
     isbn: TBD
-    codigoBarra: TBD   
+    codigoBarra: TBD  
+    imagenes: []
 
-  - id: 54
+  - id: 53
     titulo: "Hello, Robot"
     subtitulo: "Design between Human and Machine"
     autores: ["Mateo Kries", "Christoph Thun-Hohenstein", "Amelie Klein"]
@@ -540,9 +581,10 @@ libros:
     editorial: "Vitra Design Museum"
     agno: "2017"
     isbn: TBD
-    codigoBarra: TBD    
+    codigoBarra: TBD 
+    imagenes: []
 
-  - id: 55
+  - id: 54
     titulo: "Design an rp2040 Board with Kicad"
     subtitulo: "Creating Raspberry Pi Pico-compatible PCBs"
     autores: ["Jo Hinchliffe", "Ben Everard"]
@@ -550,9 +592,10 @@ libros:
     editorial: "Raspberry Pi Press"
     agno: "2024"
     isbn: TBD
-    codigoBarra: TBD 
+    codigoBarra: TBD
+    imagenes: []
 
-  - id: 56
+  - id: 55
     titulo: "El Jinete Inmenso"
     subtitulo: 
     autores: ["Manuel Scorza"]
@@ -560,9 +603,10 @@ libros:
     editorial: "Siglo Veintiuno Editores"
     agno: "1991"
     isbn: TBD
-    codigoBarra: TBD  
+    codigoBarra: TBD
+    imagenes: []
 
-  - id: 57
+  - id: 56
     titulo: "La tumba del Relámpago"
     subtitulo: 
     autores: ["Manuel Scorza"]
@@ -570,9 +614,10 @@ libros:
     editorial: "Siglo Veintiuno Editores"
     agno: "1998"
     isbn: TBD
-    codigoBarra: TBD  
+    codigoBarra: TBD
+    imagenes: []
 
-  - id: 58
+  - id: 57
     titulo: "Cantar de Agapito Robles"
     subtitulo: 
     autores: ["Manuel Scorza"]
@@ -580,19 +625,21 @@ libros:
     editorial: "Siglo Veintiuno Editores"
     agno: "1991"
     isbn: TBD
-    codigoBarra: TBD 
+    codigoBarra: TBD
+    imagenes: []
 
-  - id: 59
-    titulo: "La Danza inmóvil"
+  - id: 58
+    titulo: "La Danza Inmóvil"
     subtitulo: 
     autores: ["Manuel Scorza"]
     palabrasClave: ["Novela", "Literatura peruana", "Conflictos agrarios"]
     editorial: "Siglo Veintiuno Editores"
     agno: "1991"
     isbn: TBD
-    codigoBarra: TBD  
+    codigoBarra: TBD
+    imagenes: []
 
-  - id: 60
+  - id: 59
     titulo: "Redoble por Rancas"
     subtitulo: 
     autores: ["Manuel Scorza"]
@@ -600,9 +647,10 @@ libros:
     editorial: "Siglo Veintiuno Editores"
     agno: "1988"
     isbn: TBD
-    codigoBarra: TBD  
+    codigoBarra: TBD
+    imagenes: []
 
-  - id: 61
+  - id: 60
     titulo: "Garabombo el Invisible"
     subtitulo: 
     autores: ["Manuel Scorza"]
@@ -610,9 +658,10 @@ libros:
     editorial: "Siglo Veintiuno Editores"
     agno: "1988"
     isbn: TBD
-    codigoBarra: TBD  
+    codigoBarra: TBD
+    imagenes: []
 
-  - id: 62
+  - id: 61
     titulo: "Tortugas, Termitas y Atascos de Tráfico"
     subtitulo: 
     autores: ["Mitchel Resnick"]
@@ -620,4 +669,5 @@ libros:
     editorial: "Gedisa Editorial"
     agno: "2015"
     isbn: TBD
-    codigoBarra: TBD     
+    codigoBarra: TBD
+    imagenes: []
