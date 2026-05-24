@@ -54,7 +54,7 @@ libros:
     agno: "2020"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["aesthetic-programming.jpeg"]
 
   - id: 6
     titulo: "Handmade electronic music"
@@ -241,7 +241,7 @@ libros:
     agno: "2021"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["the-fitting-book.jpeg"]
     
   - id: 23
     titulo: "Digital art"
@@ -285,7 +285,7 @@ libros:
     agno: "2005"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["album.jpeg"]
     
   - id: 27
     titulo: "Vector Synthesis"
@@ -296,7 +296,7 @@ libros:
     agno: "2019"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["vector-synthesis.jpeg"]
     
   - id: 28
     titulo: "Impressme"
@@ -318,7 +318,7 @@ libros:
     agno: "1994"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["turtles-termites-and-traffic-jams.jpeg"]
 
   - id: 30
     titulo: "Escalas"
@@ -406,7 +406,7 @@ libros:
     agno: "2018"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["stompbox.jpeg"]
 
   - id: 38
     titulo: "Code as Creative Medium"
@@ -494,7 +494,7 @@ libros:
     agno: "2022"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["the-guitar-circle.jpeg"]
 
   - id: 46
     titulo: "Mindstorms"
@@ -549,7 +549,7 @@ libros:
     agno: "2015"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["automate-the-boring-stuff-with-python.jpeg"]
 
   - id: 51
     titulo: "Political Interventions"
