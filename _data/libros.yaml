@@ -21,7 +21,7 @@ libros:
     agno: "2017"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["push-turn-move.jpeg"]
 
   - id: 3
     titulo: "Modular synthesis"
@@ -32,7 +32,7 @@ libros:
     agno: "2024"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["modular-synthesis.jpeg"]
     
   - id: 4
     titulo: "Patch & tweak"
@@ -43,7 +43,7 @@ libros:
     agno: "2018"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["patch-tweak-modular.jpeg"]
    
   - id: 5
     titulo: "Aesthetic programming"
@@ -65,7 +65,7 @@ libros:
     agno: "2020"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["handmade-electronic-music.jpeg"]
 
   - id: 7
     titulo: "Chromatic algorithms"
@@ -76,7 +76,7 @@ libros:
     agno: "2014"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["chromatic-algorithms.jpeg"]
 
   - id: 8
     titulo: "Processing"
@@ -87,7 +87,7 @@ libros:
     agno: "2014"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["processing.jpeg"]
 
   - id: 9
     titulo: "Code"
@@ -120,7 +120,7 @@ libros:
     agno: "2010"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["fuentes-de-derecho.jpeg"]
 
   - id: 12
     titulo: "Haz fácil lo imposible"
@@ -142,7 +142,7 @@ libros:
     agno: "2023"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["imagenes-de-imagenes.jpeg"]
 
   - id: 14 
     titulo: "De otras cosas y el amor"
@@ -153,7 +153,7 @@ libros:
     agno: "2000"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["de-otras-cosas-y-el-amor.jpeg"]
 
   - id: 15
     titulo: "Articulations"
@@ -164,7 +164,7 @@ libros:
     agno: "2018"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["articulations.jpeg"]
 
   - id: 16
     titulo: "Caps Lock"
@@ -175,7 +175,7 @@ libros:
     agno: "2021"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["caps-lock.jpeg"]
 
   - id: 17
     titulo: "How to Speak Machine"
@@ -186,7 +186,7 @@ libros:
     agno: "2019"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["how-to-speak-machine.jpeg"]
 
   - id: 18
     titulo: "Make: analog synthesizers"
@@ -197,7 +197,7 @@ libros:
     agno: "2014"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["make-analog-synthesizers.jpeg"]
 
   - id: 19
     titulo: "Pedagogy of hope"
@@ -208,7 +208,7 @@ libros:
     agno: "2014"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["paulo-freire.jpeg"]
 
   - id: 20
     titulo: "Jeannette"
@@ -230,7 +230,7 @@ libros:
     agno: "1998"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["fisica-conceptual.jpeg"]
 
   - id: 22
     titulo: "The fitting book"
@@ -263,7 +263,7 @@ libros:
     agno: "2022"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["patch-tweak.jpeg"]
     
   - id: 25
     titulo: "Inspire the music"
@@ -274,7 +274,7 @@ libros:
     agno: "2022"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["inspire-the-music.jpeg"]
     
   - id: 26
     titulo: "Álbum"
@@ -307,7 +307,7 @@ libros:
     agno: "2019"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["impress-me.jpeg"]
 
   - id: 29
     titulo: "Turtles, termites, and traffic jams"
@@ -351,7 +351,7 @@ libros:
     agno: "2010"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["sleep-walk-with-me.jpeg"]
   
   - id: 33
     titulo: "Making Pictures with Generative Adversarial Networks"
@@ -362,7 +362,7 @@ libros:
     agno: "2019"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["making-pictures.jpeg"]
 
   - id: 34
     titulo: "La Música de Ana Tijoux"
@@ -417,7 +417,7 @@ libros:
     agno: "2021"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["code-as-creative-medium.jpeg"]
 
   - id: 39
     titulo: "Reminded by the Instruments"
@@ -461,7 +461,7 @@ libros:
     agno: "2020"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["redoble-por-rancas.jpeg"]
     
   - id: 43
     titulo: "Vintage Synthesizers"
@@ -483,7 +483,7 @@ libros:
     agno: "1993"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["midi-for-the-professional.jpeg"]
 
   - id: 45
     titulo: "The Guitar Circle"
@@ -505,7 +505,7 @@ libros:
     agno: "1980"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["mindstorms.jpeg"]
 
   - id: 47
     titulo: "Electrónica Digital Lógica Digital Integrada"
@@ -516,7 +516,7 @@ libros:
     agno: "2010"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["logica-digital-integrada.jpeg"]
 
   - id: 48
     titulo: "Serious Python"
@@ -527,7 +527,7 @@ libros:
     agno: "2018"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["serious-python.jpeg"]
 
   - id: 49
     titulo: "Object-Oriented Python"
@@ -538,7 +538,7 @@ libros:
     agno: "2022"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["python.jpeg"]
 
   - id: 50
     titulo: "Automate the Boring Stuff with Python"
@@ -571,7 +571,7 @@ libros:
     agno: "2020"
     isbn: TBD
     codigoBarra: TBD  
-    imagenes: []
+    imagenes: ["developing-virtual.jpeg"]
 
   - id: 53
     titulo: "Hello, Robot"
@@ -593,10 +593,10 @@ libros:
     agno: "2024"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["rp2040-board-with-kicad.jpeg"]
 
   - id: 55
-    titulo: "El Jinete Inmenso"
+    titulo: "El Jinete Insomne"
     subtitulo: 
     autores: ["Manuel Scorza"]
     palabrasClave: ["Novela", "Literatura peruana", "Conflictos agrarios"]
@@ -604,7 +604,7 @@ libros:
     agno: "1991"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["el-jinete-insomne.jpeg"]
 
   - id: 56
     titulo: "La tumba del Relámpago"
@@ -615,7 +615,7 @@ libros:
     agno: "1998"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["la-tumba-del-relampago.jpeg"]
 
   - id: 57
     titulo: "Cantar de Agapito Robles"
@@ -626,7 +626,7 @@ libros:
     agno: "1991"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["cantar-de-agapito-robles.jpeg"]
 
   - id: 58
     titulo: "La Danza Inmóvil"
@@ -637,20 +637,9 @@ libros:
     agno: "1991"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["la-danza-inmovil.jpeg"]
 
   - id: 59
-    titulo: "Redoble por Rancas"
-    subtitulo: 
-    autores: ["Manuel Scorza"]
-    palabrasClave: ["Novela", "Literatura peruana", "Conflictos agrarios"]
-    editorial: "Siglo Veintiuno Editores"
-    agno: "1988"
-    isbn: TBD
-    codigoBarra: TBD
-    imagenes: []
-
-  - id: 60
     titulo: "Garabombo el Invisible"
     subtitulo: 
     autores: ["Manuel Scorza"]
@@ -659,4 +648,4 @@ libros:
     agno: "1988"
     isbn: TBD
     codigoBarra: TBD
-    imagenes: []
+    imagenes: ["garombo-el-invisible.jpeg"]
