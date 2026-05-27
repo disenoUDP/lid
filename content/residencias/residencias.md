@@ -20,8 +20,9 @@ Su labor se concentrará en apoyar la manufactura de los proyectos finales del c
 ## 2026-01
 
 ### Profesores a cargo
+
 - Aarón Montoya
-- Joaquín Gonzales
+- Joaquín González
 
 Durante el primer semestre, estudiantes postularon a la práctica electiva. Motivados por continuar su proceso de aprendizaje, a cada uno se le asignó una labor según sus intereses.
 La meta de este semestre es la organización del Processing Community Day, la creación de la página web del LID y la organización espacial del laboratorio.
@@ -29,8 +30,9 @@ La meta de este semestre es la organización del Processing Community Day, la cr
 ### Practicantes LID
 
 Equipo
- - Sofía Pérez: diseño visual de la página web
- - Yamna Carrión: recopilación de datos y organización espacial
- - Félix Rodríguez: recopilación de datos y organización espacial
- - Santiago Gaete: organización del Processing Community Day
- - Bernardita Jesús: organización del Processing Community Day
+
+- Sofía Pérez: diseño visual de la página web
+- Yamna Carrión: recopilación de datos y organización espacial
+- Félix Rodríguez: recopilación de datos y organización espacial
+- Santiago Gaete: organización del Processing Community Day
+- Bernardita Jesús: organización del Processing Community Day
