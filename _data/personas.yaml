@@ -405,15 +405,15 @@ personas:
     correo: manuel.gallardo
     estudianteUDP:
       existencia: true
-      inicio: 1234
-      fin: 1234
+      inicio: 2005
+      fin: 2012
     ayudanteUDP:
       existencia: true
-      inicio: 1234
-      fin: 1234
+      inicio: 2007
+      fin: 2013
     profeUDP:
       existencia: true
-      inicio: 1234
+      inicio: 2013
       fin: false
   - nombre: Sofía Etchepare
     github: Bumwox

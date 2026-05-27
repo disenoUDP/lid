@@ -33,6 +33,6 @@ Equipo
 
 - Sofía Pérez: diseño visual de la página web
 - Yamna Carrión: recopilación de datos y organización espacial
-- Félix Rodríguez: recopilación de datos y organización espacial
+- Félix Rodríguez: organización del Processing Community Day
 - Santiago Gaete: organización del Processing Community Day
-- Bernardita Jesús: organización del Processing Community Day
+- Bernardita Jesús: recopilación de datos y organización espacial
