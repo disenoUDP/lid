@@ -21,7 +21,7 @@ cursos:
             ayudantes: ["Janis Sepúlveda"]
           - seccion: 3
             profes: ["Sofía Suazo"]
-            ayudantes: [""]
+            ayudantes: ["Valentina Chávez"]
           - seccion: 4
             profes: ["Aarón Montoya"]
             ayudantes: ["Vania Paredes"]
@@ -30,7 +30,7 @@ cursos:
             ayudantes: ["Santiago Gaete"]
           - seccion: 6
             profes: ["Sofía Suazo"]
-            ayudantes: [""]
+            ayudantes: ["Jacinta Barrenechea"]
   - sigla: "DIS8636"
     nombre: "Taller de interfaz de usuario UI"
     semestres:
@@ -85,7 +85,7 @@ cursos:
         secciones:
           - seccion: 1
             profes: ["Sergio Mora", "Joaquín González"]
-            ayudantes: [""]
+            ayudantes: ["Martín Ogueta"]
   - sigla: "DIS8915"
     nombre: "Proyectos interdisciplinarios en tecnologías"
     semestres:
@@ -93,7 +93,7 @@ cursos:
         secciones:
           - seccion: 1
             profes: ["Nicolás Troncoso"]
-            ayudantes: [""]
+            ayudantes: ["placeholder"]
   - sigla: "DIS8948"
     nombre: "Interacciones digitales"
     semestres:

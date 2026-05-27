@@ -87,6 +87,21 @@ personas:
       existencia: true
       inicio: 2025
       fin: false
+  - nombre: Dominique Tetzner
+    github: false
+    correo: false
+    estudianteUDP:
+      existencia: false
+      inicio: false
+      fin: false
+    ayudanteUDP:
+      existencia: false
+      inicio: false
+      fin: false
+    profeUDP:
+      existencia: true
+      inicio: 2020
+      fin: false
   - nombre: Emilia Guerra
     github: emiguerra
     correo: emilia.guerra
@@ -116,6 +131,37 @@ personas:
     profeUDP:
       existencia: false
       inicio: false
+      fin: false
+  - nombre: Francisca Wright
+    github: 2020
+    correo: 2024
+    bio: false
+    estudianteUDP:
+      existencia: true
+      inicio: false
+      fin: false
+    ayudanteUDP:
+      existencia: true
+      inicio: 2022
+      fin: 2024
+    profeUDP:
+      existencia: false
+      inicio: false
+      fin: false
+  - nombre: Guillermo Montecinos
+    github: false
+    correo: guillermo.montecinos
+    estudianteUDP:
+      existencia: false
+      inicio: false
+      fin: false
+    ayudanteUDP:
+      existencia: false
+      inicio: false
+      fin: false
+    profeUDP:
+      existencia: true
+      inicio: 2026
       fin: false
   - nombre: Jacinta Barrenechea
     github: jacintaOOO
@@ -194,6 +240,36 @@ personas:
       existencia: false
       inicio: false
       fin: false
+  - nombre: Magdalena Claro
+    github: false
+    correo: false
+    estudianteUDP:
+      existencia: false
+      inicio: false
+      fin: false
+    ayudanteUDP:
+      existencia: true
+      inicio: 2026
+      fin: false
+    profeUDP:
+      existencia: false
+      inicio: false
+      fin: false
+  - nombre: Martín Ogueta
+    github: false
+    correo: martin.ogueta_g
+    estudianteUDP:
+      existencia: true
+      inicio: 2021
+      fin: 2025
+    ayudanteUDP:
+      existencia: true
+      inicio: 2025
+      fin: false
+    profeUDP:
+      existencia: false
+      inicio: false
+      fin: false
   - nombre: Matías Serrano
     github: misaaaaaa
     correo: matias.serrano
@@ -209,6 +285,51 @@ personas:
       existencia: true
       inicio: 2024
       fin: false
+  - nombre: Morgan Aravena
+    github: false
+    correo: false
+    estudianteUDP:
+      existencia: true
+      inicio: 2022
+      fin: 2026
+    ayudanteUDP:
+      existencia: true
+      inicio: 2026
+      fin: false
+    profeUDP:
+      existencia: false
+      inicio: false
+      fin: false
+  - nombre: Nicolás Troncoso
+    github: nicotron
+    correo: nicolas.troncoso1
+    estudianteUDP:
+      existencia: false
+      inicio: false
+      fin: false
+    ayudanteUDP:
+      existencia: false
+      inicio: false
+      fin: false
+    profeUDP:
+      existencia: true
+      inicio: 2024
+      fin: 2024
+  - nombre: Paulina Mujica
+    github: false
+    correo: false
+    estudianteUDP:
+      existencia: false
+      inicio: false
+      fin: false
+    ayudanteUDP:
+      existencia: false
+      inicio: false
+      fin: false
+    profeUDP:
+      existencia: true
+      inicio: 2026
+      fin: false
   - nombre: Santiago Gaete
     github: santiagoClifford
     correo: santiago.gaete@mail.udp.cl
@@ -222,6 +343,21 @@ personas:
       existencia: true
       inicio: 2026
       fin: false
+    profeUDP:
+      existencia: false
+      inicio: false
+      fin: false
+  - nombre: Sebastián Cisternas
+    github: false
+    correo: false
+    estudianteUDP:
+      existencia: true
+      inicio: 2014
+      fin: 2019
+    ayudanteUDP:
+      existencia: true
+      inicio: 2023
+      fin: 2023
     profeUDP:
       existencia: false
       inicio: false
@@ -309,6 +445,52 @@ personas:
       existencia: false
       inicio: false
       fin: false
+  - nombre: Sofía Sandoval
+    github: false
+    correo: false
+    bio: false
+    estudianteUDP:
+      existencia: true
+      inicio: 2021
+      fin: 2025
+    ayudanteUDP:
+      existencia: true
+      inicio: 2024
+      fin: 2025
+    profeUDP:
+      existencia: false
+      inicio: false
+      fin: false
+  - nombre: Sofía Suazo
+    github: 
+    correo: sofia.suazo
+    estudianteUDP:
+      existencia: false
+      inicio: false
+      fin: false
+    ayudanteUDP:
+      existencia: false
+      inicio: false
+      fin: false
+    profeUDP:
+      existencia: true
+      inicio: 2026
+      fin: false
+  - nombre: Valentina Chávez
+    github: false
+    correo: false
+    estudianteUDP:
+      existencia: true
+      inicio: 2022
+      fin: 2026
+    ayudanteUDP:
+      existencia: true
+      inicio: 2026
+      fin: false
+    profeUDP:
+      existencia: false
+      inicio: false
+      fin: false
   - nombre: Vania Paredes
     github: vaniaparedes
     correo: vania.paredes
@@ -330,6 +512,21 @@ personas:
     estudianteUDP:
       existencia: true
       inicio: 2023
+      fin: false
+    ayudanteUDP:
+      existencia: false
+      inicio: false
+      fin: false
+    profeUDP:
+      existencia: false
+      inicio: false
+      fin: false
+  - nombre: placeholder
+    github: false
+    correo: false
+    estudianteUDP:
+      existencia: false
+      inicio: false
       fin: false
     ayudanteUDP:
       existencia: false
