@@ -44,11 +44,13 @@ Lugar: Auditorio de Salvador Sanfuentes 2221.
 
 La audiencia estuvo compuesta por el curso de Interacciones Digitales, dictado por el equipo docente Guillermo Montecinos y Magdalena Claro, y por estudiantes de la mención de interacción digital de la Escuela de Diseño UDP.
 
-![Grounding Computation](/public/eventos-imagenes/)
+<!-- ![Grounding Computation](/public/eventos-imagenes/) -->
 
-<img src="/public/libros-imagenes//eventos-imagenes/2026-05-grounding-computation.png"
+<!-- <img src="/public/libros-imagenes//eventos-imagenes/2026-05-grounding-computation.png"
     alt="Grounding Computation"
-    eleventy:ignore />
+    eleventy:ignore /> -->
+
+<img src="{{ '/eventos-imagenes/2026-05-grounding-computation.png' | url }}">
 
 ## 2026-01
 
