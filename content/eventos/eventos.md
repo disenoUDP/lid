@@ -44,15 +44,15 @@ Lugar: Auditorio de Salvador Sanfuentes 2221.
 
 La audiencia estuvo compuesta por el curso de Interacciones Digitales, dictado por el equipo docente Guillermo Montecinos y Magdalena Claro, y por estudiantes de la mención de interacción digital de la Escuela de Diseño UDP.
 
-![Grounding Computation](/public/eventos-imagenes/2026-05-grounding-computation.png)
+![Grounding Computation](/public/eventos-imagenes/)
 
-<!-- <img src="/public/eventos-imagenes/2026-05-grounding-computation.png" alt="Grounding Computation"> -->
+<img src="/public/libros-imagenes//eventos-imagenes/2026-05-grounding-computation.png"
+    alt="Grounding Computation"
+    eleventy:ignore />
 
 ## 2026-01
 
 ### Taller Delay
-
-<!-- <img src="/public/eventos-imagenes/2026-01-taller-delay.jpg" alt="Taller Delay"> -->
 
 Taller donde estudiantes de la Universidad de Chile, y de la Universidad Diego Portales aprendieron a programar efectos de delay en el lenguaje C++ con el microcontrolador Daisy de Electrosmith.
 
@@ -60,6 +60,8 @@ Co-organizado entre el Laboratorio de Interacción Digital de la Universidad Die
 
 Curso dictado por Emir Chacra, estudiante doctoral de la University of California, San Diego.
 
-![Taller Delay](/public/eventos-imagenes/2026-01-taller-delay.jpg)
+<img src="/public/libros-imagenes//eventos-imagenes/2026-01-taller-delay.jpg"
+    alt="Taller Delay"
+    eleventy:ignore />
 
 Gráfica por Mateo Arce.
