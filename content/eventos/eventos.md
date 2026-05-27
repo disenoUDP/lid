@@ -44,7 +44,7 @@ Lugar: Auditorio de Salvador Sanfuentes 2221.
 
 La audiencia estuvo compuesta por el curso de Interacciones Digitales, dictado por el equipo docente Guillermo Montecinos y Magdalena Claro, y por estudiantes de la mención de interacción digital de la Escuela de Diseño UDP.
 
-![Grounding Computation](/eventos-imagenes/2026-05-grounding-computation.png)
+![Grounding Computation](/public/eventos-imagenes/2026-05-grounding-computation.png)
 
 <!-- <img src="/public/eventos-imagenes/2026-05-grounding-computation.png" alt="Grounding Computation"> -->
 
@@ -60,6 +60,6 @@ Co-organizado entre el Laboratorio de Interacción Digital de la Universidad Die
 
 Curso dictado por Emir Chacra, estudiante doctoral de la University of California, San Diego.
 
-![Taller Delay](/eventos-imagenes/2026-01-taller-delay.jpg)
+![Taller Delay](/public/eventos-imagenes/2026-01-taller-delay.jpg)
 
 Gráfica por Mateo Arce.
