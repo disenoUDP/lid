@@ -1,0 +1,28 @@
+---
+nombre: eventos lid
+eventos:
+
+  - id: 1
+    agno: 2026
+    mes: 06
+    nombre: "Processing Community Day 2026"
+    instituciones: ["Diseño UDP"]
+    categorias: ["evento", "charlas", "talleres"]
+    enlaces: [""]
+    imagenes: [false]
+  - id: 2
+    agno: 2026
+    mes: 05
+    nombre: "Grounding Computation"
+    instituciones: ["Diseño UDP", "Rhode Island School of Design"]
+    categorias: ["evento, charlas", "talleres"]
+    enlaces: [false]
+    imaganes: [false]
+  - id: 3
+    agno: 2026
+    mes: 01
+    nombre: "Taller Delay"
+    instituciones: ["Diseño UDP", "Laboratorio de Luthería Postdigital UChile"]
+    categorias: ["evento, charlas", "talleres"]
+    enlaces: [false]
+    imaganes: [false]
