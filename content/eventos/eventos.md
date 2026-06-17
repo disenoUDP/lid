@@ -15,7 +15,11 @@ Processing Community Day 2026 - Sede Santiago de Chile
 
 viernes 26 y sábado 27 de junio de 2026
 
-Formulario de inscripción: <https://forms.gle/JTbhtAG8oHtq1mJ37>
+Formulario de inscripción para PCD 2026: <https://forms.gle/JTbhtAG8oHtq1mJ37>
+
+Formulario de inscripción para Clínica Aarón Montoya-Moraga 26 de junio: <https://forms.gle/d45T1TxtorqBn1vG9>
+
+Formulario de inscripción para Conversatorio Design Systems International 26 de junio 2026: <https://forms.gle/QiqxkwiY8bZh8dr87>
 
 <!-- [Bases de la convocatoria](https://docs.google.com/document/d/e/2PACX-1vQbIUu0ZQKrMiw6ld12CDybDhX9rSsFq_Hvbv23XAs3-Mry6k_iIU6uyP9puxSvqBOQUr9evXRsuCFB/pub)
 
