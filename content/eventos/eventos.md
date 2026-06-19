@@ -20,6 +20,7 @@ Formularios de inscripción:
 - Processing Community Day 2026: <https://forms.gle/JTbhtAG8oHtq1mJ37>
 - Clínica Aarón Montoya-Moraga viernes 26 de junio 2026: <https://forms.gle/d45T1TxtorqBn1vG9>
 - Conversatorio Design Systems International 26 de junio 2026: <https://forms.gle/QiqxkwiY8bZh8dr87>
+- Clínica CumaSystem 27 de junio <https://forms.gle/eNMKLDrY6fx4AbZn6>
 
 <!-- [Bases de la convocatoria](https://docs.google.com/document/d/e/2PACX-1vQbIUu0ZQKrMiw6ld12CDybDhX9rSsFq_Hvbv23XAs3-Mry6k_iIU6uyP9puxSvqBOQUr9evXRsuCFB/pub)
 
