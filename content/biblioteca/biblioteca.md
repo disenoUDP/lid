@@ -13,3 +13,4 @@ Secciones
 - <a href="./impresoras/">Impresoras</a>
 - <a href="./libros/">Libros</a>
 - <a href="./sintetizadores/">Sintetizadores</a>
+- <a href="./tesis/">Tesis</a>
