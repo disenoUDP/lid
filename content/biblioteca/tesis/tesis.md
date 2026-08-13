@@ -48,8 +48,8 @@ Colección de tesis del Laboratorio de Interacción Digital.
     <li>institución: {{ entrada.institucion }}</li>
     <li>grado: {{ entrada.grado }}</li>
     <li>temas: {% for tema in entrada.temas %}{{ tema }}{% if not loop.last %}, {% endif %}{% endfor %}</li>
-    {% if entrada.url %}<li><a href="{{ entrada.url }}">ver en catálogo</a></li>{% endif %}
-    {% if entrada.pdf %}<li><a href="https://github.com/disenoUDP/coleccion-tesis-interaccion-digital/blob/main/{{ entrada.pdf }}">ver PDF</a></li>{% endif %}
+    {% if entrada.url %}<li><a href="{{ entrada.url }}">ver en biblioteca udp</a></li>{% endif %}
+    {% if entrada.pdf %}<li><a href="https://github.com/disenoUDP/coleccion-tesis-interaccion-digital/blob/main/{{ entrada.pdf }}">descargar pdf</a></li>{% endif %}
   </ul>
 </div>
 {% endfor %}
