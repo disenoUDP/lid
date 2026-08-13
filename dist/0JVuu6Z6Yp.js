@@ -229,3 +229,103 @@ class HeadingAnchors extends HTMLElement {
 HeadingAnchors.register();
 
 export { HeadingAnchors }
+(function () {
+  var lista = document.getElementById('tesis-lista');
+  var entradas = Array.from(document.querySelectorAll('#tesis-lista .libro-item'));
+  var anhosSet = new Set();
+  var temasSet = new Set();
+
+  entradas.forEach(function (entrada) {
+    var anho = entrada.dataset.agno.trim();
+    var temas = entrada.dataset.temas.split('|').map(function (t) { return t.trim(); }).filter(Boolean);
+    if (anho) anhosSet.add(anho);
+    temas.forEach(function (t) { temasSet.add(t); });
+  });
+
+  function populateSelect(id, values, sortDescending) {
+    var sel = document.getElementById(id);
+    Array.from(values).sort(function (a, b) {
+      return sortDescending ? b.localeCompare(a) : a.localeCompare(b);
+    }).forEach(function (v) {
+      var opt = document.createElement('option');
+      opt.value = v;
+      opt.textContent = v;
+      sel.appendChild(opt);
+    });
+  }
+
+  populateSelect('filtro-anho', anhosSet, true);
+  populateSelect('filtro-tema', temasSet, false);
+
+  function reordenar(arr) {
+    arr.forEach(function (el) { lista.appendChild(el); });
+  }
+
+  function ordenarEntradas(criterio) {
+    var copia = entradas.slice();
+    if (criterio === 'az') {
+      copia.sort(function (a, b) {
+        return (a.dataset.titulo || '').localeCompare(b.dataset.titulo || '', 'es', { sensitivity: 'base', numeric: true });
+      });
+    } else if (criterio === 'za') {
+      copia.sort(function (a, b) {
+        return (b.dataset.titulo || '').localeCompare(a.dataset.titulo || '', 'es', { sensitivity: 'base', numeric: true });
+      });
+    } else if (criterio === 'agno-asc') {
+      copia.sort(function (a, b) {
+        return (parseInt(a.dataset.agno, 10) || 0) - (parseInt(b.dataset.agno, 10) || 0);
+      });
+    } else if (criterio === 'agno-desc') {
+      copia.sort(function (a, b) {
+        return (parseInt(b.dataset.agno, 10) || 0) - (parseInt(a.dataset.agno, 10) || 0);
+      });
+    }
+    reordenar(copia);
+  }
+
+  function aplicarFiltros() {
+    var filtroAnho = document.getElementById('filtro-anho').value;
+    var filtroTema = document.getElementById('filtro-tema').value;
+
+    entradas.forEach(function (entrada) {
+      var anho = entrada.dataset.agno.trim();
+      var temas = entrada.dataset.temas.split('|').map(function (t) { return t.trim(); }).filter(Boolean);
+      var matchAnho = !filtroAnho || anho === filtroAnho;
+      var matchTema = !filtroTema || temas.includes(filtroTema);
+      entrada.style.display = (matchAnho && matchTema) ? '' : 'none';
+    });
+  }
+
+  document.getElementById('filtro-anho').addEventListener('change', aplicarFiltros);
+  document.getElementById('filtro-tema').addEventListener('change', aplicarFiltros);
+
+  document.getElementById('ordenar').addEventListener('change', function () {
+    ordenarEntradas(this.value);
+    aplicarFiltros();
+  });
+
+  document.getElementById('filtro-reset').addEventListener('click', function () {
+    document.getElementById('filtro-anho').value = '';
+    document.getElementById('filtro-tema').value = '';
+    document.getElementById('ordenar').value = 'az';
+    ordenarEntradas('az');
+    aplicarFiltros();
+  });
+}());
+// Cursor personalizado
+			const cursor = document.getElementById('cursor');
+			document.addEventListener('mousemove', e => {
+				cursor.style.left = e.clientX + 'px';
+				cursor.style.top  = e.clientY + 'px';
+			});
+
+// Toggle sidebar
+            const toggle = document.getElementById('nav-toggle');
+            if (window.innerWidth <= 768) {
+                document.body.classList.add('nav-collapsed');
+                toggle.setAttribute('aria-expanded', 'false');
+            }
+            toggle.addEventListener('click', () => {
+                const collapsed = document.body.classList.toggle('nav-collapsed');
+                toggle.setAttribute('aria-expanded', String(!collapsed));
+            });
