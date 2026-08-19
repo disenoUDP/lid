@@ -7,14 +7,6 @@ const eleventyNavigation = {
 
 # Cuerdas
 
-## Ciat-Lonbarde Shtar
-
-Tar
-
-## Yamaha RBX370-a
-
-Bajo eléctrico
-
 ## Ibanez Omar Rodriguez Lopez
 
 Guitarra eléctrica
